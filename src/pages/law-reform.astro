@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Law Reform">
+  <style>
+    .content {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    .organization {
+      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .organization:last-child {
+      border-bottom: none;
+    }
+
+    .org-name {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #000;
+    }
+
+    .position {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .position-title {
+      font-size: 1.05rem;
+      color: #000;
+      margin-bottom: 0.3rem;
+    }
+
+    .position-role {
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-style: italic;
+      color: #000;
+      margin-bottom: 0.2rem;
+    }
+
+    .position-dates {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .delegate-info {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #000;
+      line-height: 1.7;
+    }
+
+    .achievement-list {
+      list-style: none;
+      margin-top: 0.75rem;
+      padding-left: 1rem;
+    }
+
+    .achievement-list li {
+      margin-bottom: 0.5rem;
+      color: #000;
+      font-size: 0.95rem;
+      position: relative;
+      padding-left: 1.5rem;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .achievement-list li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .position {
+        padding-left: 0;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>Law Reform Initiatives</h1>
+    
+    <div class="organization">
+      <div class="org-name">Uniform Law Commission</div>
+      
+      <div class="position">
+        <div class="position-title">Study Committee on the Verified Carbon Credits</div>
+        <div class="position-role">Reporter</div>
+        <div class="position-dates">September 2024 – present</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">Drafting Committee on the Virtual Currency Customer Protection Act</div>
+        <div class="position-role">Reporter</div>
+        <div class="position-dates">June 2023 – 2025</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">Permanent Editorial Board for the Uniform Commercial Code</div>
+        <div class="position-role">Associate Research Director</div>
+        <div class="position-dates">March 2022 – present (co-appointment with Professor Carla Reyes)</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">Enactment Committee for the 2022 Uniform Commercial Code Amendments</div>
+        <div class="position-role">Member</div>
+        <div class="position-dates">August 2022 – present</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">UCC and Emerging Technologies Committee (Joint Committee with the American Law Institute)</div>
+        <div class="position-role">Member</div>
+        <div class="position-dates">June 2019 – July 2022</div>
+      </div>
+    </div>
+
+    <div class="organization">
+      <div class="org-name">Unidroit</div>
+      
+      <div class="position">
+        <div class="position-title">Drafting Committee for the Working Group developing the Unidroit Principles on Verified Carbon Credits</div>
+        <div class="position-role">Member</div>
+        <div class="position-dates">June 2024 – present</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">Drafting Committee for the Working Group developing the Unidroit Principles on Digital Assets</div>
+        <div class="position-role">Member</div>
+        <div class="position-dates">April 2022 – 2023</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">Working Group developing the Unidroit Model Law on Warehouse Receipts</div>
+        <div class="position-role">Member</div>
+        <div class="position-dates">April 2022 – 2023</div>
+      </div>
+    </div>
+
+    <div class="organization">
+      <div class="org-name">Italian Ministry of Foreign Affairs</div>
+      
+      <div class="position">
+        <div class="position-title">Advisor for International Commercial Law affairs</div>
+        <div class="position-dates">2008 – present</div>
+      </div>
+
+      <div class="position">
+        <div class="position-title">Delegate to the United Nations Commission on International Trade Law (UNCITRAL)</div>
+        <div class="position-dates">2008 – 2017</div>
+        <div class="delegate-info">Representing the Italian government in the negotiations for:</div>
+        <ul class="achievement-list">
+          <li>The UNCITRAL Model Law on Secured Transactions: Guide to Enactment (2017)</li>
+          <li>UNCITRAL Model Law on Secured Transactions (2016)</li>
+          <li>UNCITRAL Guide on the Implementation of a Security Rights Registry (2013)</li>
+          <li>UNCITRAL Legislative Guide on Secured Transactions: Supplement on Security Rights in Intellectual Property (2010)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>

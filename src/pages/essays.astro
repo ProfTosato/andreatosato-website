@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Essays">
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    .essay-item {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .essay-item:last-child {
+      border-bottom: none;
+    }
+
+    .essay-title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+      color: #000;
+    }
+
+    .essay-meta {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .essay-coauthors {
+      font-size: 0.95rem;
+      color: #999;
+      margin-bottom: 0.75rem;
+    }
+
+    .essay-featured {
+      font-size: 0.9rem;
+      color: #666;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .essay-featured li {
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>Essays</h1>
+    
+    <div class="essay-item" id="regulating-stablecoins">
+      <div class="essay-title">Regulating Stablecoins: Comparing MiCAR and the GENIUS Act</div>
+      <div class="essay-meta">Notre Dame Law Review Reflection (2026) (forthcoming)</div>
+      <div class="essay-coauthors">with Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item" id="tokenized-real-estate">
+      <div class="essay-title">Tokenized Real Estate: The Law and Tech of Digital Deeds</div>
+      <div class="essay-meta">Ohio State Law Journal Online (2026) (forthcoming)</div>
+      <div class="essay-coauthors">with Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item" id="daos-financial-distress">
+      <div class="essay-title">DAOs in Financial Distress</div>
+      <div class="essay-meta">Foundations of Decentralized Organizations: Blockchain and the Future of Corporate Law (eds. Kevin Werbach, Eva Micheler, and Bianca Kremer) (forthcoming)</div>
+      <div class="essay-coauthors">with Kara Bruce and Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Decentralizing Bankruptcy Law</div>
+      <div class="essay-meta">44 The Bankruptcy Law Letter 1 (2024)</div>
+      <div class="essay-coauthors">with Kara Bruce and Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">The Intersection of NFTs and Structured Finance</div>
+      <div class="essay-meta">103 Boston University Law Review (2023)</div>
+      <div class="essay-coauthors">with Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Floating Liens Over Crypto-in-Commerce</div>
+      <div class="essay-meta">99 Indiana Law Journal (2023)</div>
+      <div class="essay-coauthors">with Christopher Odinet</div>
+      <ul class="essay-featured">
+        <li>Featured in The ALI Adviser, 3 July 2023</li>
+      </ul>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">How to Create a Floating Lien on Digital Assets</div>
+      <div class="essay-meta">Business Law Today (2023)</div>
+      <div class="essay-coauthors">with Jordan Jenquin and Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Stablecoins in Bankruptcy</div>
+      <div class="essay-meta">42 The Bankruptcy Law Letter 1 (2022)</div>
+      <div class="essay-coauthors">with Kara Bruce and Christopher Odinet</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Personal Property Security Law: International Ambitions and Local Realities</div>
+      <div class="essay-meta">in International Business Law 283 (Lucio Ghia ed. 2019)</div>
+      <div class="essay-coauthors">with Giuliano G. Castellano</div>
+      <ul class="essay-featured">
+        <li>Featured in the Oxford Business Law Blog, 5 June 2020</li>
+      </ul>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Security interests over intellectual property rights in Italy: critical analysis and reform proposals</div>
+      <div class="essay-meta">in International and Comparative Secured Transactions Law 259 (Spyridon Bazinas and Orkun Akseli eds. 2017)</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Joseph McMahon & Michael Cardwell, Research Handbook on EU Agriculture Law: Book Review</div>
+      <div class="essay-meta">54 Common Market Law Review 969 (2017)</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Jens Hartig Danielsen, EU Agricultural Law: Book Review</div>
+      <div class="essay-meta">51 Common Market Law Review 1307 (2014)</div>
+    </div>
+
+    <div class="essay-item">
+      <div class="essay-title">Amendments to the Italian Code for Industrial Property</div>
+      <div class="essay-meta">GRUR International 1111 (2010)</div>
+    </div>
+  </div>
+</Layout>

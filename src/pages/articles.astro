@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Articles">
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    .article-item {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .article-item:last-child {
+      border-bottom: none;
+    }
+
+    .article-title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+      color: #000;
+    }
+
+    .article-title a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .article-title a:hover {
+      opacity: 0.5;
+    }
+
+    .article-meta {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-coauthors {
+      font-size: 0.95rem;
+      color: #999;
+      margin-bottom: 0.75rem;
+    }
+
+    .article-featured {
+      font-size: 0.9rem;
+      color: #666;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .article-featured li {
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>Articles</h1>
+    
+    <div class="article-item" id="bankrupt-crypto-organizations">
+      <div class="article-title">
+        <a href="/articles/bankrupt-crypto-organizations">Bankrupt Crypto Organizations</a>
+      </div>
+      <div class="article-meta">104 North Carolina Law Review (forthcoming 2026)</div>
+      <div class="article-coauthors">with Kara Bruce and Christopher Odinet</div>
+    </div>
+
+    <div class="article-item" id="digital-assets-property-question">
+      <div class="article-title">
+        <a href="/articles/digital-assets-property-question">Digital Assets and the Property Question</a>
+      </div>
+      <div class="article-meta">78 Florida Law Review (forthcoming 2026)</div>
+      <div class="article-coauthors">with Christopher Odinet</div>
+      <ul class="article-featured">
+        <li>Featured in the Oxford Business Law Blog, 18 March 2025</li>
+        <li>Featured in The ALI Adviser, 3 April 2025</li>
+      </ul>
+    </div>
+
+    <div class="article-item" id="debt-tokens">
+      <div class="article-title">
+        <a href="/articles/debt-tokens">Debt Tokens</a>
+      </div>
+      <div class="article-meta">173 University of Pennsylvania Law Review (2025)</div>
+      <div class="article-coauthors">with Diane Lourdes Dick and Christopher Odinet</div>
+      <ul class="article-featured">
+        <li>Featured in The ALI Adviser, 16 May 2024</li>
+      </ul>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Crypto in Real Estate Finance</div>
+      <div class="article-meta">75 Alabama Law Review (2023)</div>
+      <div class="article-coauthors">with R. Wilson Freyermuth and Christopher Odinet</div>
+      <ul class="article-featured">
+        <li>Awarded the Shook Hardy Bacon Research Award</li>
+      </ul>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">The Private Law of Stablecoins</div>
+      <div class="article-meta">54 Arizona State Law Journal (2023)</div>
+      <div class="article-coauthors">with Kara Bruce and Christopher Odinet</div>
+      <ul class="article-featured">
+        <li>Awarded the Grant Gilmore Award of the American College of Commercial Finance Lawyers in recognition of "superior writing in the field of commercial finance law"</li>
+      </ul>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Access To Medicines and Pharmaceutical Patents: Fulfilling The Promise Of TRIPS Article 31bis</div>
+      <div class="article-meta">91 Fordham Law Review (2023)</div>
+      <div class="article-coauthors">with Ezinne Igboqwe</div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Commercial Law Intersections</div>
+      <div class="article-meta">72 Hastings Law Journal 999 (2021) (peer-reviewed)</div>
+      <div class="article-coauthors">with Giuliano G. Castellano</div>
+      <ul class="article-featured">
+        <li>Cited by the World Bank: Distributed Ledger Technology and Secured Transactions Frameworks: A Primer (2020)</li>
+        <li>Cited by the World Bank: Coordinating Prudential Regulation and Secured Transactions Frameworks: A Primer (2020)</li>
+        <li>Featured in the Duke University School of Law FinReg Blog, 30 June 2020</li>
+      </ul>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Secured Transactions and IP licenses: comparative observations and reform suggestions</div>
+      <div class="article-meta">81 Law & Contemporary Problems 155 (2018)</div>
+      <ul class="article-featured">
+        <li>Cited by the World Bank, Collateral Registry, Secured Transactions Law and Practice (2020)</li>
+        <li>Featured in the Oxford Business Law Blog, 13 June 2018</li>
+      </ul>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Intellectual Property License Contracts: Reflections on a prospective UNCITRAL Project</div>
+      <div class="article-meta">86 University of Cincinnati Law Review 1251 (2018)</div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Commercial agency and the duty to act in good faith</div>
+      <div class="article-meta">36 Oxford Journal of Legal Studies 661 (2016) (peer-reviewed)</div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">An exploration of the European dimension of the Commercial Agents Regulations</div>
+      <div class="article-meta">39 Lloyd's Maritime and Commercial Law Quarterly 544 (2013) (peer-reviewed)</div>
+      <ul class="article-featured">
+        <li>Cited by the Advocate General of the European Court of Justice, The Software Incubator (Self-employed commercial agents), Opinion of Advocate General Tanchev, [2020] EUECJ C-410/19_O (17 December 2020)</li>
+      </ul>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">The protection of traditional foods in the EU: Traditional Specialities Guaranteed</div>
+      <div class="article-meta">19 European Law Journal 545 (2013) (peer-reviewed)</div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">Security interests over intellectual property</div>
+      <div class="article-meta">6 Journal of Intellectual Property Law & Practice 93 (2011) (peer-reviewed)</div>
+    </div>
+
+    <div class="article-item">
+      <div class="article-title">The UNCITRAL Annex on security rights in IP: a work in progress</div>
+      <div class="article-meta">4 Journal of Intellectual Property Law & Practice 743 (2009) (peer-reviewed)</div>
+    </div>
+  </div>
+</Layout>

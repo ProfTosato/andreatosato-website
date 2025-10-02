@@ -1,0 +1,261 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const recentArticles = [
+  {
+    title: "Bankrupt Crypto Organizations",
+    journal: "North Carolina Law Review",
+    volume: "104",
+    year: "forthcoming 2026",
+    coauthors: "with Kara Bruce and Christopher Odinet",
+    url: "/articles/bankrupt-crypto-organizations"
+  },
+  {
+    title: "Digital Assets and the Property Question",
+    journal: "Florida Law Review",
+    volume: "78",
+    year: "forthcoming 2026",
+    coauthors: "with Christopher Odinet",
+    url: "/articles/digital-assets-property-question"
+  },
+  {
+    title: "Debt Tokens",
+    journal: "University of Pennsylvania Law Review",
+    volume: "173",
+    year: "2025",
+    coauthors: "with Diane Lourdes Dick and Christopher Odinet",
+    url: "/articles/debt-tokens"
+  }
+];
+
+const recentEssays = [
+  {
+    title: "Regulating Stablecoins: Comparing MiCAR and the GENIUS Act",
+    publication: "Notre Dame Law Review Reflection",
+    year: "2026 (forthcoming)",
+    coauthors: "with Christopher Odinet",
+    url: "/essays#regulating-stablecoins"
+  },
+  {
+    title: "Tokenized Real Estate: The Law and Tech of Digital Deeds",
+    publication: "Ohio State Law Journal Online",
+    year: "2026 (forthcoming)",
+    coauthors: "with Christopher Odinet",
+    url: "/essays#tokenized-real-estate"
+  },
+  {
+    title: "DAOs in Financial Distress",
+    publication: "Foundations of Decentralized Organizations: Blockchain and the Future of Corporate Law",
+    year: "forthcoming",
+    coauthors: "with Kara Bruce and Christopher Odinet",
+    url: "/essays#daos-financial-distress"
+  }
+];
+---
+
+<Layout>
+  <style>
+    .hero {
+      padding: 5rem 0 4rem 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .hero-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #000;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #666;
+      font-weight: 300;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      color: #000;
+    }
+
+    h2 a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    h2 a:hover {
+      opacity: 0.5;
+    }
+
+    .about-preview {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 800px;
+      color: #000;
+    }
+
+    .about-preview a {
+      color: #000;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .about-preview a:hover {
+      opacity: 0.6;
+    }
+
+    .publication-item {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .publication-item:last-child {
+      border-bottom: none;
+    }
+
+    .publication-title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+      color: #000;
+    }
+
+    .publication-title a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .publication-title a:hover {
+      opacity: 0.5;
+    }
+
+    .publication-meta {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 0.3rem;
+    }
+
+    .publication-coauthors {
+      font-size: 0.95rem;
+      color: #999;
+    }
+
+    .view-all {
+      margin-top: 2rem;
+    }
+
+    .view-all a {
+      color: #000;
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .view-all a:hover {
+      opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero {
+        padding: 3rem 0 2rem 0;
+      }
+
+      section {
+        padding: 3rem 1.5rem;
+      }
+
+      .hero-container {
+        padding: 0 1.5rem;
+      }
+    }
+  </style>
+
+  <div class="hero">
+    <div class="hero-container">
+      <h1>Andrea Tosato</h1>
+      <p class="subtitle">Professor of Law, SMU Dedman School of Law</p>
+    </div>
+  </div>
+
+  <section>
+    <h2><a href="/about-me">About Me</a></h2>
+    <div class="about-preview">
+      <p>I am a Law Professor at the SMU Dedman School of Law, where my research focuses on the intersection between private law, emerging technologies, and intangible assets. My scholarship focuses particularly on commercial law, secured transactions, and bankruptcy law as they intersect with cryptocurrencies, stablecoins, NFTs, and verified carbon credits. <a href="/about-me">Read more →</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2><a href="/articles">Recent Articles</a></h2>
+    {recentArticles.map(article => (
+      <div class="publication-item">
+        <div class="publication-title">
+          <a href={article.url}>{article.title}</a>
+        </div>
+        <div class="publication-meta">
+          {article.journal}{article.volume && `, ${article.volume}`} ({article.year})
+        </div>
+        {article.coauthors && (
+          <div class="publication-coauthors">{article.coauthors}</div>
+        )}
+      </div>
+    ))}
+    <div class="view-all">
+      <a href="/articles">View all articles →</a>
+    </div>
+  </section>
+
+  <section>
+    <h2><a href="/essays">Recent Essays</a></h2>
+    {recentEssays.map(essay => (
+      <div class="publication-item">
+        <div class="publication-title">
+          <a href={essay.url}>{essay.title}</a>
+        </div>
+        <div class="publication-meta">
+          {essay.publication} ({essay.year})
+        </div>
+        {essay.coauthors && (
+          <div class="publication-coauthors">{essay.coauthors}</div>
+        )}
+      </div>
+    ))}
+    <div class="view-all">
+      <a href="/essays">View all essays →</a>
+    </div>
+  </section>
+</Layout>

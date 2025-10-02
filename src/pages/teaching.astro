@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Teaching">
+  <style>
+    .content {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 2.5rem 0 1rem 0;
+      color: #000;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      color: #000;
+      font-size: 1.05rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>Teaching</h1>
+    
+    <h2>Foundation Courses</h2>
+    <ul>
+      <li>Contract Law</li>
+      <li>Tort Law</li>
+    </ul>
+
+    <h2>Elective Courses</h2>
+    <ul>
+      <li>Secured Transactions</li>
+      <li>Bankruptcy Law</li>
+      <li>International Business Transactions</li>
+      <li>Blockchain and the Law</li>
+    </ul>
+  </div>
+</Layout>

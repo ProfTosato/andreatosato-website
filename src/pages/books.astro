@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Books">
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    .book-item {
+      margin-bottom: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .book-item:last-child {
+      border-bottom: none;
+    }
+
+    .book-title {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
+      color: #000;
+      text-transform: uppercase;
+    }
+
+    .book-meta {
+      font-size: 1.05rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .book-coauthors {
+      font-size: 1rem;
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .book-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>Books</h1>
+    
+    <div class="book-item">
+      <div class="book-title">Digital Commercial Law</div>
+      <div class="book-meta">Oxford University Press (forthcoming 2026)</div>
+      <div class="book-coauthors">with Christopher Odinet</div>
+    </div>
+  </div>
+</Layout>
