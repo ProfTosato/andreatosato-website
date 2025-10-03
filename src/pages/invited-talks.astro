@@ -43,6 +43,41 @@ import Layout from '../layouts/Layout.astro';
       border-bottom: none;
     }
 
+    .talk-item a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .talk-item a:hover {
+      opacity: 0.5;
+      text-decoration: underline;
+    }
+
+    .media-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.7;
+    }
+
+    .media-item:last-of-type {
+      border-bottom: none;
+      margin-bottom: 2.5rem;
+    }
+
+    .media-item a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+      display: block;
+    }
+
+    .media-item a:hover {
+      opacity: 0.5;
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .content {
         padding: 2rem 1.5rem;
@@ -62,6 +97,24 @@ import Layout from '../layouts/Layout.astro';
     <h1>News, Media & Invited Talks</h1>
     
     <h2>Media</h2>
+    
+    <div class="media-item">
+      <a href="https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order" target="_blank" rel="noopener">
+        Bankrupt Crypto Organizations feat. Kara Bruce, Chris Odinet, & Andrea Tosato - Block & Order Podcast #36
+      </a>
+    </div>
+
+    <div class="media-item">
+      <a href="https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4" target="_blank" rel="noopener">
+        Barrons: Crypto's Future Is at Stake in a Dispute Over Commercial Law's Definition of Money
+      </a>
+    </div>
+
+    <div class="media-item">
+      <a href="https://www.coindesk.com/policy/2023/05/17/floridas-desantis-waging-toothless-campaign-against-digital-dollars-lawyers-say/" target="_blank" rel="noopener">
+        Coindesk: Florida's DeSantis Waging Toothless Campaign Against Digital Dollars, Lawyers Say
+      </a>
+    </div>
     
     <h2>Recent Invited Talks</h2>
     

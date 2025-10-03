@@ -22,10 +22,29 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 3rem;
       padding-bottom: 2.5rem;
       border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
     }
 
     .book-item:last-child {
       border-bottom: none;
+    }
+
+    .book-cover {
+      width: 250px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .book-info {
+      flex: 1;
     }
 
     .book-title {
@@ -57,6 +76,17 @@ import Layout from '../layouts/Layout.astro';
         font-size: 2rem;
       }
 
+      .book-item {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .book-cover {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
       .book-title {
         font-size: 1.3rem;
       }
@@ -67,9 +97,14 @@ import Layout from '../layouts/Layout.astro';
     <h1>Books</h1>
     
     <div class="book-item">
-      <div class="book-title">Digital Commercial Law</div>
-      <div class="book-meta">Oxford University Press (forthcoming 2026)</div>
-      <div class="book-coauthors">with Christopher Odinet</div>
+      <div class="book-cover">
+        <img src="/book-cover.png" alt="Digital Commercial Law book cover" />
+      </div>
+      <div class="book-info">
+        <div class="book-title">Digital Commercial Law</div>
+        <div class="book-meta">Oxford University Press (forthcoming 2026)</div>
+        <div class="book-coauthors">with Christopher Odinet</div>
+      </div>
     </div>
   </div>
 </Layout>
