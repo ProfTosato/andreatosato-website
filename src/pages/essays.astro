@@ -7,20 +7,20 @@ import Layout from '../layouts/Layout.astro';
     .content {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 2.5rem 2rem;
     }
 
     h1 {
       font-size: 2.5rem;
       font-weight: 300;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       letter-spacing: -0.02em;
       color: #000;
     }
 
     .essay-item {
-      margin-bottom: 2.5rem;
-      padding-bottom: 2.5rem;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.8rem;
       border-bottom: 1px solid #e0e0e0;
     }
 
@@ -34,6 +34,16 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 0.5rem;
       letter-spacing: -0.01em;
       color: #000;
+    }
+
+    .essay-title a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .essay-title a:hover {
+      opacity: 0.5;
     }
 
     .essay-meta {
@@ -74,13 +84,17 @@ import Layout from '../layouts/Layout.astro';
     <h1>Essays</h1>
     
     <div class="essay-item" id="regulating-stablecoins">
-      <div class="essay-title">Regulating Stablecoins: Comparing MiCAR and the GENIUS Act</div>
+      <div class="essay-title">
+        <a href="/essays/regulating-stablecoins">Regulating Stablecoins: Comparing MiCAR and the GENIUS Act</a>
+      </div>
       <div class="essay-meta">Notre Dame Law Review Reflection (2026) (forthcoming)</div>
       <div class="essay-coauthors">with Christopher Odinet</div>
     </div>
 
     <div class="essay-item" id="tokenized-real-estate">
-      <div class="essay-title">Tokenized Real Estate: The Law and Tech of Digital Deeds</div>
+      <div class="essay-title">
+        <a href="/essays/tokenized-real-estate">Tokenized Real Estate: The Law and Tech of Digital Deeds</a>
+      </div>
       <div class="essay-meta">Ohio State Law Journal Online (2026) (forthcoming)</div>
       <div class="essay-coauthors">with Christopher Odinet</div>
     </div>
@@ -98,13 +112,17 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <div class="essay-item">
-      <div class="essay-title">The Intersection of NFTs and Structured Finance</div>
+      <div class="essay-title">
+        <a href="/essays/nfts-structured-finance">The Intersection of NFTs and Structured Finance</a>
+      </div>
       <div class="essay-meta">103 Boston University Law Review (2023)</div>
       <div class="essay-coauthors">with Christopher Odinet</div>
     </div>
 
     <div class="essay-item">
-      <div class="essay-title">Floating Liens Over Crypto-in-Commerce</div>
+      <div class="essay-title">
+        <a href="/essays/floating-liens-crypto">Floating Liens Over Crypto-in-Commerce</a>
+      </div>
       <div class="essay-meta">99 Indiana Law Journal (2023)</div>
       <div class="essay-coauthors">with Christopher Odinet</div>
       <ul class="essay-featured">
