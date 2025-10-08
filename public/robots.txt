@@ -1,0 +1,10 @@
+# Allow all search engine crawlers to access all content
+User-agent: *
+Allow: /
+
+# Special rules for Google Scholar bot
+User-agent: Googlebot-Scholar
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.andreatosato.com/sitemap-index.xml
