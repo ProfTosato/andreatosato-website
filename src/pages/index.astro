@@ -247,6 +247,66 @@ const recentEssays = [
       opacity: 0.5;
     }
 
+    .news-ticker {
+      background-color: #f8f8f8;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 0.75rem 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-ticker-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      min-height: 1.5rem;
+    }
+
+    .news-ticker-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      flex-shrink: 0;
+    }
+
+    .news-ticker-content {
+      flex: 1;
+      position: relative;
+      height: 1.5rem;
+    }
+
+    .news-item {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      font-size: 0.9rem;
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .news-item.active {
+      opacity: 1;
+    }
+
+    .news-item a {
+      color: #333;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .news-item a:hover {
+      opacity: 0.6;
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5rem;
@@ -275,6 +335,18 @@ const recentEssays = [
       section {
         padding: 1.7rem 1.5rem;
       }
+
+      .news-ticker {
+        padding: 0.75rem 1.5rem;
+      }
+
+      .news-ticker-label {
+        display: none;
+      }
+
+      .news-item {
+        font-size: 0.85rem;
+      }
     }
   </style>
 
@@ -296,6 +368,36 @@ const recentEssays = [
       </div>
     </div>
   </div>
+
+  <div class="news-ticker">
+    <div class="news-ticker-container">
+      <span class="news-ticker-label">News</span>
+      <div class="news-ticker-content">
+        <div class="news-item active">
+          📰 <a href="https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership" target="_blank" rel="noopener">Professor Andrea Tosato Elected to the ALI</a>
+        </div>
+        <div class="news-item">
+          🎙️ <a href="https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order" target="_blank" rel="noopener">Featured on Block & Order Podcast: Bankrupt Crypto Organizations</a>
+        </div>
+        <div class="news-item">
+          📝 <a href="https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4" target="_blank" rel="noopener">Featured in Barrons: Crypto's Future and Commercial Law</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const newsItems = document.querySelectorAll('.news-item');
+    let currentIndex = 0;
+
+    function rotateNews() {
+      newsItems[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % newsItems.length;
+      newsItems[currentIndex].classList.add('active');
+    }
+
+    setInterval(rotateNews, 7000); // Rotate every 7 seconds
+  </script>
 
   <section>
     <h2><a href="/about-me">About Me</a></h2>
