@@ -371,34 +371,34 @@ const recentEssays = [
   </div>
 
   <div class="news-ticker">
-    <div class="news-ticker-container">
-      <span class="news-ticker-label">News</span>
-      <div class="news-ticker-content">
-        <div class="news-item active">
-          📰 <a href="https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership" target="_blank" rel="noopener">Professor Andrea Tosato Elected to the ALI</a>
-        </div>
-        <div class="news-item">
-          🎙️ <a href="https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order" target="_blank" rel="noopener">Featured on Block & Order Podcast: Bankrupt Crypto Organizations</a>
-        </div>
-        <div class="news-item">
-          📝 <a href="https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4" target="_blank" rel="noopener">Featured in Barrons: Crypto's Future and Commercial Law</a>
-        </div>
+  <div class="news-ticker-container">
+    <span class="news-ticker-label">News</span>
+    <div class="news-ticker-content">
+      <div class="news-item active">
+        📰 <a href="https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership" target="_blank" rel="noopener">Professor Andrea Tosato Elected to the ALI</a>
+      </div>
+      <div class="news-item">
+        🎙️ <a href="https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order" target="_blank" rel="noopener">Featured on Block & Order Podcast: Bankrupt Crypto Organizations</a>
+      </div>
+      <div class="news-item">
+        📝 <a href="https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4" target="_blank" rel="noopener">Featured in Barrons: Crypto's Future and Commercial Law</a>
       </div>
     </div>
   </div>
+</div>
 
-  <script>
-    const newsItems = document.querySelectorAll('.news-item');
-    let currentIndex = 0;
+<script>
+  const newsItems = document.querySelectorAll('.news-item');
+  let currentIndex = 0;
 
-    function rotateNews() {
-      newsItems[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % newsItems.length;
-      newsItems[currentIndex].classList.add('active');
-    }
+  function rotateNews() {
+    newsItems[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % newsItems.length;
+    newsItems[currentIndex].classList.add('active');
+  }
 
-    setInterval(rotateNews, 7000); // Rotate every 7 seconds
-  </script>
+  setInterval(rotateNews, 7000);
+</script>
 
   <section>
     <h2><a href="/about-me">About Me</a></h2>
