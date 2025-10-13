@@ -1,14 +1,107 @@
 ---
-const { title, description = "Andrea Tosato - Professor of Law at SMU Dedman School of Law" } = Astro.props;
+const { 
+  title, 
+  description = "Andrea Tosato - Professor of Law at SMU Dedman School of Law specializing in UCC Article 12, digital assets law, cryptocurrency regulation, commercial law, and secured transactions. Leading expert on blockchain and commercial law reform." 
+} = Astro.props;
 const currentPath = Astro.url.pathname;
+
+// Enhanced meta description based on page
+let pageDescription = description;
+if (currentPath === '/' && !description) {
+  pageDescription = "Andrea Tosato is a leading expert on UCC Article 12 and digital assets law. Professor at SMU Dedman School of Law, key contributor to 2022 UCC amendments governing cryptocurrency, NFTs, and blockchain-based commercial transactions.";
+} else if (currentPath === '/about-me' && !description) {
+  pageDescription = "Andrea Tosato is a Professor of Law at SMU specializing in UCC Article 12, digital assets law, and commercial law. Key drafter of the 2022 UCC amendments for cryptocurrency and blockchain transactions.";
+} else if (currentPath === '/articles' && !description) {
+  pageDescription = "Research articles by Andrea Tosato on UCC Article 12, digital assets law, cryptocurrency regulation, stablecoins, commercial law, and secured transactions.";
+}
+
+// Schema.org structured data
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Andrea Tosato",
+  "alternateName": "Prof. Andrea Tosato",
+  "givenName": "Andrea",
+  "familyName": "Tosato",
+  "jobTitle": "Professor of Law",
+  "description": "Leading expert on UCC Article 12, digital assets law, cryptocurrency regulation, and commercial law",
+  "knowsAbout": [
+    "UCC Article 12",
+    "Digital Assets Law",
+    "Cryptocurrency Law",
+    "Commercial Law",
+    "Secured Transactions",
+    "Bankruptcy Law",
+    "Blockchain Technology",
+    "Stablecoins",
+    "NFTs",
+    "Controllable Electronic Records"
+  ],
+  "affiliation": {
+    "@type": "Organization",
+    "name": "SMU Dedman School of Law",
+    "url": "https://www.smu.edu/law"
+  },
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "University of Cambridge"
+    },
+    {
+      "@type": "Organization",
+      "name": "University of Pavia"
+    }
+  ],
+  "url": "https://www.andreatosato.com",
+  "sameAs": [
+    "https://www.smu.edu/law/faculty/profiles/tosato-andrea",
+    "https://www.linkedin.com/in/andrea-tosato-5a862067/",
+    "https://x.com/Andrea_Tosato",
+    "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1851659",
+    "https://scholar.google.com/citations?user=gvFpxc4AAAAJ"
+  ],
+  "worksFor": {
+    "@type": "EducationalOrganization",
+    "name": "SMU Dedman School of Law"
+  },
+  "award": [
+    "Grant Gilmore Award - American College of Commercial Finance Lawyers",
+    "Shook Hardy Bacon Research Award",
+    "American Law Institute Membership"
+  ]
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title ? `${title} | Andrea Tosato` : 'Andrea Tosato'}</title>
-  <meta name="description" content={description}>
+  <title>{title ? `${title} | Andrea Tosato` : 'Andrea Tosato | UCC Article 12 Expert | Digital Assets Law Professor'}</title>
+  <meta name="description" content={pageDescription}>
+  
+  <!-- Additional SEO meta tags -->
+  <meta name="keywords" content="Andrea Tosato, UCC Article 12, digital assets law, cryptocurrency law, commercial law, secured transactions, blockchain law, stablecoins, NFTs, controllable electronic records, bankruptcy law">
+  <meta name="author" content="Andrea Tosato">
+  <link rel="canonical" href={`https://www.andreatosato.com${currentPath}`}>
+  
+  <!-- Open Graph meta tags for social media -->
+  <meta property="og:title" content={title ? `${title} | Andrea Tosato` : 'Andrea Tosato | UCC Article 12 Expert | Digital Assets Law'}>
+  <meta property="og:description" content={pageDescription}>
+  <meta property="og:url" content={`https://www.andreatosato.com${currentPath}`}>
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://www.andreatosato.com/profile.jpg">
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Andrea_Tosato">
+  <meta name="twitter:creator" content="@Andrea_Tosato">
+  <meta name="twitter:title" content={title ? `${title} | Andrea Tosato` : 'Andrea Tosato | UCC Article 12 Expert'}>
+  <meta name="twitter:description" content={pageDescription}>
+  <meta name="twitter:image" content="https://www.andreatosato.com/profile.jpg">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  
   <style>
     * {
       margin: 0;

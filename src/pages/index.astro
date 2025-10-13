@@ -179,6 +179,10 @@ const recentEssays = [
       color: #000;
     }
 
+    .about-preview p {
+      margin-bottom: 1rem;
+    }
+
     .about-preview a {
       color: #000;
       text-decoration: underline;
@@ -188,6 +192,42 @@ const recentEssays = [
 
     .about-preview a:hover {
       opacity: 0.6;
+    }
+
+    .expertise-highlight {
+      background-color: #f9f9f9;
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin-top: 1.5rem;
+    }
+
+    .expertise-highlight h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: #000;
+    }
+
+    .expertise-highlight ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .expertise-highlight li {
+      font-size: 1rem;
+      color: #444;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .expertise-highlight li:before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #666;
     }
 
     .publication-item {
@@ -348,12 +388,16 @@ const recentEssays = [
       .news-item {
         font-size: 0.95rem;
       }
+
+      .expertise-highlight ul {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
   <div class="hero">
     <div class="hero-container">
-      <img src="/profile.jpg" alt="Andrea Tosato" class="profile-image" />
+      <img src="/profile.jpg" alt="Andrea Tosato - Law Professor and UCC Article 12 Expert" class="profile-image" />
       <div class="hero-content">
         <h1>Andrea Tosato</h1>
         <p class="subtitle">Professor of Law, SMU Dedman School of Law</p>
@@ -403,9 +447,34 @@ const recentEssays = [
 </script>
 
   <section>
-    <h2><a href="/about-me">About Me</a></h2>
+    <h2><a href="/about-me">About Andrea Tosato</a></h2>
     <div class="about-preview">
-      <p>I am a Law Professor at the SMU Dedman School of Law, where my research focuses on the intersection between private law, emerging technologies, and intangible assets. My scholarship focuses particularly on commercial law, secured transactions, and bankruptcy law as they intersect with cryptocurrencies, stablecoins, NFTs, and verified carbon credits. <a href="/about-me">Read more →</a></p>
+      <p>Professor Andrea Tosato is a leading authority in commercial law, particularly at the intersection of private law and emerging technologies. As a Professor of Law at SMU Dedman School of Law, Andrea Tosato focuses his research on digital assets, secured transactions, and bankruptcy law, with particular expertise in cryptocurrencies, stablecoins, NFTs, and verified carbon credits.</p>
+      
+      <p>Andrea Tosato played a key role in drafting the groundbreaking <strong>UCC Article 12</strong>, serving as a Reporter for the ULC/ALI Uniform Commercial Code and Emerging Technologies Committee that produced the 2022 Amendments to the Uniform Commercial Code. His expertise in the law of digital assets has positioned him as a thought leader in how commercial law adapts to blockchain technology and digital asset transactions. <a href="/about-me">Read more →</a></p>
+
+      <div class="expertise-highlight">
+        <h3>Research Expertise</h3>
+        <ul>
+          <li>UCC Article 12 and Controllable Electronic Records</li>
+          <li>Law of Digital Assets</li>
+          <li>Cryptocurrency and Blockchain Regulation</li>
+          <li>Stablecoins and Digital Payment Systems</li>
+          <li>Secured Transactions Law</li>
+          <li>Commercial Law and Bankruptcy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>UCC Article 12 and Digital Assets</h2>
+    <div class="about-preview">
+      <p>Andrea Tosato is nationally recognized for his work on <strong>UCC Article 12</strong>. As a key contributor to the drafting of UCC Article 12, he helped create the legal concept of controllable electronic records (CERs), which provides clear rules for transferring and securing interests in cryptocurrencies, NFTs, and other digital assets.</p>
+      
+      <p>His scholarship on the law of digital assets addresses critical questions about the application of property law, commercial law and bankruptcy law principles to blockchain and DLT systems. Professor Tosato continues to work on the enactment of UCC Article 12 across all United States jurisdictions through his role on ULC Committe for the Enacment of the 2022 Amendments to the UCC .</p>
+      
+      <p>Beyond UCC Article 12, Andrea Tosato has contributed to international law reform on digital assets through his work with UNIDROIT, where he served on the Drafting Committee for the UNIDROIT Principles on Digital Assets and Private Law.</p>
     </div>
   </section>
 
