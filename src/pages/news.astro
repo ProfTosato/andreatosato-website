@@ -1,0 +1,300 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const allNews = [
+  {
+    date: "2025-01-15",
+    title: "Professor Andrea Tosato Elected to the ALI",
+    description: "Andrea Tosato has been elected to membership in the American Law Institute, one of the highest honors in the American legal profession. The ALI is responsible for producing scholarly work to clarify, modernize, and improve the law, including the Restatements of the Law and Model Codes such as the Uniform Commercial Code.",
+    url: "https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership",
+    external: true,
+    category: "Awards & Recognition"
+  },
+  {
+    date: "2024-11-20",
+    title: "Featured on Block & Order Podcast: Bankrupt Crypto Organizations",
+    description: "Professor Tosato discusses his forthcoming North Carolina Law Review article examining how bankruptcy law principles apply when a debtor holds or operates with digital assets. The conversation explores the treatment of cryptocurrency exchanges and DeFi platforms in insolvency proceedings.",
+    url: "https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order",
+    external: true,
+    category: "Media & Podcasts"
+  },
+  {
+    date: "2024-10-08",
+    title: "Featured in Barrons: Crypto's Future and Commercial Law",
+    description: "Analysis of how the UCC Article 12 amendments are shaping the legal framework for cryptocurrency transactions in the United States. The article examines the implications of controllable electronic records for the future of digital asset regulation.",
+    url: "https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4",
+    external: true,
+    category: "Media & Press"
+  },
+  {
+    date: "2024-09-15",
+    title: "UCC Article 12 Enacted in 30+ States",
+    description: "The 2022 UCC amendments, including Article 12 on controllable electronic records, have now been enacted in over 30 states. Professor Tosato continues his work as Associate Research Director of the Permanent Editorial Board for the UCC, supporting implementation across all U.S. jurisdictions.",
+    url: null,
+    external: false,
+    category: "Law Reform"
+  },
+  {
+    date: "2024-08-01",
+    title: "Speaking at American Bar Association Business Law Section Annual Meeting",
+    description: "Professor Tosato presented on the intersection of UCC Article 12 and bankruptcy law at the ABA Business Law Section Annual Meeting. The presentation addressed emerging issues in the treatment of digital assets in insolvency proceedings.",
+    url: null,
+    external: false,
+    category: "Speaking Engagements"
+  },
+  {
+    date: "2024-05-16",
+    title: "Debt Tokens Article Featured in The ALI Adviser",
+    description: "The ALI Adviser features Professor Tosato's University of Pennsylvania Law Review article on debt tokens, examining how UCC Article 12 applies to blockchain-based debt instruments.",
+    url: "https://www.thealiadviser.org/",
+    external: true,
+    category: "Publications"
+  },
+  {
+    date: "2024-03-18",
+    title: "Digital Assets and the Property Question Featured in Oxford Business Law Blog",
+    description: "Professor Tosato's forthcoming Florida Law Review article with Christopher Odinet is featured in the Oxford Business Law Blog, discussing fundamental questions about property rights in digital assets.",
+    url: "https://www.law.ox.ac.uk/business-law-blog",
+    external: true,
+    category: "Publications"
+  },
+  {
+    date: "2023-10-04",
+    title: "UNIDROIT Principles on Digital Assets and Private Law Published",
+    description: "The UNIDROIT Principles on Digital Assets and Private Law, for which Professor Tosato served on the Drafting Committee, were officially published. This international instrument provides a framework for jurisdictions worldwide to develop coherent legal approaches to digital asset transactions.",
+    url: "https://www.unidroit.org/work-in-progress/digital-assets-and-private-law/",
+    external: true,
+    category: "Law Reform"
+  },
+  {
+    date: "2023-05-10",
+    title: "The Private Law of Stablecoins Wins Grant Gilmore Award",
+    description: "Professor Tosato's article with Kara Bruce and Christopher Odinet published in the Arizona State Law Journal receives the Grant Gilmore Award from the American College of Commercial Finance Lawyers in recognition of superior writing in the field of commercial finance law.",
+    url: null,
+    external: false,
+    category: "Awards & Recognition"
+  },
+  {
+    date: "2022-07-21",
+    title: "2022 UCC Amendments and Article 12 Approved",
+    description: "The Uniform Law Commission and American Law Institute approve the 2022 amendments to the Uniform Commercial Code, including new Article 12 on controllable electronic records. Professor Tosato served as a key contributor to the drafting committee.",
+    url: "https://www.uniformlaws.org/committees/community-home?CommunityKey=e104aaa8-c10f-45a7-a34a-0423c2106778",
+    external: true,
+    category: "Law Reform"
+  }
+];
+
+// Group news by year
+const newsByYear = allNews.reduce((acc, news) => {
+  const year = new Date(news.date).getFullYear();
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(news);
+  return acc;
+}, {} as Record<number, typeof allNews>);
+
+const years = Object.keys(newsByYear).sort((a, b) => Number(b) - Number(a));
+---
+
+<Layout 
+  title="News" 
+  description="Latest news, media appearances, and updates from Andrea Tosato including awards, publications, speaking engagements, and developments in UCC Article 12 and digital assets law."
+>
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 3rem;
+      max-width: 750px;
+    }
+
+    .year-section {
+      margin-bottom: 3rem;
+    }
+
+    .year-header {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #000;
+      color: #000;
+    }
+
+    .news-item {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid #e0e0e0;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .news-item:hover {
+      border-color: #000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .news-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      gap: 1rem;
+    }
+
+    .news-date {
+      font-size: 0.85rem;
+      color: #999;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .news-category {
+      font-size: 0.8rem;
+      color: #666;
+      background: #f5f5f5;
+      padding: 0.25rem 0.75rem;
+      border-radius: 3px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .news-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+      color: #000;
+    }
+
+    .news-title a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .news-title a:hover {
+      opacity: 0.6;
+    }
+
+    .news-description {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    .news-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+      margin-top: 0.75rem;
+      transition: opacity 0.2s;
+    }
+
+    .news-link:hover {
+      opacity: 0.6;
+    }
+
+    .external-icon {
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .year-header {
+        font-size: 1.3rem;
+      }
+
+      .news-header-row {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .news-item {
+        padding: 1.25rem;
+      }
+
+      .news-title {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>News</h1>
+    <p class="intro">
+      Updates on awards, publications, speaking engagements, media appearances, and developments in UCC Article 12 and digital assets law.
+    </p>
+
+    {years.map(year => (
+      <div class="year-section">
+        <h2 class="year-header">{year}</h2>
+        {newsByYear[Number(year)].map(news => (
+          <div class="news-item">
+            <div class="news-header-row">
+              <div class="news-date">
+                {new Date(news.date).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </div>
+              <div class="news-category">{news.category}</div>
+            </div>
+            <div class="news-title">
+              {news.url ? (
+                <a href={news.url} target={news.external ? "_blank" : undefined} rel={news.external ? "noopener" : undefined}>
+                  {news.title}
+                </a>
+              ) : (
+                news.title
+              )}
+            </div>
+            <div class="news-description">
+              {news.description}
+            </div>
+            {news.url && (
+              <a 
+                href={news.url} 
+                class="news-link"
+                target={news.external ? "_blank" : undefined}
+                rel={news.external ? "noopener" : undefined}
+              >
+                {news.external ? "Read more" : "Learn more"}
+                {news.external && <span class="external-icon">↗</span>}
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</Layout>

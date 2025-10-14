@@ -51,6 +51,30 @@ const recentEssays = [
     url: "/essays/daos-financial-distress"
   }
 ];
+
+const featuredNews = [
+  {
+    date: "2025-01-15",
+    title: "Professor Andrea Tosato Elected to the ALI",
+    description: "Andrea Tosato has been elected to membership in the American Law Institute, one of the highest honors in the American legal profession.",
+    url: "https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership",
+    external: true
+  },
+  {
+    date: "2024-11-20",
+    title: "Featured on Block & Order Podcast: Bankrupt Crypto Organizations",
+    description: "Discussion of the forthcoming North Carolina Law Review article examining bankruptcy law's intersection with cryptocurrency and digital assets.",
+    url: "https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order",
+    external: true
+  },
+  {
+    date: "2024-10-08",
+    title: "Featured in Barrons: Crypto's Future and Commercial Law",
+    description: "Analysis of how the UCC Article 12 amendments are shaping the legal framework for cryptocurrency transactions in the United States.",
+    url: "https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4",
+    external: true
+  }
+];
 ---
 
 <Layout>
@@ -140,6 +164,99 @@ const recentEssays = [
 
     .cv-button:hover {
       opacity: 0.8;
+    }
+
+    /* News Section */
+    .news-section {
+      background-color: #fafafa;
+      border-top: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 2.5rem 2rem;
+    }
+
+    .news-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .news-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .news-header h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin: 0;
+      color: #000;
+    }
+
+    .view-all-news {
+      font-size: 0.95rem;
+      color: #000;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid #000;
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .view-all-news:hover {
+      opacity: 0.5;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .news-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: #000;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+
+    .news-card:hover {
+      border-color: #000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .news-date {
+      font-size: 0.85rem;
+      color: #999;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .news-title {
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+      color: #000;
+    }
+
+    .news-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .news-external {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #666;
     }
 
     section {
@@ -287,67 +404,6 @@ const recentEssays = [
       opacity: 0.5;
     }
 
-    .news-ticker {
-      background-color: #f8f8f8;
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
-      padding: 0.75rem 2rem;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .news-ticker-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      min-height: 1.5rem;
-    }
-
-    .news-ticker-label {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #999;
-      flex-shrink: 0;
-    }
-
-    .news-ticker-content {
-      flex: 1;
-      position: relative;
-      height: 1.5rem;
-    }
-
-    .news-item {
-      position: absolute;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-      font-size: 1rem;
-      font-style: italic;
-      color: #222;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .news-item.active {
-      opacity: 1;
-    }
-
-    .news-item a {
-      color: #111;
-      text-decoration: underline;
-      font-style: italic;
-      transition: opacity 0.2s;
-    }
-
-    .news-item a:hover {
-      opacity: 0.6;
-    }
-
     @media (max-width: 768px) {
       h1 {
         font-size: 2.5rem;
@@ -377,16 +433,18 @@ const recentEssays = [
         padding: 1.7rem 1.5rem;
       }
 
-      .news-ticker {
-        padding: 0.75rem 1.5rem;
+      .news-section {
+        padding: 2rem 1.5rem;
       }
 
-      .news-ticker-label {
-        display: none;
+      .news-grid {
+        grid-template-columns: 1fr;
       }
 
-      .news-item {
-        font-size: 0.95rem;
+      .news-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
       }
 
       .expertise-highlight ul {
@@ -414,37 +472,35 @@ const recentEssays = [
     </div>
   </div>
 
-  <div class="news-ticker">
-  <div class="news-ticker-container">
-    <span class="news-ticker-label">News</span>
-    <div class="news-ticker-content">
-      <a href="https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership" target="_blank" rel="noopener" class="news-item active">
-        📰 <span>Professor Andrea Tosato Elected to the ALI</span>
-      </a>
-      <a href="https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order" target="_blank" rel="noopener" class="news-item">
-        🎙️ <span>Featured on Block & Order Podcast: Bankrupt Crypto Organizations</span>
-      </a>
-      <a href="https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4" target="_blank" rel="noopener" class="news-item">
-        📝 <span>Featured in Barrons: Crypto's Future and Commercial Law</span>
-      </a>
+  <div class="news-section">
+    <div class="news-container">
+      <div class="news-header">
+        <h2>News</h2>
+        <a href="/news" class="view-all-news">View all news →</a>
+      </div>
+      <div class="news-grid">
+        {featuredNews.map(news => (
+          <a 
+            href={news.url} 
+            class="news-card"
+            target={news.external ? "_blank" : undefined}
+            rel={news.external ? "noopener" : undefined}
+          >
+            <div class="news-date">
+              {new Date(news.date).toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}
+            </div>
+            <div class="news-title">{news.title}</div>
+            <div class="news-description">{news.description}</div>
+            {news.external && <span class="news-external">↗ External link</span>}
+          </a>
+        ))}
+      </div>
     </div>
   </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const newsItems = document.querySelectorAll('.news-ticker-content .news-item');
-    let currentIndex = 0;
-
-    function rotateNews() {
-      newsItems[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % newsItems.length;
-      newsItems[currentIndex].classList.add('active');
-    }
-
-    setInterval(rotateNews, 7000);
-  });
-</script>
 
   <section>
     <h2><a href="/about-me">About Andrea Tosato</a></h2>
