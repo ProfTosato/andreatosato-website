@@ -8,6 +8,7 @@ const {
   abstract, 
   pdfUrl,
   keywords = [],
+  awards = [],
   publishDate,
   backLink = { url: '/articles', text: 'Articles' }
 } = Astro.props;
@@ -152,7 +153,21 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
     .publication-info {
       font-size: 1rem;
       color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .awards-section {
       margin-bottom: 2.5rem;
+    }
+
+    .award-item {
+      font-size: 0.95rem;
+      color: #000;
+      background: #f9f7f2;
+      border: 1px solid #e8e2d6;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+      letter-spacing: 0.02em;
     }
 
     .abstract-section {
@@ -270,6 +285,16 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
       <div class="publication-info">
         {journal}{volume && `, ${volume}`} ({year})
       </div>
+
+      {awards.length > 0 && (
+        <div class="awards-section">
+          {awards.map(award => (
+            <div class="award-item">
+              {award}
+            </div>
+          ))}
+        </div>
+      )}
 
       <div class="abstract-section">
         <h2>Abstract</h2>
