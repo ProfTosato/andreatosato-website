@@ -7,6 +7,7 @@ const {
   year, 
   abstract, 
   pdfUrl,
+  ssrnUrl,
   localPdfUrl,
   keywords = [],
   awards = [],
@@ -338,6 +339,11 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
         {pdfUrl && (
           <a href={pdfUrl} class={localPdfUrl ? 'download-button secondary' : 'download-button'} target="_blank" rel="noopener">
             {localPdfUrl ? 'View Published Version ↗' : 'Download PDF'}
+          </a>
+        )}
+        {ssrnUrl && (
+          <a href={ssrnUrl} class={(localPdfUrl || pdfUrl) ? 'download-button secondary' : 'download-button'} target="_blank" rel="noopener">
+            View on SSRN ↗
           </a>
         )}
       </div>
