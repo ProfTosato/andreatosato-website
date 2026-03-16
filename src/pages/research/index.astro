@@ -1,0 +1,136 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const hubPages = [
+  {
+    title: "UCC Article 12 and Controllable Electronic Records",
+    description: "The first comprehensive American legal framework for commercial transactions in digital assets, by one of its principal drafters.",
+    url: "/research/ucc-article-12"
+  },
+  {
+    title: "Stablecoins and Private Law",
+    description: "The private law framework governing stablecoins: their legal nature, property rights, and treatment in insolvency proceedings.",
+    url: "/research/stablecoins-private-law"
+  },
+  {
+    title: "Digital Assets and Property Law",
+    description: "Whether digital assets are property under American law, how they are classified, and what rules govern their circulation.",
+    url: "/research/digital-assets-property-law"
+  },
+  {
+    title: "Cryptocurrency and Bankruptcy Law",
+    description: "The intersection of cryptocurrency, digital assets, and American bankruptcy law, including DAOs, debt tokens, and crypto platform insolvencies.",
+    url: "/research/bankruptcy-crypto"
+  },
+  {
+    title: "Verified Carbon Credits and Private Law",
+    description: "The private law dimensions of verified carbon credits: their legal nature, use as collateral, and emerging international frameworks.",
+    url: "/research/verified-carbon-credits"
+  }
+];
+---
+
+<Layout
+  title="Research"
+  description="Research hub pages covering Professor Andrea Tosato's main areas of expertise: UCC Article 12, stablecoins, digital assets, bankruptcy, and verified carbon credits."
+>
+  <style>
+    .content {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+      color: #000;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 3rem;
+      max-width: 750px;
+    }
+
+    .hub-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hub-item {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .hub-item:last-child {
+      border-bottom: none;
+    }
+
+    .hub-item-title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hub-item-title a {
+      color: #000;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .hub-item-title a:hover {
+      opacity: 0.5;
+    }
+
+    .hub-item-desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    .hub-item-coming {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: #999;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <div class="content">
+    <h1>Research</h1>
+    <p class="intro">
+      Overview pages covering the principal areas of Professor Tosato's research, with links to related scholarship.
+    </p>
+
+    <ul class="hub-list">
+      {hubPages.map(hub => (
+        <li class="hub-item">
+          <div class="hub-item-title">
+            <a href={hub.url}>{hub.title}</a>
+          </div>
+          <div class="hub-item-desc">{hub.description}</div>
+          <span class="hub-item-coming">Content forthcoming</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>
