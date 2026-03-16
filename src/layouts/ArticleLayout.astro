@@ -11,6 +11,7 @@ const {
   localPdfUrl,
   keywords = [],
   awards = [],
+  relatedTalks = [],
   publishDate,
   backLink = { url: '/articles', text: 'Articles' }
 } = Astro.props;
@@ -263,6 +264,36 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
       border-color: #666;
     }
 
+    .related-talks {
+      margin: 2rem 0;
+    }
+
+    .related-talks h3 {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #000;
+    }
+
+    .talks-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .talks-list li {
+      font-size: 0.95rem;
+      color: #444;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.6;
+    }
+
+    .talks-list li:last-child {
+      border-bottom: none;
+    }
+
     footer {
       border-top: 1px solid #000;
       padding: 1.5rem;
@@ -327,6 +358,17 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
               <span class="keyword">{keyword}</span>
             ))}
           </div>
+        </div>
+      )}
+
+      {relatedTalks.length > 0 && (
+        <div class="related-talks">
+          <h3>Selected Presentations</h3>
+          <ul class="talks-list">
+            {relatedTalks.map(talk => (
+              <li>{talk}</li>
+            ))}
+          </ul>
         </div>
       )}
 
