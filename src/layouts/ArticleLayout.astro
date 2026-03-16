@@ -7,6 +7,7 @@ const {
   year, 
   abstract, 
   pdfUrl,
+  localPdfUrl,
   keywords = [],
   awards = [],
   publishDate,
@@ -42,7 +43,7 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
   <meta name="citation_publication_date" content={publishDate}>
   <meta name="citation_journal_title" content={journal}>
   {volume && <meta name="citation_volume" content={volume}>}
-  {pdfUrl && <meta name="citation_pdf_url" content={pdfUrl}>}
+  {localPdfUrl ? <meta name="citation_pdf_url" content={`https://www.andreatosato.com${localPdfUrl}`}> : pdfUrl && <meta name="citation_pdf_url" content={pdfUrl}>}
   <meta name="citation_abstract" content={abstract}>
   <meta name="citation_keywords" content={keywords.join('; ')}>
   <meta name="citation_language" content="en">
@@ -88,7 +89,7 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
     "keywords": keywords.join(', '),
     "inLanguage": "en",
     "url": currentUrl,
-    ...(pdfUrl && { "encoding": { "@type": "MediaObject", "contentUrl": pdfUrl } })
+    ...(localPdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": `https://www.andreatosato.com${localPdfUrl}` } } : pdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": pdfUrl } } : {})
   })} />
   
   <style>
@@ -247,6 +248,20 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
       color: #fff;
     }
 
+    .download-button.secondary {
+      background: #fff;
+      color: #666;
+      border-color: #ccc;
+      margin-left: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .download-button.secondary:hover {
+      background: #666;
+      color: #fff;
+      border-color: #666;
+    }
+
     footer {
       border-top: 1px solid #000;
       padding: 1.5rem;
@@ -315,9 +330,16 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
       )}
 
       <div class="download-section">
-        <a href={pdfUrl} class="download-button" target="_blank" rel="noopener">
-          Download PDF
-        </a>
+        {localPdfUrl && (
+          <a href={localPdfUrl} class="download-button" target="_blank" rel="noopener">
+            Download PDF
+          </a>
+        )}
+        {pdfUrl && (
+          <a href={pdfUrl} class={localPdfUrl ? 'download-button secondary' : 'download-button'} target="_blank" rel="noopener">
+            {localPdfUrl ? 'View Published Version ↗' : 'Download PDF'}
+          </a>
+        )}
       </div>
     </article>
   </div>
