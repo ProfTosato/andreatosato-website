@@ -120,6 +120,93 @@ const webPageSchema = {
       text-decoration: underline;
     }
 
+    .hub-prose :global(h2) {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      color: #000;
+    }
+
+    .hub-prose :global(h2:first-child) {
+      margin-top: 0;
+    }
+
+    .hub-prose :global(strong) {
+      font-weight: 600;
+    }
+
+    .hub-prose :global(em) {
+      font-style: italic;
+    }
+
+    .hub-prose :global(sup) {
+      font-size: 0.7em;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+      top: -0.5em;
+    }
+
+    .hub-prose :global(sup a) {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+      padding: 0 1px;
+      transition: opacity 0.2s;
+    }
+
+    .hub-prose :global(sup a:hover) {
+      opacity: 0.5;
+    }
+
+    .hub-prose :global(blockquote) {
+      margin: 1.5rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 3px solid #e0e0e0;
+      font-style: italic;
+      color: #333;
+    }
+
+    .hub-prose :global(.endnotes) {
+      border-top: 1px solid #e0e0e0;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+    }
+
+    .hub-prose :global(.endnotes h2) {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    .hub-prose :global(.endnotes ol) {
+      padding-left: 2rem;
+      margin: 0;
+    }
+
+    .hub-prose :global(.endnotes li) {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 0.4rem;
+    }
+
+    .hub-prose :global(.endnotes a) {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+      transition: opacity 0.2s;
+    }
+
+    .hub-prose :global(.endnotes a:hover) {
+      opacity: 0.5;
+    }
+
     @media (max-width: 768px) {
       .hub-content {
         padding: 2rem 1.5rem;

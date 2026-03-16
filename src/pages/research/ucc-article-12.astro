@@ -16,15 +16,103 @@ import HubLayout from '../../layouts/HubLayout.astro';
     { url: "/essays/nfts-structured-finance", title: "The Intersection of NFTs and Structured Finance" }
   ]}
 >
-  <!-- PROFESSOR INPUT REQUIRED: 500–800 words of authoritative prose.
-       Suggested questions to address:
-       — What is UCC Article 12 and what gap in commercial law did it address?
-       — What is the legal concept of "control" as defined in 12-105, and why does it matter?
-       — What is a controllable electronic record (CER), and which assets qualify?
-       — What does the qualified purchaser rule do?
-       — How does Article 12 interact with Article 9 for secured transactions in digital assets?
-       — What is the current state of enactment (30+ states as of 2025)?
-       See also /law-reform for the professor's role as Associate Research Director
-       of the Permanent Editorial Board for the UCC. -->
-  <p><em>Content forthcoming.</em></p>
+
+  <h2>What Is UCC Article 12?</h2>
+
+  <p>In 2022, the American Law Institute and the Uniform Law Commission adopted amendments to the Uniform Commercial Code that include a new Article 12, the first comprehensive private law framework for commercial transactions involving digital assets in American law.<sup><a href="#fn-1" id="fnref-1">1</a></sup> The amendments were the product of a joint drafting process that began in 2018, when the two organizations convened a committee to study whether the UCC needed updating to accommodate transactions facilitated by emerging technologies such as distributed ledger technology, cryptocurrencies, and other digital assets.<sup><a href="#fn-2" id="fnref-2">2</a></sup></p>
+
+  <p>The centerpiece of Article 12 is an entirely new legal category: the <strong>controllable electronic record</strong> (CER). Article 12 “introduces ‘controllable electronic records’ as a novel category of personal property, together with a regime deliberately crafted to align with parties’ expectations and market practices.”<sup><a href="#fn-3" id="fnref-3">3</a></sup> As of early 2026, the 2022 Amendments have been enacted in thirty-three jurisdictions, including New York, Delaware, California, Florida, and the District of Columbia, with legislation pending in additional states.<sup><a href="#fn-4" id="fnref-4">4</a></sup></p>
+
+  <h2>What Is a Controllable Electronic Record?</h2>
+
+  <p>A CER is defined as a “record stored in an electronic medium that can be subjected to control.”<sup><a href="#fn-5" id="fnref-5">5</a></sup> This definition has three elements. First, <em>record</em> means information stored in a medium and retrievable in perceivable form. Second, <em>electronic</em> encompasses any technology having electrical, digital, magnetic, wireless, optical, electromagnetic, or similar capabilities. Third, and most importantly, <em>control</em> is what shapes the core of the CER category and demarcates its limits.<sup><a href="#fn-6" id="fnref-6">6</a></sup></p>
+
+  <p>Under Section 12-105, a person has “control” over an electronic record only when they hold three distinct powers: (1) the power to avail themselves of substantially all the benefit from the electronic record; (2) the power to prevent others from availing themselves of substantially all such benefit; and (3) the power to transfer both of these powers to another person, who can in turn re-transfer them.<sup><a href="#fn-7" id="fnref-7">7</a></sup></p>
+
+  <p>“CERs are a very particular type of intangible asset. Their defining characteristic is that a person can enjoy them directly, without depending on an intermediary.”<sup><a href="#fn-8" id="fnref-8">8</a></sup> This distinguishes CERs from digital assets maintained and administered by service providers such as Google, Meta, Apple, or Microsoft, and also from pure intangibles such as intellectual property rights, for which enforcement depends on state intervention and judicial proceedings.<sup><a href="#fn-9" id="fnref-9">9</a></sup></p>
+
+  <h2>How Are CERs Transferred?</h2>
+
+  <p>Article 12 establishes two key tenets governing the transfer of CERs.<sup><a href="#fn-10" id="fnref-10">10</a></sup></p>
+
+  <p>The first is the <strong>security of property principle</strong>: a purchaser of a CER acquires all rights the transferor had or had power to transfer.<sup><a href="#fn-11" id="fnref-11">11</a></sup> This is one of the cornerstones of the UCC’s entire conveyancing framework, rooted in the idea of free alienability.</p>
+
+  <p>The second is the <strong>take-free rule</strong>: a purchaser who obtains control of a CER for value, in good faith, and without notice of conflicting claims is a “qualifying purchaser” and acquires rights in the CER free from any property rights held by third parties.<sup><a href="#fn-12" id="fnref-12">12</a></sup> The effect of this rule is to make CERs “highly negotiable,” closely replicating the regime established by the UCC for negotiable instruments such as checks, promissory notes, and investment securities.<sup><a href="#fn-13" id="fnref-13">13</a></sup></p>
+
+  <h2>How Can CERs Be Used as Collateral?</h2>
+
+  <p>The 2022 Amendments introduce specialized rules for CERs across the three fundamental aspects of secured transactions: attachment, perfection, and priority.<sup><a href="#fn-14" id="fnref-14">14</a></sup></p>
+
+  <p>For <strong>attachment</strong>, there are two pathways: a traditional signed security agreement describing the CER collateral, or an agreement evidenced by the secured party’s acquisition of control. The second represents a significant innovation, dispensing with the formality of a signed writing.<sup><a href="#fn-15" id="fnref-15">15</a></sup></p>
+
+  <p>For <strong>perfection</strong>, secured parties can file a financing statement in the relevant public registry or, alternatively, perfect by taking control of the CER.<sup><a href="#fn-16" id="fnref-16">16</a></sup> Control-based perfection eliminates jurisdictional complexities associated with determining the correct filing location, a particularly thorny issue for digital assets. Moreover, secured parties who acquire control for value, in good faith, and without notice of competing claims can achieve qualifying purchaser status and thereby obtain their security interest free from any prior property rights.<sup><a href="#fn-17" id="fnref-17">17</a></sup></p>
+
+  <p>For <strong>priority</strong>, “a secured creditor who perfects by control ‘has priority over conflicting security interests held by a secured party that does not have control.’”<sup><a href="#fn-18" id="fnref-18">18</a></sup> This non-temporal priority rule creates an exception to Article 9’s general first-to-file-or-perfect hierarchy. If Lender A perfects by filing and Lender B later perfects by control, Lender B prevails despite Lender A’s earlier perfection.<sup><a href="#fn-19" id="fnref-19">19</a></sup></p>
+  <h2>What Are Controllable Accounts and Controllable Payment Intangibles?</h2>
+
+  <p>Although the CER framework generally does not extend to tokenizations (Article 12 explicitly provides that rights in property evidenced by a CER are governed by “law other than this article”<sup><a href="#fn-20" id="fnref-20">20</a></sup>), the 2022 Amendments carve out two important exceptions: <strong>controllable accounts</strong> and <strong>controllable payment intangibles</strong>.<sup><a href="#fn-21" id="fnref-21">21</a></sup></p>
+
+  <p>A controllable account builds on the familiar UCC definition of an “account,” which encompasses a right to payment for goods sold, services rendered, or similar obligations, and adds two requirements: the account must be evidenced by a CER, and the account debtor must agree to pay the person who has control of that CER.<sup><a href="#fn-22" id="fnref-22">22</a></sup> Similarly, a controllable payment intangible starts with a “payment intangible,” a general intangible under which the principal obligation is monetary, and adds the same requirements.<sup><a href="#fn-23" id="fnref-23">23</a></sup></p>
+
+  <p>These controllable accounts and controllable payment intangibles benefit from the same take-free rule that applies to CERs themselves, and the account debtor may agree not to assert claims or defenses against subsequent transferees.<sup><a href="#fn-24" id="fnref-24">24</a></sup> “The combined effect creates highly negotiable payment rights, allowing qualifying purchasers to acquire these tokenized rights with confidence that they are obtaining them free from competing claims or defenses, contingent only on the creditworthiness of the account debtor.”<sup><a href="#fn-25" id="fnref-25">25</a></sup></p>
+
+  <p>“Controllable accounts are a paradigm shift. Previously, the UCC only provided for tokenizing payment obligations in paper form, primarily through negotiable instruments like promissory notes and checks.”<sup><a href="#fn-26" id="fnref-26">26</a></sup> The 2022 Amendments create what are effectively electronic negotiable instruments by enabling payment obligations to be evidenced by CERs with comparable legal protections for good faith purchasers.<sup><a href="#fn-27" id="fnref-27">27</a></sup></p>
+
+  <h2>How Does Article 12 Relate to Article 8?</h2>
+
+  <p>Digital assets can also be brought within the framework of UCC Article 8, which governs the indirect holding of securities and other financial assets through intermediaries. Under Section 8-102(a)(9)(iii), virtually any property, including digital assets, can be treated as a “financial asset” if it is held by a securities intermediary in a securities account and the parties have expressly agreed to that treatment.<sup><a href="#fn-28" id="fnref-28">28</a></sup> This opt-in mechanism allows digital asset custodians and exchanges to position themselves as securities intermediaries and to offer their customers the protections of Article 8, including robust rules for transfer and collateralization and, critically, insulation of customer assets from the intermediary’s creditors.<sup><a href="#fn-29" id="fnref-29">29</a></sup></p>
+
+  <p>The 2022 Amendments reinforced this pathway by updating the official commentary to Article 8. The revised comments expressly confirm that digital assets, including controllable electronic records, can be held in securities accounts and treated as financial assets. They further clarify that when parties agree to this treatment, the rules of Article 12 do not apply to the entitlement holder’s security entitlement; instead, Article 8 governs.<sup><a href="#fn-30" id="fnref-30">30</a></sup> The updated comments also broaden the range of entities that can qualify as securities intermediaries, confirming that a digital asset exchange holding only cryptocurrencies for customers may fall within this definition.<sup><a href="#fn-31" id="fnref-31">31</a></sup></p>
+
+  <p>The critical distinction between the two regimes is one of intermediation. Article 8 presupposes that financial assets are held through securities intermediaries in securities accounts; it is a framework designed for intermediated holdings.<sup><a href="#fn-32" id="fnref-32">32</a></sup> Article 12, by contrast, is designed for the disintermediated nature of digital assets, where individuals hold and transfer CERs directly through control, without relying on an intermediary. The two regimes are complementary. Market participants who custody their digital assets with exchanges or custodial platforms can access the protections of Article 8 through an opt-in agreement. Those who hold digital assets directly, in self-custodied wallets for example, operate under Article 12. The 2022 Amendments thus provide American law with two parallel private law frameworks, each calibrated to a different model of digital asset holding and transacting.<sup><a href="#fn-33" id="fnref-33">33</a></sup></p>
+
+  <h2>Why Does This Matter?</h2>
+
+  <p>Before the 2022 Amendments, the private law framework for digital assets was fundamentally misaligned with market realities. Digital assets were classified as “general intangibles” under Article 9, a residual category that provided no specialized rules for their unique characteristics.<sup><a href="#fn-34" id="fnref-34">34</a></sup> Secured parties had only one option for perfection: filing a financing statement in the applicable public registry. The slow pace and inherent time lag of public registration systems contrasted sharply with the near-instantaneous execution of digital asset transfers, and the pseudonymity of distributed ledger networks made it difficult to determine the correct filing jurisdiction or to search for existing liens.<sup><a href="#fn-35" id="fnref-35">35</a></sup> There was no take-free rule for purchasers of digital assets and no control-based mechanism for attachment, perfection, or priority. By the early 2020s, market participants were routinely ignoring this framework, transferring digital assets directly to lenders with minimal documentation and no public filings.<sup><a href="#fn-36" id="fnref-36">36</a></sup></p>
+
+  <p>Article 12 addresses these deficiencies. Control replaces filing as the primary mechanism for perfection and priority. The qualifying purchaser take-free rule provides negotiability comparable to that of checks, promissory notes, and investment securities. Controllable accounts and controllable payment intangibles extend the framework to tokenized payment obligations, with robust protections for good faith purchasers. The result is “a workable legal infrastructure that provides legal certainty, conforms to stakeholders’ expectations, and sustains innovation.”<sup><a href="#fn-37" id="fnref-37">37</a></sup></p>
+
+  <div class="endnotes">
+    <h2>Notes</h2>
+    <ol>
+      <li id="fn-1">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, Fla. L. Rev. (forthcoming 2026), at 5. <a href="#fnref-1">↩</a></li>
+      <li id="fn-2">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. 1103, 1150–51 (2025). <a href="#fnref-2">↩</a></li>
+      <li id="fn-3">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 5. <a href="#fnref-3">↩</a></li>
+      <li id="fn-4">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1152. <a href="#fnref-4">↩</a></li>
+      <li id="fn-5">U.C.C. § 12-102(a)(1); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 43. <a href="#fnref-5">↩</a></li>
+      <li id="fn-6">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1152–53. <a href="#fnref-6">↩</a></li>
+      <li id="fn-7">U.C.C. § 12-105(a)(1); discussed in Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1152–53. <a href="#fnref-7">↩</a></li>
+      <li id="fn-8">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1153. <a href="#fnref-8">↩</a></li>
+      <li id="fn-9">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1153–54. <a href="#fnref-9">↩</a></li>
+      <li id="fn-10">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1154 (citing Castellano &amp; Tosato, <em>Commercial Law Intersections</em>, 72 Hastings L.J. 999, 1042 (2021)). <a href="#fnref-10">↩</a></li>
+      <li id="fn-11">U.C.C. § 12-104(d); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 47. <a href="#fnref-11">↩</a></li>
+      <li id="fn-12">U.C.C. § 12-102(a)(2), § 12-104(e); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 47–48. <a href="#fnref-12">↩</a></li>
+      <li id="fn-13">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1155. <a href="#fnref-13">↩</a></li>
+      <li id="fn-14">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 48–50. <a href="#fnref-14">↩</a></li>
+      <li id="fn-15">U.C.C. § 9-107A; discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 49. <a href="#fnref-15">↩</a></li>
+      <li id="fn-16">U.C.C. § 9-310(b)(8); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 49. <a href="#fnref-16">↩</a></li>
+      <li id="fn-17">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 50. <a href="#fnref-17">↩</a></li>
+      <li id="fn-18">U.C.C. § 9-326A; quoted in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 50. <a href="#fnref-18">↩</a></li>
+      <li id="fn-19">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 50. <a href="#fnref-19">↩</a></li>
+      <li id="fn-20">U.C.C. § 12-104(f); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 50. <a href="#fnref-20">↩</a></li>
+      <li id="fn-21">U.C.C. § 9-102(a)(27A)–(27B); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 51, and Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1157–58. <a href="#fnref-21">↩</a></li>
+      <li id="fn-22">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 51. <a href="#fnref-22">↩</a></li>
+      <li id="fn-23">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 51. <a href="#fnref-23">↩</a></li>
+      <li id="fn-24">U.C.C. § 9-317(i), § 9-403(b); discussed in Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 51. <a href="#fnref-24">↩</a></li>
+      <li id="fn-25">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 51. <a href="#fnref-25">↩</a></li>
+      <li id="fn-26">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1159. <a href="#fnref-26">↩</a></li>
+      <li id="fn-27">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 52. <a href="#fnref-27">↩</a></li>
+      <li id="fn-28">U.C.C. § 8-102(a)(9)(iii) (Am. L. Inst. &amp; Unif. L. Comm’n 2022). <a href="#fnref-28">↩</a></li>
+      <li id="fn-29">U.C.C. §§ 8-501 to -511; discussed in Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1115. <a href="#fnref-29">↩</a></li>
+      <li id="fn-30">U.C.C. § 8-102 cmt. 9 (2022 Amendments). <a href="#fnref-30">↩</a></li>
+      <li id="fn-31">U.C.C. § 8-102 cmt. 14 (2022 Amendments). <a href="#fnref-31">↩</a></li>
+      <li id="fn-32">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. at 1115, 1153–54. <a href="#fnref-32">↩</a></li>
+      <li id="fn-33">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 43–52. <a href="#fnref-33">↩</a></li>
+      <li id="fn-34">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 37–38. <a href="#fnref-34">↩</a></li>
+      <li id="fn-35">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 37–38. <a href="#fnref-35">↩</a></li>
+      <li id="fn-36">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 38. <a href="#fnref-36">↩</a></li>
+      <li id="fn-37">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, at 52. <a href="#fnref-37">↩</a></li>
+    </ol>
+  </div>
+
 </HubLayout>
