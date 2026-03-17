@@ -4,18 +4,42 @@ import Layout from '../layouts/Layout.astro';
 const bookSchema = {
   "@context": "https://schema.org",
   "@type": "Book",
-  "name": "Digital Commercial Law",
+  "name": "Digital Commercial Law: Private Law in the Age of Tokens, Platforms, and Automation",
   "author": [
-    { "@type": "Person", "name": "Andrea Tosato", "url": "https://andreatosato.com" },
-    { "@type": "Person", "name": "Christopher Odinet" }
+    { "@type": "Person", "name": "Christopher K. Odinet" },
+    { "@type": "Person", "name": "Andrea Tosato", "url": "https://andreatosato.com" }
   ],
-  "publisher": { "@type": "Organization", "name": "Oxford University Press" },
-  "datePublished": "2026",
-  "url": "https://andreatosato.com/books"
+  "publisher": {
+    "@type": "Organization",
+    "name": "Oxford University Press",
+    "url": "https://global.oup.com"
+  },
+  "datePublished": "2026-06-16",
+  "isbn": "9780197758625",
+  "numberOfPages": 352,
+  "bookFormat": ["https://schema.org/Hardcover", "https://schema.org/EBook"],
+  "inLanguage": "en",
+  "url": "https://andreatosato.com/books",
+  "sameAs": "https://global.oup.com/academic/product/digital-commercial-law-9780197758625",
+  "about": [
+    "digital assets",
+    "private law",
+    "commercial law",
+    "blockchain",
+    "Uniform Commercial Code",
+    "tokenization",
+    "stablecoins",
+    "NFTs",
+    "secured transactions",
+    "digital asset custody",
+    "cryptocurrency",
+    "property law"
+  ],
+  "description": "A comprehensive treatment of the private law framework governing commercial transactions in digital assets, examining ownership, transfer, custody, and collateralization through doctrinal analysis and case studies."
 };
 ---
 
-<Layout title="Books" description="Digital Commercial Law by Andrea Tosato and Christopher Odinet, forthcoming from Oxford University Press in 2026. A comprehensive treatment of the legal framework governing commercial transactions in digital assets.">
+<Layout title="Books" description="Digital Commercial Law: Private Law in the Age of Tokens, Platforms, and Automation, by Christopher K. Odinet and Andrea Tosato. Oxford University Press, June 2026. A comprehensive treatment of the private law framework governing commercial transactions in digital assets.">
   <script type="application/ld+json" set:html={JSON.stringify(bookSchema)} />
 
   <style>
@@ -61,10 +85,18 @@ const bookSchema = {
     .book-title {
       font-size: 1.6rem;
       font-weight: 400;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.4rem;
       letter-spacing: -0.01em;
       color: #000;
       text-transform: uppercase;
+    }
+
+    .book-subtitle {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #444;
+      margin-bottom: 0.75rem;
+      font-style: italic;
     }
 
     .book-meta {
@@ -76,6 +108,22 @@ const bookSchema = {
     .book-coauthors {
       font-size: 1rem;
       color: #999;
+      margin-bottom: 1.5rem;
+    }
+
+    .book-cta {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      transition: opacity 0.2s;
+    }
+
+    .book-cta:hover {
+      opacity: 0.7;
     }
 
     .book-section {
@@ -137,11 +185,20 @@ const bookSchema = {
       margin-bottom: 0.5rem;
     }
 
-    .placeholder-note {
+    .chapter-link {
       font-size: 0.9rem;
-      color: #999;
-      font-style: italic;
-      margin-top: 0.5rem;
+      color: #666;
+    }
+
+    .chapter-link a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+      transition: opacity 0.2s;
+    }
+
+    .chapter-link a:hover {
+      opacity: 0.5;
     }
 
     @media (max-width: 768px) {
@@ -179,8 +236,10 @@ const bookSchema = {
       </div>
       <div class="book-header">
         <div class="book-title">Digital Commercial Law</div>
-        <div class="book-meta">Oxford University Press (forthcoming 2026)</div>
-        <div class="book-coauthors">Andrea Tosato and Christopher Odinet</div>
+        <div class="book-subtitle">Private Law in the Age of Tokens, Platforms, and Automation</div>
+        <div class="book-meta">Oxford University Press (June 2026)</div>
+        <div class="book-coauthors">Christopher K. Odinet and Andrea Tosato</div>
+        <a href="https://global.oup.com/academic/product/digital-commercial-law-9780197758625" class="book-cta" target="_blank" rel="noopener">Pre-Order from Oxford University Press</a>
       </div>
     </div>
 
@@ -194,8 +253,14 @@ const bookSchema = {
     <section class="book-section">
       <h2>Chapter Overview</h2>
       <p><strong>Part I: Foundations</strong> lays the groundwork for the rest of the book. Chapter 1 introduces the concept of digital commercial law and explains why a transaction-centered approach to digital assets is both necessary and overdue. Chapters 2 through 4 examine the foundational questions that underpin all digital asset transactions: the legal nature of digital assets and whether they can be objects of property rights, the process of tokenization and how off-chain assets are represented on distributed ledgers, and the emerging legal and practical frameworks for digital asset custody.</p>
+      <div class="chapter-link">Related research: <a href="/research/digital-assets-property-law">Digital Assets and Property Law</a> · <a href="/research/ucc-article-12">UCC Article 12 and Controllable Electronic Records</a></div>
+
       <p><strong>Part II: Digital Assets in Commerce</strong> turns to specific transactional contexts. Chapter 5 explores how non-fungible tokens have transformed the market for creative works and the private law questions that arise from their creation, sale, and licensing. Chapter 6 examines the use of digital assets in bankruptcy claims trading, an area where blockchain technology has the potential to bring transparency and efficiency to a traditionally opaque market.</p>
+      <div class="chapter-link">Related research: <a href="/essays/nfts-structured-finance">NFTs and Structured Finance</a> · <a href="/articles/debt-tokens">Debt Tokens</a> · <a href="/research/bankruptcy-crypto">Cryptocurrency and Bankruptcy Law</a></div>
+
       <p><strong>Part III: Digital Assets in Finance</strong> addresses the intersection of digital assets and financial transactions. Chapter 7 analyzes the tokenization of real estate, tracing how fractional ownership interests in property are created, transferred, and financed through blockchain-based instruments. Chapter 8 examines stablecoins, exploring whether these instruments function as a new form of private money and how existing commercial law frameworks apply to their issuance and circulation.</p>
+      <div class="chapter-link">Related research: <a href="/articles/crypto-real-estate-finance">Crypto in Real Estate Finance</a> · <a href="/essays/tokenized-real-estate">Tokenized Real Estate</a> · <a href="/research/stablecoins-private-law">Stablecoins and Private Law</a> · <a href="/articles/private-law-stablecoins">The Private Law of Stablecoins</a></div>
+
       <p>The <strong>Conclusion</strong> draws together the themes of the preceding chapters and argues that the development of a coherent digital commercial law is not merely a technical exercise but a precondition for the responsible integration of digital assets into the broader legal and economic order.</p>
     </section>
 
@@ -229,8 +294,11 @@ const bookSchema = {
     <section class="book-section">
       <h2>Publication Information</h2>
       <p class="pub-detail">Publisher: Oxford University Press</p>
-      <p class="pub-detail">Expected: 2026</p>
-      <!-- PROFESSOR INPUT REQUIRED: Add OUP product page URL when available. -->
+      <p class="pub-detail">Publication date: 16 June 2026</p>
+      <p class="pub-detail">Format: Hardcover (also available as e-book)</p>
+      <p class="pub-detail">Pages: 352</p>
+      <p class="pub-detail">ISBN: 9780197758625</p>
+      <p class="pub-detail">Price: $39.95 (hardcover)</p>
     </section>
   </div>
 </Layout>
