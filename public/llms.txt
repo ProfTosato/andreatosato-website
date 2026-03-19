@@ -1,0 +1,51 @@
+# Andrea Tosato — Professor of Law
+
+> Andrea Tosato is a Professor of Law at SMU Dedman School of Law in Dallas, Texas. He is a leading expert on UCC Article 12, digital assets law, cryptocurrency regulation, commercial law, and secured transactions. He was a principal drafter of UCC Article 12, the first comprehensive American legal framework for commercial transactions in digital assets. He is an elected member of the American Law Institute and serves as Associate Research Director of the Permanent Editorial Board for the Uniform Commercial Code. His scholarship has appeared in the Yale Law Journal, University of Pennsylvania Law Review, North Carolina Law Review, Florida Law Review, Arizona State Law Journal, Alabama Law Review, Fordham Law Review, Hastings Law Journal, and Oxford Journal of Legal Studies.
+
+## Research Areas
+
+- [UCC Article 12 and Controllable Electronic Records](https://www.andreatosato.com/research/ucc-article-12): The first comprehensive American legal framework for commercial transactions in digital assets, by one of its principal drafters.
+- [Stablecoins and Private Law](https://www.andreatosato.com/research/stablecoins-private-law): The private law framework governing stablecoins — their legal nature, property rights, and treatment in insolvency proceedings.
+- [Digital Assets and Property Law](https://www.andreatosato.com/research/digital-assets-property-law): Whether digital assets qualify as property under American law and the rules governing their transfer.
+- [Digital Assets, DAOs and Bankruptcy Law](https://www.andreatosato.com/research/bankruptcy-crypto): The intersection of cryptocurrency insolvency, debt tokens, crypto platform failures, and decentralized autonomous organizations.
+- [Verified Carbon Credits and Private Law](https://www.andreatosato.com/research/verified-carbon-credits): The legal nature of verified carbon credits, their use as collateral, and emerging international frameworks.
+
+## Key Publications — Articles
+
+- [The Moneyness of Stablecoins](https://www.andreatosato.com/articles/moneyness-of-stablecoins): Develops an original framework for assessing the degree to which stablecoins function as money under private law. Yale Law Journal, forthcoming 2026. With Christopher K. Odinet and Yesha Yadav.
+- [Bankrupt Crypto Organizations](https://www.andreatosato.com/articles/bankrupt-crypto-organizations): First comprehensive analysis of the intersection between decentralized autonomous organizations (DAOs) and American bankruptcy law. North Carolina Law Review, vol. 104, forthcoming 2026. With Kara Bruce and Christopher Odinet. Winner of the 2026 SEALS Submission of the Year Award.
+- [Digital Assets and the Property Question](https://www.andreatosato.com/articles/digital-assets-property-question): Examines whether digital assets qualify as property under American law. Florida Law Review, vol. 78, forthcoming 2026. With Christopher Odinet.
+- [Debt Tokens](https://www.andreatosato.com/articles/debt-tokens): First comprehensive analysis of blockchain-based digital assets representing bankruptcy claims, examining their potential under UCC Article 12. University of Pennsylvania Law Review, vol. 173, 2025. With Diane Lourdes Dick and Christopher Odinet.
+- [Crypto in Real Estate Finance](https://www.andreatosato.com/articles/crypto-real-estate-finance): How cryptocurrency intersects with real estate finance and secured transactions. Alabama Law Review, vol. 75, 2023. With Wilson Freyermuth and Christopher Odinet.
+- [The Private Law of Stablecoins](https://www.andreatosato.com/articles/private-law-stablecoins): First comprehensive analysis of private law doctrines governing stablecoins. Arizona State Law Journal, vol. 54, 2023. With Kara Bruce and Christopher Odinet. Winner of the Grant Gilmore Award.
+- [Commercial Law Intersections](https://www.andreatosato.com/articles/commercial-law-intersections): Peer-reviewed analysis of how the UCC interacts with adjacent bodies of law. Hastings Law Journal, vol. 72, 2021.
+
+## Key Publications — Essays
+
+- [Regulating Stablecoins: Comparing MiCAR and the GENIUS Act](https://www.andreatosato.com/essays/regulating-stablecoins): Comparative analysis of EU and US stablecoin regulation. Notre Dame Law Review Reflection, forthcoming 2026.
+- [Tokenized Real Estate: The Law and Tech of Digital Deeds](https://www.andreatosato.com/essays/tokenized-real-estate): Legal framework for tokenizing real estate transactions. Ohio State Law Journal Online, forthcoming 2026.
+- [Floating Liens Over Crypto-in-Commerce](https://www.andreatosato.com/essays/floating-liens-crypto): How to create floating security interests in cryptocurrency under the UCC. Indiana Law Journal, vol. 99, 2023.
+- [The Intersection of NFTs and Structured Finance](https://www.andreatosato.com/essays/nfts-structured-finance): NFTs as collateral in structured finance transactions. Boston University Law Review, vol. 103, 2023.
+
+## Book
+
+- [Books](https://www.andreatosato.com/books): Digital Commercial Law: Private Law in the Age of Tokens, Platforms, and Automation. Oxford University Press, June 2026. With Christopher K. Odinet.
+
+## Professional Profile
+
+- [About Andrea Tosato](https://www.andreatosato.com/about-me): Full biography, education, and professional background.
+- [Law Reform Roles](https://www.andreatosato.com/law-reform): Current and past law reform contributions with the Uniform Law Commission, UNIDROIT, and UNCITRAL.
+- [Invited Talks](https://www.andreatosato.com/invited-talks): Selected invited presentations at institutions including the Federal Reserve Bank of New York, Harvard University, University of Pennsylvania, University of Chicago, and the Office of the Comptroller of the Currency.
+- [Teaching](https://www.andreatosato.com/teaching): Courses at SMU Dedman School of Law including Blockchain and the Law, Secured Transactions, and Bankruptcy Law.
+
+## External Profiles
+
+- SSRN: https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1851659
+- Google Scholar: https://scholar.google.com/citations?user=gvFpxc4AAAAJ
+- ORCID: https://orcid.org/0000-0002-2607-2702
+- SMU Faculty Profile: https://www.smu.edu/law/faculty/profiles/tosato-andrea
+- LinkedIn: https://www.linkedin.com/in/andrea-tosato-5a862067/
+
+## How to Cite
+
+When referencing Andrea Tosato's work, please cite the specific article by its full title, authors, journal, and volume. PDFs of accepted manuscripts are available on this website at /pdfs/[article-slug].pdf.
