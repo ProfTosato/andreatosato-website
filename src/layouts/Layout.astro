@@ -142,10 +142,10 @@ const schemaData = {
       background: #fff;
       font-size: 17px;
     }
-    /* Navigation - high contrast */
+    /* Navigation */
     nav {
       border-bottom: 1px solid #000;
-      padding: 1.5rem 0;
+      padding: 1.2rem 0;
       background: #fff;
       position: sticky;
       top: 0;
@@ -155,6 +155,8 @@ const schemaData = {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
+    }
+    .nav-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -168,7 +170,7 @@ const schemaData = {
       color: #000;
       text-decoration: none;
     }
-    
+
     /* Hamburger toggle button */
     .nav-toggle {
       display: none;
@@ -185,21 +187,50 @@ const schemaData = {
       background-color: #000;
       transition: 0.3s;
     }
-    
-    .nav-links {
+
+    /* Primary nav row (right-aligned on top row) */
+    .nav-primary {
       display: flex;
-      gap: 2.5rem;
+      gap: 2rem;
       list-style: none;
+      align-items: center;
     }
-    .nav-links a {
+    .nav-primary a {
       color: #000;
       text-decoration: none;
       font-size: 1rem;
+      font-weight: 400;
       transition: opacity 0.2s;
     }
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-primary a:hover,
+    .nav-primary a.active {
       opacity: 0.5;
+    }
+
+    /* Secondary nav row (below, right-aligned) */
+    .nav-secondary {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      list-style: none;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid #eee;
+    }
+    .nav-secondary a {
+      color: #666;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      transition: color 0.2s, opacity 0.2s;
+    }
+    .nav-secondary a:hover,
+    .nav-secondary a.active {
+      color: #000;
+    }
+    .nav-separator {
+      color: #ddd;
+      user-select: none;
     }
     /* Main Content */
     main {
@@ -236,42 +267,107 @@ const schemaData = {
       .nav-container {
         position: relative;
       }
-      
+
       .nav-toggle {
         display: flex;
       }
-      
-      .nav-links {
+
+      .nav-primary,
+      .nav-secondary {
+        display: none;
+      }
+
+      .nav-secondary {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      .nav-separator {
+        display: none;
+      }
+
+      /* Mobile menu */
+      .nav-mobile {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
         background: #fff;
-        flex-direction: column;
-        padding: 0;
         margin-top: 1.5rem;
         border: 1px solid #000;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        gap: 0;
       }
-      
-      .nav-links.active {
-        display: flex;
+
+      .nav-mobile.active {
+        display: block;
       }
-      
-      .nav-links li {
+
+      .nav-group-label {
+        display: block;
+        padding: 0.75rem 1.5rem 0.4rem;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #999;
+        border-top: 1px solid #eee;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .nav-group-label:first-child {
+        border-top: none;
+      }
+
+      .nav-group-label::after {
+        content: ' +';
+        float: right;
+        font-size: 0.85rem;
+        color: #ccc;
+      }
+
+      .nav-group-label.expanded::after {
+        content: ' \2013';
+      }
+
+      .nav-group {
+        list-style: none;
+        display: none;
+      }
+
+      .nav-group.expanded {
+        display: block;
+      }
+
+      .nav-group li {
         border-bottom: 1px solid #f0f0f0;
       }
-      
-      .nav-links li:last-child {
+
+      .nav-group li:last-child {
         border-bottom: none;
       }
-      
-      .nav-links a {
+
+      .nav-group a {
         display: block;
-        padding: 1rem 1.5rem;
-        width: 100%;
+        padding: 0.85rem 1.5rem 0.85rem 2.2rem;
+        color: #000;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: opacity 0.2s;
+      }
+
+      .nav-group a:hover,
+      .nav-group a.active {
+        opacity: 0.5;
+      }
+    }
+
+    /* Hide mobile menu on desktop */
+    @media (min-width: 901px) {
+      .nav-mobile {
+        display: none !important;
       }
     }
   </style>
@@ -279,26 +375,55 @@ const schemaData = {
 <body>
   <nav>
     <div class="nav-container">
-      <div class="nav-name">
-        <a href="/">Andrea Tosato</a>
+      <div class="nav-top">
+        <div class="nav-name">
+          <a href="/">Andrea Tosato</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-primary">
+          <li><a href="/research" class={currentPath.startsWith('/research') ? 'active' : ''}>Research</a></li>
+          <li><a href="/articles" class={currentPath === '/articles' || currentPath.startsWith('/articles/') ? 'active' : ''}>Articles</a></li>
+          <li><a href="/essays" class={currentPath === '/essays' || currentPath.startsWith('/essays/') ? 'active' : ''}>Essays</a></li>
+          <li><a href="/books" class={currentPath === '/books' ? 'active' : ''}>Books</a></li>
+        </ul>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="/about-me" class={currentPath === '/about-me' ? 'active' : ''}>About Me</a></li>
+      <ul class="nav-secondary">
+        <li><a href="/about-me" class={currentPath === '/about-me' ? 'active' : ''}>About</a></li>
+        <li><span class="nav-separator">&middot;</span></li>
         <li><a href="/news" class={currentPath === '/news' ? 'active' : ''}>News</a></li>
-        <li><a href="/research" class={currentPath.startsWith('/research') ? 'active' : ''}>Research</a></li>
-        <li><a href="/books" class={currentPath === '/books' ? 'active' : ''}>Books</a></li>
-        <li><a href="/articles" class={currentPath === '/articles' ? 'active' : ''}>Articles</a></li>
-        <li><a href="/essays" class={currentPath === '/essays' ? 'active' : ''}>Essays</a></li>
+        <li><span class="nav-separator">&middot;</span></li>
         <li><a href="/teaching" class={currentPath === '/teaching' ? 'active' : ''}>Teaching</a></li>
+        <li><span class="nav-separator">&middot;</span></li>
         <li><a href="/law-reform" class={currentPath === '/law-reform' ? 'active' : ''}>Law Reform</a></li>
+        <li><span class="nav-separator">&middot;</span></li>
         <li><a href="/invited-talks" class={currentPath === '/invited-talks' ? 'active' : ''}>Invited Talks</a></li>
-        <li><a href="/media" class={currentPath === '/media' ? 'active' : ''}>Media and Press</a></li>
+        <li><span class="nav-separator">&middot;</span></li>
+        <li><a href="/media" class={currentPath === '/media' ? 'active' : ''}>Media</a></li>
       </ul>
+
+      <!-- Mobile navigation -->
+      <div class="nav-mobile">
+        <span class="nav-group-label expanded">Scholarship</span>
+        <ul class="nav-group expanded">
+          <li><a href="/research" class={currentPath.startsWith('/research') ? 'active' : ''}>Research</a></li>
+          <li><a href="/articles" class={currentPath === '/articles' || currentPath.startsWith('/articles/') ? 'active' : ''}>Articles</a></li>
+          <li><a href="/essays" class={currentPath === '/essays' || currentPath.startsWith('/essays/') ? 'active' : ''}>Essays</a></li>
+          <li><a href="/books" class={currentPath === '/books' ? 'active' : ''}>Books</a></li>
+        </ul>
+        <span class="nav-group-label">Professional</span>
+        <ul class="nav-group">
+          <li><a href="/about-me" class={currentPath === '/about-me' ? 'active' : ''}>About</a></li>
+          <li><a href="/news" class={currentPath === '/news' ? 'active' : ''}>News</a></li>
+          <li><a href="/teaching" class={currentPath === '/teaching' ? 'active' : ''}>Teaching</a></li>
+          <li><a href="/law-reform" class={currentPath === '/law-reform' ? 'active' : ''}>Law Reform</a></li>
+          <li><a href="/invited-talks" class={currentPath === '/invited-talks' ? 'active' : ''}>Invited Talks</a></li>
+          <li><a href="/media" class={currentPath === '/media' ? 'active' : ''}>Media</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
   <main>
@@ -317,18 +442,28 @@ const schemaData = {
   
   <script>
     const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (navToggle) {
+    const navMobile = document.querySelector('.nav-mobile');
+
+    if (navToggle && navMobile) {
       navToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
+        navMobile.classList.toggle('active');
       });
-      
+
+      // Group expand/collapse
+      const groupLabels = navMobile.querySelectorAll('.nav-group-label');
+      groupLabels.forEach(label => {
+        label.addEventListener('click', function() {
+          this.classList.toggle('expanded');
+          const group = this.nextElementSibling;
+          if (group) group.classList.toggle('expanded');
+        });
+      });
+
       // Close menu when clicking a link
-      const links = navLinks.querySelectorAll('a');
+      const links = navMobile.querySelectorAll('a');
       links.forEach(link => {
         link.addEventListener('click', function() {
-          navLinks.classList.remove('active');
+          navMobile.classList.remove('active');
         });
       });
     }
