@@ -35,8 +35,11 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
   <meta name="language" content="English">
   <meta name="revisit-after" content="7 days">
   <meta name="category" content="Legal Research">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href={currentUrl}>
-  
+
   <!-- Google Scholar Meta Tags -->
   <meta name="citation_title" content={title}>
   {authors.map(author => (
