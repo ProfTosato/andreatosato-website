@@ -26,7 +26,7 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} | Andrea Tosato</title>
-  <meta name="description" content={abstract.substring(0, 160)}>
+  <meta name="description" content={abstract ? abstract.substring(0, 160) : ''}>
   <meta name="author" content={fullAuthors}>
   <meta name="keywords" content={keywords.join(', ')}>
   
@@ -346,12 +346,14 @@ const currentUrl = `${Astro.site}${Astro.url.pathname}`;
         </div>
       )}
 
-      <div class="abstract-section">
-        <h2>Abstract</h2>
-        <div class="abstract-text">
-          {abstract}
+      {abstract && (
+        <div class="abstract-section">
+          <h2>Abstract</h2>
+          <div class="abstract-text">
+            {abstract}
+          </div>
         </div>
-      </div>
+      )}
 
       {keywords.length > 0 && (
         <div class="keywords">
