@@ -27,7 +27,7 @@ const allNews = [
     category: "Awards & Recognition"
   },
   {
-    date: "2024-7-1",
+    date: "2025-06-01",
     title: "Featured on Block & Order Podcast: Bankrupt Crypto Organizations",
     description: "Professor Tosato discusses his forthcoming North Carolina Law Review article examining how bankruptcy law principles apply when a debtor holds or operates with digital assets. The conversation explores the treatment of cryptocurrency exchanges and DeFi platforms in insolvency proceedings.",
     url: "https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order",
@@ -71,7 +71,7 @@ const allNews = [
     category: "Publications"
   },
   {
-    date: "2024-03-18",
+    date: "2025-03-18",
     title: "Digital Assets and the Property Question Featured in Oxford Business Law Blog",
     description: "Professor Tosato's forthcoming Florida Law Review article with Christopher Odinet is featured in the Oxford Business Law Blog, discussing fundamental questions about property rights in digital assets.",
     url: "https://www.law.ox.ac.uk/business-law-blog",
@@ -283,10 +283,10 @@ const years = Object.keys(newsByYear).sort((a, b) => Number(b) - Number(a));
           <div class="news-item">
             <div class="news-header-row">
               <div class="news-date">
-                {new Date(news.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
+                {new Date(news.date + 'T12:00:00').toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
                 })}
               </div>
               <div class="news-category">{news.category}</div>
