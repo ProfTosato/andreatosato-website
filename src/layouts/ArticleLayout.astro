@@ -17,7 +17,8 @@ const {
 } = Astro.props;
 
 const fullAuthors = authors.join(', ');
-const currentUrl = `${Astro.site}${Astro.url.pathname}`;
+const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.andreatosato.com';
+const currentUrl = `${siteBase}${Astro.url.pathname}`;
 ---
 
 <!DOCTYPE html>
