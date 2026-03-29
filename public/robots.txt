@@ -23,4 +23,4 @@ User-agent: Googlebot-Scholar
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.andreatosato.com/sitemap-index.xml
+Sitemap: https://andreatosato.com/sitemap-index.xml

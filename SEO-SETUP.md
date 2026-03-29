@@ -5,14 +5,14 @@
 ### 1. Sitemap Generator
 - **File**: `astro.config.mjs` and `package.json`
 - **What it does**: Automatically generates a sitemap.xml file when you build your website
-- **Location**: The sitemap will be available at `https://www.andreatosato.com/sitemap-index.xml`
+- **Location**: The sitemap will be available at `https://andreatosato.com/sitemap-index.xml`
 - **How to use**: When you run `npm run build`, Astro will automatically create the sitemap
 
 ### 2. Robots.txt
 - **File**: `public/robots.txt`
 - **What it does**: Tells search engines they can crawl all your content
 - **Special feature**: Includes specific permission for Google Scholar bot
-- **Location**: Available at `https://www.andreatosato.com/robots.txt`
+- **Location**: Available at `https://andreatosato.com/robots.txt`
 
 ### 3. Meta Tags on Every Article/Essay Page
 Each article and essay page includes:
@@ -56,7 +56,7 @@ Each article and essay page includes:
 
 3. **After deployment**:
    - Submit your sitemap to Google Search Console: https://search.google.com/search-console
-   - The sitemap URL will be: https://www.andreatosato.com/sitemap-index.xml
+   - The sitemap URL will be: https://andreatosato.com/sitemap-index.xml
 
 ## Google Scholar Indexing
 

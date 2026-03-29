@@ -17,7 +17,7 @@ const {
 } = Astro.props;
 
 const fullAuthors = authors.join(', ');
-const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? 'https://www.andreatosato.com';
+const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? 'https://andreatosato.com';
 const currentUrl = `${siteBase}${Astro.url.pathname}`;
 ---
 
@@ -49,7 +49,7 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <meta name="citation_publication_date" content={publishDate}>
   <meta name="citation_journal_title" content={journal}>
   {volume && <meta name="citation_volume" content={volume}>}
-  {localPdfUrl ? <meta name="citation_pdf_url" content={`https://www.andreatosato.com${localPdfUrl}`}> : pdfUrl && <meta name="citation_pdf_url" content={pdfUrl}>}
+  {localPdfUrl ? <meta name="citation_pdf_url" content={`https://andreatosato.com${localPdfUrl}`}> : pdfUrl && <meta name="citation_pdf_url" content={pdfUrl}>}
   <meta name="citation_abstract" content={abstract}>
   <meta name="citation_keywords" content={keywords.join('; ')}>
   <meta name="citation_language" content="en">
@@ -95,7 +95,7 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
     "keywords": keywords.join(', '),
     "inLanguage": "en",
     "url": currentUrl,
-    ...(localPdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": `https://www.andreatosato.com${localPdfUrl}` } } : pdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": pdfUrl } } : {})
+    ...(localPdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": `https://andreatosato.com${localPdfUrl}` } } : pdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": pdfUrl } } : {})
   })} />
   
   <style>
