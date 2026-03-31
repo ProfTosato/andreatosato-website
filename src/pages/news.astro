@@ -27,6 +27,14 @@ const allNews = [
     category: "Awards & Recognition"
   },
   {
+    date: "2025-07-01",
+    title: "UCC Article 12 Enacted in 30+ States",
+    description: "The 2022 UCC amendments, including Article 12 on controllable electronic records, have now been enacted in over 30 states. Professor Tosato continues his work as Associate Research Director of the Permanent Editorial Board for the UCC, supporting implementation across all U.S. jurisdictions.",
+    url: "https://www.uniformlaws.org/committees/community-home?CommunityKey=1457c422-ddb7-40b0-8c76-39a1991651ac",
+    external: false,
+    category: "Law Reform"
+  },
+  {
     date: "2025-06-01",
     title: "Featured on Block & Order Podcast: Bankrupt Crypto Organizations",
     description: "Professor Tosato discusses his forthcoming North Carolina Law Review article examining how bankruptcy law principles apply when a debtor holds or operates with digital assets. The conversation explores the treatment of cryptocurrency exchanges and DeFi platforms in insolvency proceedings.",
@@ -37,38 +45,12 @@ const allNews = [
     category: "Media & Podcasts"
   },
   {
-    date: "2023-04-07",
-    title: "Featured in Barrons: Crypto's Future and Commercial Law",
-    description: "Analysis of how the UCC Article 12 amendments are shaping the legal framework for cryptocurrency transactions in the United States. The article examines the implications of controllable electronic records for the future of digital asset regulation.",
-    url: "https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4",
-    external: true,
-    category: "Media & Press"
-  },
-  {
-    date: "2025-07-01",
-    title: "UCC Article 12 Enacted in 30+ States",
-    description: "The 2022 UCC amendments, including Article 12 on controllable electronic records, have now been enacted in over 30 states. Professor Tosato continues his work as Associate Research Director of the Permanent Editorial Board for the UCC, supporting implementation across all U.S. jurisdictions.",
-    url: "https://www.uniformlaws.org/committees/community-home?CommunityKey=1457c422-ddb7-40b0-8c76-39a1991651ac",
-    external: false,
-    category: "Law Reform"
-  },
-  {
     date: "2025-04-16",
     title: "Speaking at American Bar Association Business Law Section Annual Meeting",
     description: "Professor Tosato presented on the intersection of UCC Article 12 and bankruptcy law at the ABA Business Law Section Annual Meeting. The presentation addressed emerging issues in the treatment of digital assets in insolvency proceedings.",
     url: "/articles/bankrupt-crypto-organizations",
     external: false,
     category: "Speaking Engagements"
-  },
-  {
-    date: "2024-05-16",
-    title: "Debt Tokens Article Featured in The ALI Adviser",
-    description: "The ALI Adviser features Professor Tosato's University of Pennsylvania Law Review article on debt tokens, examining how UCC Article 12 applies to blockchain-based debt instruments.",
-    url: "https://www.thealiadviser.org/",
-    external: true,
-    articleUrl: "/articles/debt-tokens",
-    articleText: "Read Debt Tokens",
-    category: "Publications"
   },
   {
     date: "2025-03-18",
@@ -78,6 +60,16 @@ const allNews = [
     external: true,
     articleUrl: "/articles/digital-assets-property-question",
     articleText: "Read Digital Assets and the Property Question",
+    category: "Publications"
+  },
+  {
+    date: "2024-05-16",
+    title: "Debt Tokens Article Featured in The ALI Adviser",
+    description: "The ALI Adviser features Professor Tosato's University of Pennsylvania Law Review article on debt tokens, examining how UCC Article 12 applies to blockchain-based debt instruments.",
+    url: "https://www.thealiadviser.org/",
+    external: true,
+    articleUrl: "/articles/debt-tokens",
+    articleText: "Read Debt Tokens",
     category: "Publications"
   },
   {
@@ -97,6 +89,14 @@ const allNews = [
     category: "Awards & Recognition"
   },
   {
+    date: "2023-04-07",
+    title: "Featured in Barrons: Crypto's Future and Commercial Law",
+    description: "Analysis of how the UCC Article 12 amendments are shaping the legal framework for cryptocurrency transactions in the United States. The article examines the implications of controllable electronic records for the future of digital asset regulation.",
+    url: "https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4",
+    external: true,
+    category: "Media & Press"
+  },
+  {
     date: "2022-07-21",
     title: "2022 UCC Amendments and Article 12 Approved",
     description: "The Uniform Law Commission and American Law Institute approve the 2022 amendments to the Uniform Commercial Code, including new Article 12 on controllable electronic records. Professor Tosato served as a key contributor to the drafting committee.",
@@ -106,13 +106,17 @@ const allNews = [
   }
 ];
 
-// Group news by year
+// Group news by year, sorted reverse-chronologically within each year
 const newsByYear = allNews.reduce((acc, news) => {
   const year = new Date(news.date).getFullYear();
   if (!acc[year]) acc[year] = [];
   acc[year].push(news);
   return acc;
 }, {} as Record<number, typeof allNews>);
+
+for (const year of Object.keys(newsByYear)) {
+  newsByYear[Number(year)].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
 
 const years = Object.keys(newsByYear).sort((a, b) => Number(b) - Number(a));
 ---
