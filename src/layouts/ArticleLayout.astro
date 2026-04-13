@@ -1,11 +1,11 @@
 ---
-const { 
-  title, 
-  authors, 
-  journal, 
-  volume, 
-  year, 
-  abstract, 
+const {
+  title,
+  authors,
+  journal,
+  volume,
+  year,
+  abstract,
   pdfUrl,
   ssrnUrl,
   localPdfUrl,
@@ -13,6 +13,7 @@ const {
   awards = [],
   relatedTalks = [],
   publishDate,
+  doi,
   backLink = { url: '/articles', text: 'Articles' }
 } = Astro.props;
 
@@ -41,7 +42,7 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href={currentUrl}>
 
-  <!-- Google Scholar Meta Tags -->
+  <!-- Google Scholar Meta Tags (Highwire Press) -->
   <meta name="citation_title" content={title}>
   {authors.map(author => (
     <meta name="citation_author" content={author}>
@@ -50,9 +51,12 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <meta name="citation_journal_title" content={journal}>
   {volume && <meta name="citation_volume" content={volume}>}
   {localPdfUrl ? <meta name="citation_pdf_url" content={`https://andreatosato.com${localPdfUrl}`}> : pdfUrl && <meta name="citation_pdf_url" content={pdfUrl}>}
+  <meta name="citation_abstract_html_url" content={currentUrl}>
   <meta name="citation_abstract" content={abstract}>
   <meta name="citation_keywords" content={keywords.join('; ')}>
   <meta name="citation_language" content="en">
+  {doi && <meta name="citation_doi" content={doi}>}
+  {localPdfUrl && <link rel="alternate" type="application/pdf" href={`https://andreatosato.com${localPdfUrl}`}>}
   
   <!-- Dublin Core Metadata for Better Indexing -->
   <meta name="DC.title" content={title}>
