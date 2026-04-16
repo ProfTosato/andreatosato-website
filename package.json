@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "cv": "pandoc cv/Andrea-Tosato-CV.md -o public/Andrea-Tosato-CV.pdf --pdf-engine=xelatex",
-    "cv:preview": "pandoc cv/Andrea-Tosato-CV.md -o public/Andrea-Tosato-CV.pdf --pdf-engine=xelatex && echo CV generated at public/Andrea-Tosato-CV.pdf"
+    "cv": "set PATH=%LOCALAPPDATA%\\Pandoc;%LOCALAPPDATA%\\Programs\\MiKTeX\\miktex\\bin\\x64;%PATH% && cd cv && pandoc Andrea-Tosato-CV.md -o ../public/Andrea-Tosato-CV.pdf --pdf-engine=xelatex && cd .."
   },
   "dependencies": {
     "@astrojs/sitemap": "3.2.1",

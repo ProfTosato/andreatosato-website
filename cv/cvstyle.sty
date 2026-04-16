@@ -1,0 +1,14 @@
+\ProvidesPackage{cvstyle}
+
+% ---------------------------------------------------------------
+% Fake small caps: uppercase stays full-size, lowercase becomes
+% small uppercase.  Uses a two-part command approach:
+%   \jnl{...}  wraps the whole journal name
+%   \s{...}    marks the lowercase portions to be rendered small
+%
+% Usage:  \jnl{Y\s{ale} L.J.}
+%         \jnl{N.C. L. R\s{ev}.}
+%         \jnl{F\s{la}. L. R\s{ev}.}
+% ---------------------------------------------------------------
+\newcommand{\s}[1]{{\fontsize{9}{11}\selectfont\MakeUppercase{#1}}}
+\newcommand{\jnl}[1]{#1}
