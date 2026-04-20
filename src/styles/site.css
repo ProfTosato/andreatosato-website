@@ -550,7 +550,11 @@ nav.secondary a.current { color: var(--text); }
 .prose em, .prose i { font-style: italic; }
 .prose strong, .prose b { font-weight: 500; }
 
-.drop {
+/* Drop cap applied via ::first-letter so the DOM text stays clean */
+/* ("Andrea Tosato" rather than "A" + "ndrea Tosato"). Applies to the  */
+/* first paragraph of the About page and homepage About section only.  */
+.prose > p:first-of-type::first-letter,
+.about-text > p:first-of-type::first-letter {
   font-family: var(--serif);
   font-weight: 500;
   float: left;
