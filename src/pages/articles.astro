@@ -1,227 +1,184 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const articles = [
+  {
+    id: "moneyness-of-stablecoins",
+    authors: "Andrea Tosato, Christopher K. Odinet & Yesha Yadav",
+    title: "The Moneyness of Stablecoins",
+    volume: "136",
+    venue: "Yale Law Journal",
+    year: "forthcoming 2026",
+    url: "/articles/moneyness-of-stablecoins",
+    notes: []
+  },
+  {
+    id: "bankrupt-crypto-organizations",
+    authors: "Kara Bruce, Christopher Odinet & Andrea Tosato",
+    title: "Bankrupt Crypto Organizations",
+    volume: "104",
+    venue: "North Carolina Law Review",
+    year: "forthcoming 2026",
+    url: "/articles/bankrupt-crypto-organizations",
+    notes: ["Awarded the 2026 Submission of the Year Award by the Southeastern Association of Law Schools."]
+  },
+  {
+    id: "digital-assets-property-question",
+    authors: "Christopher Odinet & Andrea Tosato",
+    title: "Digital Assets and the Property Question",
+    volume: "78",
+    venue: "Florida Law Review",
+    year: "forthcoming 2026",
+    url: "/articles/digital-assets-property-question",
+    notes: ["Featured in the Oxford Business Law Blog, 18 March 2025.", "Featured in The ALI Adviser, 3 April 2025."]
+  },
+  {
+    id: "debt-tokens",
+    authors: "Diane Lourdes Dick, Christopher Odinet & Andrea Tosato",
+    title: "Debt Tokens",
+    volume: "173",
+    venue: "University of Pennsylvania Law Review",
+    year: "2025",
+    url: "/articles/debt-tokens",
+    notes: ["Featured in The ALI Adviser, 16 May 2024."]
+  },
+  {
+    id: "crypto-real-estate-finance",
+    authors: "R. Wilson Freyermuth, Christopher Odinet & Andrea Tosato",
+    title: "Crypto in Real Estate Finance",
+    volume: "75",
+    venue: "Alabama Law Review",
+    year: "2023",
+    url: "/articles/crypto-real-estate-finance",
+    notes: ["Awarded the Shook Hardy Bacon Research Award."]
+  },
+  {
+    id: "private-law-stablecoins",
+    authors: "Kara Bruce, Christopher Odinet & Andrea Tosato",
+    title: "The Private Law of Stablecoins",
+    volume: "54",
+    venue: "Arizona State Law Journal",
+    year: "2022",
+    url: "/articles/private-law-stablecoins",
+    notes: ["Awarded the Grant Gilmore Award of the American College of Commercial Finance Lawyers for superior writing in the field of commercial finance law."]
+  },
+  {
+    id: "access-medicines-trips",
+    authors: "Ezinne Mirian Igbokwe & Andrea Tosato",
+    title: "Access to Medicines and Pharmaceutical Patents: Fulfilling the Promise of TRIPS Article 31bis",
+    volume: "91",
+    venue: "Fordham Law Review",
+    year: "2023",
+    url: "/articles/access-medicines-trips",
+    notes: []
+  },
+  {
+    id: "commercial-law-intersections",
+    authors: "Giuliano G. Castellano & Andrea Tosato",
+    title: "Commercial Law Intersections",
+    volume: "72",
+    venue: "Hastings Law Journal",
+    year: "2021",
+    url: "/articles/commercial-law-intersections",
+    notes: [
+      "Cited by the World Bank: Distributed Ledger Technology and Secured Transactions Frameworks: A Primer (2020).",
+      "Cited by the World Bank: Coordinating Prudential Regulation and Secured Transactions Frameworks: A Primer (2020).",
+      "Featured in the Duke University School of Law FinReg Blog, 30 June 2020."
+    ]
+  },
+  {
+    id: "secured-transactions-ip-licenses",
+    authors: "Andrea Tosato",
+    title: "Secured Transactions and IP Licences: Comparative Observations and Reform Suggestions",
+    volume: "81",
+    venue: "Law & Contemporary Problems",
+    year: "2018",
+    url: "/articles/secured-transactions-ip-licenses",
+    notes: [
+      "Cited by the World Bank, Collateral Registry, Secured Transactions Law and Practice (2020).",
+      "Featured in the Oxford Business Law Blog, 13 June 2018."
+    ]
+  },
+  {
+    id: "ip-license-contracts",
+    authors: "Andrea Tosato",
+    title: "Intellectual Property Licence Contracts: Reflections on a Prospective UNCITRAL Project",
+    volume: "86",
+    venue: "University of Cincinnati Law Review",
+    year: "2018",
+    url: "/articles/ip-license-contracts",
+    notes: []
+  },
+  {
+    id: "commercial-agency-good-faith",
+    authors: "Andrea Tosato",
+    title: "Commercial Agency and the Duty to Act in Good Faith",
+    volume: "36",
+    venue: "Oxford Journal of Legal Studies",
+    year: "2016",
+    url: "/articles/commercial-agency-good-faith",
+    notes: ["Peer-reviewed."]
+  },
+  {
+    id: "european-dimension-commercial-agents",
+    authors: "Andrea Tosato",
+    title: "An Exploration of the European Dimension of the Commercial Agents Regulations",
+    volume: "39",
+    venue: "Lloyd's Maritime and Commercial Law Quarterly",
+    year: "2013",
+    url: "/articles/european-dimension-commercial-agents",
+    notes: ["Peer-reviewed.", "Cited by the Advocate General of the European Court of Justice, The Software Incubator, Opinion of Advocate General Tanchev, [2020] EUECJ C-410/19_O (17 December 2020)."]
+  },
+  {
+    id: "traditional-foods-eu",
+    authors: "Andrea Tosato",
+    title: "The Protection of Traditional Foods in the EU: Traditional Specialities Guaranteed",
+    volume: "19",
+    venue: "European Law Journal",
+    year: "2013",
+    url: "/articles/traditional-foods-eu",
+    notes: ["Peer-reviewed."]
+  },
+  {
+    id: "security-interests-ip",
+    authors: "Andrea Tosato",
+    title: "Security Interests Over Intellectual Property",
+    volume: "6",
+    venue: "Journal of Intellectual Property Law & Practice",
+    year: "2011",
+    url: "/articles/security-interests-ip",
+    notes: ["Peer-reviewed."]
+  },
+  {
+    id: "uncitral-annex-ip",
+    authors: "Andrea Tosato",
+    title: "The UNCITRAL Annex on Security Rights in IP: A Work in Progress",
+    volume: "4",
+    venue: "Journal of Intellectual Property Law & Practice",
+    year: "2009",
+    url: "/articles/uncitral-annex-ip",
+    notes: ["Peer-reviewed."]
+  }
+];
 ---
 
 <Layout title="Articles" description="Law review articles by Andrea Tosato on private law, commercial law, bankruptcy, secured transactions, digital assets, stablecoins, and verified carbon credits.">
-  <style>
-    .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 2.5rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
-
-    .article-item {
-      margin-bottom: 1.8rem;
-      padding-bottom: 1.8rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .article-item:last-child {
-      border-bottom: none;
-    }
-
-    .article-title {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-      color: #000;
-    }
-
-    .article-title a {
-      color: #000;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .article-title a:hover {
-      opacity: 0.5;
-    }
-
-    .article-meta {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 0.5rem;
-    }
-
-    .article-coauthors {
-      font-size: 0.95rem;
-      color: #999;
-      margin-bottom: 0.75rem;
-    }
-
-    .article-featured {
-      font-size: 0.9rem;
-      color: #666;
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
-    }
-
-    .article-featured li {
-      margin-bottom: 0.3rem;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-
-  <div class="content">
-    <h1>Articles</h1>
-
-    <div class="article-item" id="moneyness-of-stablecoins">
-      <div class="article-title">
-        <a href="/articles/moneyness-of-stablecoins">The Moneyness of Stablecoins</a>
-      </div>
-      <div class="article-meta">136 Yale Law Journal (forthcoming 2026)</div>
-      <div class="article-coauthors">with Christopher K. Odinet and Yesha Yadav</div>
-    </div>
-
-    <div class="article-item" id="bankrupt-crypto-organizations">
-      <div class="article-title">
-        <a href="/articles/bankrupt-crypto-organizations">Bankrupt Crypto Organizations</a>
-      </div>
-      <div class="article-meta">104 North Carolina Law Review (forthcoming 2026)</div>
-      <div class="article-coauthors">with Kara Bruce and Christopher Odinet</div>
-      <ul class="article-featured">
-        <li>Awarded the 2026 Submission of the Year Award by the Southeastern Association of Law Schools (SEALS)</li>
-      </ul>
-    </div>
-
-    <div class="article-item" id="digital-assets-property-question">
-      <div class="article-title">
-        <a href="/articles/digital-assets-property-question">Digital Assets and the Property Question</a>
-      </div>
-      <div class="article-meta">78 Florida Law Review (forthcoming 2026)</div>
-      <div class="article-coauthors">with Christopher Odinet</div>
-      <ul class="article-featured">
-        <li>Featured in the Oxford Business Law Blog, 18 March 2025</li>
-        <li>Featured in The ALI Adviser, 3 April 2025</li>
-      </ul>
-    </div>
-
-    <div class="article-item" id="debt-tokens">
-      <div class="article-title">
-        <a href="/articles/debt-tokens">Debt Tokens</a>
-      </div>
-      <div class="article-meta">173 University of Pennsylvania Law Review (2025)</div>
-      <div class="article-coauthors">with Diane Lourdes Dick and Christopher Odinet</div>
-      <ul class="article-featured">
-        <li>Featured in The ALI Adviser, 16 May 2024</li>
-      </ul>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/crypto-real-estate-finance">Crypto in Real Estate Finance</a>
-      </div>
-      <div class="article-meta">75 Alabama Law Review (2023)</div>
-      <div class="article-coauthors">with R. Wilson Freyermuth and Christopher Odinet</div>
-      <ul class="article-featured">
-        <li>Awarded the Shook Hardy Bacon Research Award</li>
-      </ul>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/private-law-stablecoins">The Private Law of Stablecoins</a>
-      </div>
-      <div class="article-meta">54 Arizona State Law Journal (2022)</div>
-      <div class="article-coauthors">with Kara Bruce and Christopher Odinet</div>
-      <ul class="article-featured">
-        <li>Awarded the Grant Gilmore Award of the American College of Commercial Finance Lawyers in recognition of "superior writing in the field of commercial finance law"</li>
-      </ul>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/access-medicines-trips">Access To Medicines and Pharmaceutical Patents: Fulfilling The Promise Of TRIPS Article 31bis</a>
-      </div>
-      <div class="article-meta">91 Fordham Law Review (2023)</div>
-      <div class="article-coauthors">with Ezinne Mirian Igbokwe</div>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/commercial-law-intersections">Commercial Law Intersections</a>
-      </div>
-      <div class="article-meta">72 Hastings Law Journal 999 (2021) (peer-reviewed)</div>
-      <div class="article-coauthors">with Giuliano G. Castellano</div>
-      <ul class="article-featured">
-        <li>Cited by the World Bank: Distributed Ledger Technology and Secured Transactions Frameworks: A Primer (2020)</li>
-        <li>Cited by the World Bank: Coordinating Prudential Regulation and Secured Transactions Frameworks: A Primer (2020)</li>
-        <li>Featured in the Duke University School of Law FinReg Blog, 30 June 2020</li>
-      </ul>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/secured-transactions-ip-licenses">Secured Transactions and IP licenses: comparative observations and reform suggestions</a>
-      </div>
-      <div class="article-meta">81 Law & Contemporary Problems 155 (2018)</div>
-      <ul class="article-featured">
-        <li>Cited by the World Bank, Collateral Registry, Secured Transactions Law and Practice (2020)</li>
-        <li>Featured in the Oxford Business Law Blog, 13 June 2018</li>
-      </ul>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/ip-license-contracts">Intellectual Property License Contracts: Reflections on a prospective UNCITRAL Project</a>
-      </div>
-      <div class="article-meta">86 University of Cincinnati Law Review 1251 (2018)</div>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/commercial-agency-good-faith">Commercial agency and the duty to act in good faith</a>
-      </div>
-      <div class="article-meta">36 Oxford Journal of Legal Studies 661 (2016) (peer-reviewed)</div>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/european-dimension-commercial-agents">An exploration of the European dimension of the Commercial Agents Regulations</a>
-      </div>
-      <div class="article-meta">39 Lloyd's Maritime and Commercial Law Quarterly 544 (2013) (peer-reviewed)</div>
-      <ul class="article-featured">
-        <li>Cited by the Advocate General of the European Court of Justice, The Software Incubator (Self-employed commercial agents), Opinion of Advocate General Tanchev, [2020] EUECJ C-410/19_O (17 December 2020)</li>
-      </ul>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/traditional-foods-eu">The protection of traditional foods in the EU: Traditional Specialities Guaranteed</a>
-      </div>
-      <div class="article-meta">19 European Law Journal 545 (2013) (peer-reviewed)</div>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/security-interests-ip">Security interests over intellectual property</a>
-      </div>
-      <div class="article-meta">6 Journal of Intellectual Property Law & Practice 93 (2011) (peer-reviewed)</div>
-    </div>
-
-    <div class="article-item">
-      <div class="article-title">
-        <a href="/articles/uncitral-annex-ip">The UNCITRAL Annex on security rights in IP: a work in progress</a>
-      </div>
-      <div class="article-meta">4 Journal of Intellectual Property Law & Practice 743 (2009) (peer-reviewed)</div>
-    </div>
+  <div class="page-header">
+    <div class="section-label">Scholarship</div>
+    <h1 class="page-title">Articles</h1>
   </div>
+
+  <ol class="bib">
+    {articles.map(a => (
+      <li id={a.id}>
+        {a.authors},
+        <span class="title"><a href={a.url}><em>{a.title}</em></a></span>,
+        {a.volume && <> {a.volume}</>} <span class="venue">{a.venue}</span>
+        <span class="year">({a.year})</span>.
+        {a.notes.length > 0 && (
+          <div class="notes">{a.notes.join(' ')}</div>
+        )}
+      </li>
+    ))}
+  </ol>
 </Layout>

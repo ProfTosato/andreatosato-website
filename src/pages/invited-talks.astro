@@ -1,238 +1,80 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+type Talk = { year: number; venue: string; title: string; ref?: { url: string; text: string } };
+
+const talks: Talk[] = [
+  { year: 2026, venue: "UNCITRAL Colloquium, New York City", title: "Control as a Method for Third-Party Effectiveness for Security Rights" },
+  { year: 2026, venue: "Federal Reserve Bank of Dallas, Dallas", title: "The Law and Regulation of Stablecoins", ref: { url: "/articles/moneyness-of-stablecoins", text: "The Moneyness of Stablecoins" } },
+  { year: 2026, venue: "Association of American Law Schools, New Orleans", title: "Bankrupt Crypto Organizations", ref: { url: "/articles/bankrupt-crypto-organizations", text: "Bankrupt Crypto Organizations" } },
+  { year: 2026, venue: "Association of American Law Schools, New Orleans", title: "Regulating Centralized Stablecoins", ref: { url: "/essays/regulating-stablecoins", text: "Regulating Centralized Stablecoins" } },
+
+  { year: 2025, venue: "Pacific Law Foundation, Arlington", title: "\u201CBundle of Sticks\u201D Has Become Inadequate for Modern Digital Assets and Should Be Refined", ref: { url: "/articles/digital-assets-property-question", text: "Digital Assets and the Property Question" } },
+  { year: 2025, venue: "American Bar Association, Business Law Section, Toronto", title: "Decrypting Crypto: Valuation, Due Diligence, and Legal Risks for Lenders" },
+  { year: 2025, venue: "Federal Reserve Bank of New York, New York City", title: "Crypto and the Property Question", ref: { url: "/articles/digital-assets-property-question", text: "Digital Assets and the Property Question" } },
+  { year: 2025, venue: "UNCITRAL Colloquium, New York City", title: "Verified Carbon Credits as Collateral in Secured Transactions" },
+
+  { year: 2024, venue: "VII Conference on International Coordination of Secured Transactions Reform", title: "Verified Carbon Credits: Private Law Regime and Use as Collateral" },
+  { year: 2024, venue: "Practicing Law Institute, San Francisco", title: "NFTs in Commercial Transactions", ref: { url: "/essays/nfts-structured-finance", text: "The Intersection of NFTs and Structured Finance" } },
+  { year: 2024, venue: "Harvard-Wharton Insolvency and Restructuring Conference, Boston", title: "DAOs in Financial Distress", ref: { url: "/essays/daos-financial-distress", text: "DAOs in Financial Distress" } },
+  { year: 2024, venue: "University of Pennsylvania, Regulation & Governance Conference, Philadelphia", title: "Debt Tokens", ref: { url: "/articles/debt-tokens", text: "Debt Tokens" } },
+  { year: 2024, venue: "BYU/UChicago, Winter Bankruptcy Conference, Park City", title: "Debt Tokens", ref: { url: "/articles/debt-tokens", text: "Debt Tokens" } },
+  { year: 2024, venue: "American Bar Association, Business Law Section", title: "From Traditional to Digital: The Evolving Legal Landscape of Commercial Transactions" },
+  { year: 2024, venue: "Office of the Comptroller of the Currency, Washington DC", title: "Tokenization" },
+  { year: 2024, venue: "University of Chicago, Chicago", title: "Digital Assets and the 2022 UCC Amendments" },
+  { year: 2024, venue: "Association of American Law Schools, Washington DC", title: "Debt Tokens", ref: { url: "/articles/debt-tokens", text: "Debt Tokens" } },
+
+  { year: 2023, venue: "American Bar Association, Business Law Section", title: "Busting Myths About Digital Assets and Uncovering the True Technology Mechanics Impacting Your Clients and Practice" },
+  { year: 2023, venue: "UNIDROIT, Rome", title: "The DAPL Principles and the Transfer of Digital Assets" },
+  { year: 2023, venue: "TerraLex/ACC, New York", title: "2022 UCC Amendments and the Dawn of Controllable Electronic Records" },
+  { year: 2023, venue: "American Bar Association, Business Law Section", title: "Introducing Article 12 of the Uniform Commercial Code" },
+  { year: 2023, venue: "KCON, Texas A&M Law School, Fort Worth", title: "UCC Article 12: It Is All About Control" },
+  { year: 2023, venue: "Association of American Law Schools, San Diego", title: "Digital Assets, Virtual Currencies, and UCC Reform" },
+
+  { year: 2022, venue: "Federal Reserve Bank of New York, New York", title: "The Private Law of Stablecoins", ref: { url: "/articles/private-law-stablecoins", text: "The Private Law of Stablecoins" } },
+  { year: 2022, venue: "Baruch College, New York City", title: "The Emerging Private Law Framework for Digital Assets" },
+  { year: 2022, venue: "UNIDROIT, Rome", title: "Enforcement and Digital Assets: Rights of Secured Creditors" },
+  { year: 2022, venue: "Brooklyn Law School, New York City", title: "Commercial Law Harmonization: Past as Prologue" },
+  { year: 2022, venue: "American Bar Association, Business Law Section Spring Meeting, Atlanta", title: "UCC and Emerging Technologies" },
+
+  { year: 2021, venue: "American College of Commercial Finance Lawyers", title: "UCC and Emerging Technologies" },
+  { year: 2021, venue: "University of Vienna, Vienna", title: "ULC/ALI Project on Digital Assets: Comparative Observations" },
+  { year: 2020, venue: "UNIDROIT, Rome", title: "Model Law on Warehouse Receipts: Contractual Issues" },
+  { year: 2019, venue: "UNIDROIT, Rome", title: "Distributed Ledger Technology and International Sales of Commodities" },
+  { year: 2018, venue: "Universidad Carlos III Madrid, II Conference on International Coordination of Secured Transactions Law Reforms", title: "Distributed Ledger Technology as the Bridge Between General Secured Transactions Registers and Asset-Specific Registration Systems" },
+  { year: 2017, venue: "American Bar Association, Business Law Section Meeting, New Orleans", title: "Making the Intangible Untouchable: Creating, Perfecting and Enforcing Security Interests in Intangibles in Cross-Border Transactions" },
+  { year: 2017, venue: "UNCITRAL, Fourth International Colloquium on Secured Transactions, Vienna", title: "International Principles of Contract Law for IP Licences" }
+];
+
+const byYear = talks.reduce((acc, t) => {
+  (acc[t.year] ||= []).push(t);
+  return acc;
+}, {} as Record<number, Talk[]>);
+const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
 ---
 
 <Layout title="Invited Talks" description="Selected invited talks and conference presentations by Andrea Tosato on private law, commercial law, bankruptcy, digital assets, stablecoins, and verified carbon credits.">
-  <style>
-    .content {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 2.5rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 2.5rem;
-      margin-bottom: 1.5rem;
-      color: #000;
-    }
-
-    h2:first-of-type {
-      margin-top: 0;
-    }
-
-    .talk-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid #f0f0f0;
-      line-height: 1.7;
-    }
-
-    .talk-item:last-child {
-      border-bottom: none;
-    }
-
-    .talk-item a {
-      color: #000;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .talk-item a:hover {
-      opacity: 0.5;
-      text-decoration: underline;
-    }
-
-    .article-ref {
-      display: inline-block;
-      font-size: 0.85rem;
-      color: #666;
-      margin-left: 0.5rem;
-    }
-
-    .article-ref:hover {
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-
-  <div class="content">
-    <h1>Invited Talks</h1>
-
-    <h2>2026</h2>
-
-    <div class="talk-item">
-      UNCITRAL Colloquium: Colloquium on Harmonizing Law in the Age of Digital Trade and Finance, New York City. Control As A Method For Third Party Effectiveness For Security Rights (2026)
-    </div>
-
-    <div class="talk-item">
-      The Federal Reserve Bank of Dallas, Dallas. The Law and Regulation of Stablecoins (2026) <a href="/articles/moneyness-of-stablecoins" class="article-ref">→ The Moneyness of Stablecoins</a>
-    </div>
-
-    <div class="talk-item">
-      Association of American Law Schools, New Orleans. Bankrupt Crypto Organizations (2026) <a href="/articles/bankrupt-crypto-organizations" class="article-ref">→ Bankrupt Crypto Organizations</a>
-    </div>
-
-    <div class="talk-item">
-      Association of American Law Schools, New Orleans. Regulating Centralized Stablecoins (2026) <a href="/essays/regulating-stablecoins" class="article-ref">→ Regulating Centralized Stablecoins</a>
-    </div>
-
-    <h2>2025</h2>
-
-    <div class="talk-item">
-      Pacific Law Foundation, Arlington. "Bundle of Sticks" Has Become Inadequate for Modern Digital Assets and Should Be Refined (2025) <a href="/articles/digital-assets-property-question" class="article-ref">→ Digital Assets and the Property Question</a>
-    </div>
-
-    <div class="talk-item">
-      American Bar Association, Business Law Section, Toronto. Decrypting Crypto: Valuation, Due Diligence, and Legal Risks for Lenders (2025)
-    </div>
-
-    <div class="talk-item">
-      The Federal Reserve Bank of New York, New York City. Crypto and the Property Question (2025) <a href="/articles/digital-assets-property-question" class="article-ref">→ Digital Assets and the Property Question</a>
-    </div>
-
-    <div class="talk-item">
-      UNCITRAL Colloquium: Navigating the new era of digital finance, New York City. Verified Carbon Credits as Collateral in Secured Transactions (2025)
-    </div>
-
-    <h2>2024</h2>
-
-    <div class="talk-item">
-      VII Conference on International Coordination of Secured Transactions Reform. Verified Carbon Credits: Private Law Regime and Use as Collateral (2024)
-    </div>
-
-    <div class="talk-item">
-      Practicing Law Institute, San Francisco. NFTs in Commercial Transactions (2024) <a href="/essays/nfts-structured-finance" class="article-ref">→ The Intersection of NFTs and Structured Finance</a>
-    </div>
-
-    <div class="talk-item">
-      Harvard University, Harvard-Wharton Insolvency and Restructuring Conference, Boston. DAOs in Financial Distress (2024) <a href="/essays/daos-financial-distress" class="article-ref">→ DAOs in Financial Distress</a>
-    </div>
-
-    <div class="talk-item">
-      University of Pennsylvania, Regulation & Governance Conference, Philadelphia. Debt Tokens (2024) <a href="/articles/debt-tokens" class="article-ref">→ Debt Tokens</a>
-    </div>
-
-    <div class="talk-item">
-      BYU/UChicago, Winter Bankruptcy Conference, Park City. Debt Tokens (2024) <a href="/articles/debt-tokens" class="article-ref">→ Debt Tokens</a>
-    </div>
-
-    <div class="talk-item">
-      American Bar Association, Business Law Section. From Traditional to Digital: The Evolving Legal Landscape of Commercial Transactions (2024)
-    </div>
-
-    <div class="talk-item">
-      Office of the Comptroller of The Currency, Washington DC. Tokenization (2024)
-    </div>
-
-    <div class="talk-item">
-      University of Chicago, Chicago. Digital Assets & the 2022 UCC Amendments (2024)
-    </div>
-
-    <div class="talk-item">
-      Association of American Law Schools, Washington DC. Debt Tokens (2024) <a href="/articles/debt-tokens" class="article-ref">→ Debt Tokens</a>
-    </div>
-
-    <h2>2023</h2>
-
-    <div class="talk-item">
-      American Bar Association, Business Law Section. Busting Myths About Digital Assets and Uncovering the True Technology Mechanics Impacting Your Clients and Practice (2023)
-    </div>
-
-    <div class="talk-item">
-      UNIDROIT, Rome. The DAPL Principles and the Transfer of Digital Assets (2023)
-    </div>
-
-    <div class="talk-item">
-      TerraLex/ACC, New York. 2022 UCC Amendments and the Dawn of Controllable Electronic Records (2023)
-    </div>
-
-    <div class="talk-item">
-      American Bar Association, Business Law Section. Introducing Article 12 of the Uniform Commercial Code (2023)
-    </div>
-
-    <div class="talk-item">
-      KCON, Texas A&M Law School, Fort Worth. UCC Article 12: It is All About Control! (2023)
-    </div>
-
-    <div class="talk-item">
-      Association of American Law Schools, San Diego. Digital Assets, Virtual Currencies, & UCC Reform (2023)
-    </div>
-
-    <h2>2022</h2>
-
-    <div class="talk-item">
-      The Federal Reserve Bank of New York, New York. The Private Law of Stablecoins (2022) <a href="/articles/private-law-stablecoins" class="article-ref">→ The Private Law of Stablecoins</a>
-    </div>
-
-    <div class="talk-item">
-      Baruch College, New York City. The emerging private law framework for digital assets (2022)
-    </div>
-
-    <div class="talk-item">
-      UNIDROIT, Rome. Enforcement and Digital Assets: Rights of Secured Creditors (2022)
-    </div>
-
-    <div class="talk-item">
-      Brooklyn Law School, New York City. Commercial Law Harmonization: Past as Prologue (2022)
-    </div>
-
-    <div class="talk-item">
-      American Bar Association, Business Law Section 2022 Spring Meeting, Atlanta. College of Commercial Finance Lawyers. UCC and Emerging Technologies (2022)
-    </div>
-
-    <h2>2021 and Earlier</h2>
-
-    <div class="talk-item">
-      American College of Commercial Finance Lawyers. UCC and Emerging Technologies (2021)
-    </div>
-
-    <div class="talk-item">
-      University of Wien, Vienna. ULC/ALI Project on Digital Assets: Comparative observations (2021)
-    </div>
-
-    <div class="talk-item">
-      UNIDROIT, Rome. Model Law on Warehouse Receipts: Contractual Issues (2020)
-    </div>
-
-    <div class="talk-item">
-      UNIDROIT, Rome. Distributed Ledger Technology and international sales of commodities (2019)
-    </div>
-
-    <div class="talk-item">
-      Universidad Carlos III Madrid, II Conference on International Coordination of Secured Transactions Law Reforms. Distributed ledger technology as the bridge between general secured transactions registers and assets specific registration systems? (2018)
-    </div>
-
-    <div class="talk-item">
-      American Bar Association, Business Law Section 2017 Meeting, New Orleans. Making the Intangible Untouchable: Creating, Perfecting and Enforcing Security Interests in Intangibles in Cross-Border Transactions (2017)
-    </div>
-
-    <div class="talk-item">
-      UNCITRAL, Fourth International Colloquium on Secured Transactions, Vienna. International principles of contract law for IP licences (2017)
-    </div>
+  <div class="page-header">
+    <div class="section-label">Engagements</div>
+    <h1 class="page-title">Invited Talks</h1>
+    <p class="page-lede">Selected talks and conference presentations.</p>
   </div>
+
+  {years.map(year => (
+    <section class="talks-year-group">
+      <h2 class="subsection-label tabular">{year}</h2>
+      <ol class="talks-list">
+        {byYear[year].map(t => (
+          <li class="talk">
+            <div class="talk-year tabular">{year}</div>
+            <div class="talk-body">
+              <div class="talk-venue">{t.venue}</div>
+              <div class="talk-title"><em>{t.title}</em></div>
+              {t.ref && <a class="talk-ref" href={t.ref.url}>&rarr; {t.ref.text}</a>}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
 </Layout>

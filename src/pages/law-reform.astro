@@ -3,185 +3,78 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Law Reform" description="Andrea Tosato's law reform work includes the UCC, the Permanent Editorial Board, the Uniform Law Commission, UNIDROIT, and international commercial law projects involving digital assets and verified carbon credits.">
-  <style>
-    .content {
-      max-width: 950px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
+  <div class="page-header">
+    <div class="section-label">Service</div>
+    <h1 class="page-title">Law Reform</h1>
+  </div>
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 3rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
+  <div class="reform-list">
 
-    .organization {
-      margin-bottom: 3rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
+    <section class="reform-org">
+      <h2 class="reform-org-name">Uniform Law Commission</h2>
+      <ol class="reform-roles">
+        <li class="reform-role">
+          <div class="role-title">Study Committee on Commercial Law Framework for Voluntary Carbon Credits</div>
+          <div class="role-meta"><span class="role-position">Co-Reporter</span><span class="role-dates tabular">September 2024 to present</span></div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">Drafting Committee on the Virtual Currency Customer Protection Act</div>
+          <div class="role-meta"><span class="role-position">Reporter</span><span class="role-dates tabular">June 2023 to April 2025</span></div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">Permanent Editorial Board for the Uniform Commercial Code</div>
+          <div class="role-meta"><span class="role-position">Associate Research Director</span><span class="role-dates tabular">March 2022 to present</span></div>
+          <div class="role-note">Co-appointment with Professor Carla Reyes.</div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">Enactment Committee for the 2022 Uniform Commercial Code Amendments</div>
+          <div class="role-meta"><span class="role-position">Member</span><span class="role-dates tabular">August 2022 to present</span></div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">UCC and Emerging Technologies Committee (Joint Committee with the American Law Institute)</div>
+          <div class="role-meta"><span class="role-position">Member</span><span class="role-dates tabular">June 2019 to July 2022</span></div>
+        </li>
+      </ol>
+    </section>
 
-    .organization:last-child {
-      border-bottom: none;
-    }
+    <section class="reform-org">
+      <h2 class="reform-org-name">UNIDROIT</h2>
+      <ol class="reform-roles">
+        <li class="reform-role">
+          <div class="role-title">Drafting Committee for the Working Group developing the UNIDROIT Principles on Verified Carbon Credits</div>
+          <div class="role-meta"><span class="role-position">Member</span><span class="role-dates tabular">June 2024 to present</span></div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">Drafting Committee for the Working Group developing the UNIDROIT Principles on Digital Assets</div>
+          <div class="role-meta"><span class="role-position">Member</span><span class="role-dates tabular">April 2022 to May 2023</span></div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">Working Group developing the UNIDROIT Model Law on Warehouse Receipts</div>
+          <div class="role-meta"><span class="role-position">Member</span><span class="role-dates tabular">April 2022 to May 2024</span></div>
+        </li>
+      </ol>
+    </section>
 
-    .org-name {
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-      color: #000;
-    }
+    <section class="reform-org">
+      <h2 class="reform-org-name">Italian Ministry of Foreign Affairs</h2>
+      <ol class="reform-roles">
+        <li class="reform-role">
+          <div class="role-title">Advisor for International Commercial Law Affairs</div>
+          <div class="role-meta"><span class="role-dates tabular">2008 to 2020</span></div>
+        </li>
+        <li class="reform-role">
+          <div class="role-title">Delegate to the United Nations Commission on International Trade Law (UNCITRAL)</div>
+          <div class="role-meta"><span class="role-position">Delegate</span><span class="role-dates tabular">2008 to 2017</span></div>
+          <div class="role-note">Representing the Italian government in the negotiations for:</div>
+          <ul class="role-subitems">
+            <li>The UNCITRAL Model Law on Secured Transactions: Guide to Enactment (2017).</li>
+            <li>The UNCITRAL Model Law on Secured Transactions (2016).</li>
+            <li>The UNCITRAL Guide on the Implementation of a Security Rights Registry (2013).</li>
+            <li>The UNCITRAL Legislative Guide on Secured Transactions Supplement on Security Rights in Intellectual Property (2010).</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-    .position {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
-    .position-title {
-      font-size: 1.05rem;
-      color: #000;
-      margin-bottom: 0.3rem;
-    }
-
-    .position-role {
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-style: italic;
-      color: #000;
-      margin-bottom: 0.2rem;
-    }
-
-    .position-dates {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    .delegate-info {
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-      color: #000;
-      line-height: 1.7;
-    }
-
-    .achievement-list {
-      list-style: none;
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-    }
-
-    .achievement-list li {
-      margin-bottom: 0.5rem;
-      color: #000;
-      font-size: 0.95rem;
-      position: relative;
-      padding-left: 1.5rem;
-      font-weight: 600;
-      font-style: italic;
-    }
-
-    .achievement-list li::before {
-      content: "◆";
-      position: absolute;
-      left: 0;
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .position {
-        padding-left: 0;
-      }
-    }
-  </style>
-
-  <div class="content">
-    <h1>Law Reform Initiatives</h1>
-    
-    <div class="organization">
-      <div class="org-name">Uniform Law Commission</div>
-      
-      <div class="position">
-        <div class="position-title">Study Committee on Commercial Law Framework for Voluntary Carbon Credits</div>
-        <div class="position-role">Co-Reporter</div>
-        <div class="position-dates">September 2024 – present</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">Drafting Committee on the Virtual Currency Customer Protection Act</div>
-        <div class="position-role">Reporter</div>
-        <div class="position-dates">June 2023 – April 2025</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">Permanent Editorial Board for the Uniform Commercial Code</div>
-        <div class="position-role">Associate Research Director</div>
-        <div class="position-dates">March 2022 – present (co-appointment with Professor Carla Reyes)</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">Enactment Committee for the 2022 Uniform Commercial Code Amendments</div>
-        <div class="position-role">Member</div>
-        <div class="position-dates">August 2022 – present</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">UCC and Emerging Technologies Committee (Joint Committee with the American Law Institute)</div>
-        <div class="position-role">Member</div>
-        <div class="position-dates">June 2019 – July 2022</div>
-      </div>
-    </div>
-
-    <div class="organization">
-      <div class="org-name">UNIDROIT</div>
-      
-      <div class="position">
-        <div class="position-title">Drafting Committee for the Working Group developing the UNIDROIT Principles on Verified Carbon Credits</div>
-        <div class="position-role">Member</div>
-        <div class="position-dates">June 2024 – present</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">Drafting Committee for the Working Group developing the UNIDROIT Principles on Digital Assets</div>
-        <div class="position-role">Member</div>
-        <div class="position-dates">April 2022 – May 2023</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">Working Group developing the UNIDROIT Model Law on Warehouse Receipts</div>
-        <div class="position-role">Member</div>
-        <div class="position-dates">April 2022 – May 2024</div>
-      </div>
-    </div>
-
-    <div class="organization">
-      <div class="org-name">Italian Ministry of Foreign Affairs</div>
-      
-      <div class="position">
-        <div class="position-title">Advisor for International Commercial Law affairs</div>
-        <div class="position-dates">2008 – 2020</div>
-      </div>
-
-      <div class="position">
-        <div class="position-title">Delegate to the United Nations Commission on International Trade Law (UNCITRAL)</div>
-        <div class="position-dates">2008 – 2017</div>
-        <div class="delegate-info">Representing the Italian government in the negotiations for:</div>
-        <ul class="achievement-list">
-          <li>The UNCITRAL Model Law on Secured Transactions: Guide to Enactment (2017)</li>
-          <li>UNCITRAL Model Law on Secured Transactions (2016)</li>
-          <li>UNCITRAL Guide on the Implementation of a Security Rights Registry (2013)</li>
-          <li>UNCITRAL Legislative Guide on Secured Transactions: Supplement on Security Rights in Intellectual Property (2010)</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </Layout>

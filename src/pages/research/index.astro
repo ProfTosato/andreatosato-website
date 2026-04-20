@@ -39,103 +39,21 @@ const hubPages = [
   title="Research"
   description="Research agenda and topic hubs on private law, commercial law, bankruptcy, digital assets, stablecoins, UCC Article 12, and verified carbon credits."
 >
-  <style>
-    .content {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
-
-    .intro {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 3rem;
-      max-width: 750px;
-    }
-
-    .hub-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .hub-item {
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .hub-item:last-child {
-      border-bottom: none;
-    }
-
-    .hub-item-title {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-
-    .hub-item-title a {
-      color: #000;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .hub-item-title a:hover {
-      opacity: 0.5;
-    }
-
-    .hub-item-desc {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #555;
-    }
-
-    .hub-item-coming {
-      display: inline-block;
-      font-size: 0.8rem;
-      color: #999;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-
-  <div class="content">
-    <h1>Research</h1>
-    <p class="intro">
-      Research agenda and topic hubs on private law, commercial law, bankruptcy, digital assets, stablecoins, UCC Article 12, and verified carbon credits, with links to related scholarship.
-    </p>
-
-    <ul class="hub-list">
-      {hubPages.map(hub => (
-        <li class="hub-item">
-          <div class="hub-item-title">
-            <a href={hub.url}>{hub.title}</a>
-          </div>
-          <div class="hub-item-desc">{hub.description}</div>
-          {hub.forthcoming && <span class="hub-item-coming">Content forthcoming</span>}
-        </li>
-      ))}
-    </ul>
+  <div class="page-header">
+    <div class="section-label">Research</div>
+    <h1 class="page-title">Research</h1>
+    <p class="page-lede">Research agenda and topic pages on private law, commercial law, bankruptcy, digital assets, stablecoins, UCC Article 12, and verified carbon credits, with links to related scholarship.</p>
   </div>
+
+  <ol class="topic-list">
+    {hubPages.map(hub => (
+      <li class="topic">
+        <h2 class="topic-title"><a href={hub.url}>{hub.title}</a></h2>
+        <p class="topic-desc">
+          {hub.description}
+          {hub.forthcoming && <span class="forthcoming-marker">Content forthcoming.</span>}
+        </p>
+      </li>
+    ))}
+  </ol>
 </Layout>

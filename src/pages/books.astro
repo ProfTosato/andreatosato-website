@@ -42,267 +42,95 @@ const bookSchema = {
 <Layout title="Books" description="Books and book-length projects by Andrea Tosato on commercial law, digital commercial law, and modern intangible assets.">
   <script type="application/ld+json" set:html={JSON.stringify(bookSchema)} />
 
-  <style>
-    .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
+  <div class="page-header">
+    <div class="section-label">Books</div>
+    <h1 class="page-title">Books</h1>
+  </div>
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 3rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
-
-    .book-hero {
-      display: flex;
-      gap: 2.5rem;
-      align-items: flex-start;
-      margin-bottom: 3rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .book-cover {
-      width: 300px;
-      flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .book-cover img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .book-header {
-      flex: 1;
-    }
-
-    .book-title {
-      font-size: 1.6rem;
-      font-weight: 400;
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.01em;
-      color: #000;
-      text-transform: uppercase;
-    }
-
-    .book-subtitle {
-      font-size: 1.1rem;
-      font-weight: 300;
-      color: #444;
-      margin-bottom: 0.75rem;
-      font-style: italic;
-    }
-
-    .book-meta {
-      font-size: 1.05rem;
-      color: #666;
-      margin-bottom: 0.5rem;
-    }
-
-    .book-coauthors {
-      font-size: 1rem;
-      color: #999;
-      margin-bottom: 1.5rem;
-    }
-
-    .book-cta {
-      display: inline-block;
-      background: #000;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-      transition: opacity 0.2s;
-    }
-
-    .book-cta:hover {
-      opacity: 0.7;
-    }
-
-    .book-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .book-section h2 {
-      font-size: 1.3rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      color: #000;
-    }
-
-    .book-section p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-
-    .scholarship-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .scholarship-list li {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    .scholarship-list li:last-child {
-      border-bottom: none;
-    }
-
-    .scholarship-list a {
-      color: #000;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .scholarship-list a:hover {
-      opacity: 0.5;
-      text-decoration: underline;
-    }
-
-    .scholarship-journal {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    .pub-detail {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.8;
-      margin-bottom: 0.5rem;
-    }
-
-    .chapter-link {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    .chapter-link a {
-      color: #000;
-      text-decoration: none;
-      border-bottom: 1px solid #ccc;
-      transition: opacity 0.2s;
-    }
-
-    .chapter-link a:hover {
-      opacity: 0.5;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .book-hero {
-        flex-direction: column;
-        gap: 1.5rem;
-      }
-
-      .book-cover {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-      }
-
-      .book-title {
-        font-size: 1.3rem;
-      }
-    }
-  </style>
-
-  <div class="content">
-    <h1>Books</h1>
-
-    <div class="book-hero">
-      <div class="book-cover">
-        <img src="/book-cover.png" alt="Digital Commercial Law book cover - Oxford University Press" />
-      </div>
-      <div class="book-header">
-        <div class="book-title">Digital Commercial Law</div>
-        <div class="book-subtitle">Private Law in the Age of Tokens, Platforms, and Automation</div>
-        <div class="book-meta">Oxford University Press (June 2026)</div>
-        <div class="book-coauthors">Christopher K. Odinet and Andrea Tosato</div>
-        <a href="https://global.oup.com/academic/product/digital-commercial-law-9780197758625" class="book-cta" target="_blank" rel="noopener">Pre-Order from Oxford University Press</a>
-      </div>
+  <div class="book">
+    <img class="book-cover" src="/book-cover.png" alt="Digital Commercial Law, cover" />
+    <div class="book-meta">
+      <h2 class="book-title"><em>Digital Commercial Law</em></h2>
+      <p class="book-subtitle">Private Law in the Age of Tokens, Platforms, and Automation</p>
+      <p class="book-credit">Christopher K. Odinet &amp; Andrea Tosato</p>
+      <p class="book-citation"><span class="venue">Oxford University Press</span> <span class="year">(forthcoming June 2026)</span></p>
+      <a class="book-cta" href="https://global.oup.com/academic/product/digital-commercial-law-9780197758625" target="_blank" rel="noopener">Pre-order from Oxford University Press</a>
     </div>
+  </div>
 
-    <section class="book-section">
-      <h2>About the Book</h2>
+  <section class="book-section">
+    <h2 class="subsection-label">About the book</h2>
+    <div class="book-section-body">
       <p>Digital assets are everywhere. Bitcoin, stablecoins, non-fungible tokens, tokenized securities, and other blockchain-based instruments have moved from the fringes of technology into the mainstream of global commerce. Yet while the public debate has focused almost entirely on regulatory questions, the basic private law framework governing commercial transactions in digital assets has remained largely overlooked.</p>
       <p>This book introduces the concept of digital commercial law: the body of rules that determines how digital assets are created, transferred, encumbered, and used as collateral in commercial practice. Rather than proposing a unified theory of digital assets, the book adopts an applied, transaction-centered approach. Each chapter examines a distinct commercial use of digital assets and identifies the private law rules that govern it, revealing how existing legal frameworks apply, where they fall short, and what reforms are needed.</p>
       <p>A central theme of the book is the flexibility fallacy: the widespread assumption that existing commercial law statutes are flexible enough to accommodate digital assets without amendment. The book demonstrates that this assumption is often incorrect and that targeted legislative reform is both necessary and achievable. The analysis pursues three aims: to map the private law architecture that governs digital asset transactions, to identify the doctrinal gaps and uncertainties that create legal risk for market participants, and to evaluate the reform initiatives that have sought to address them.</p>
-    </section>
+    </div>
+  </section>
 
-    <section class="book-section">
-      <h2>Chapter Overview</h2>
+  <section class="book-section">
+    <h2 class="subsection-label">Chapter overview</h2>
+    <div class="book-section-body">
       <p><strong>Part I: Foundations</strong> lays the groundwork for the rest of the book. Chapter 1 introduces the concept of digital commercial law and explains why a transaction-centered approach to digital assets is both necessary and overdue. Chapters 2 through 4 examine the foundational questions that underpin all digital asset transactions: the legal nature of digital assets and whether they can be objects of property rights, the process of tokenization and how off-chain assets are represented on distributed ledgers, and the emerging legal and practical frameworks for digital asset custody.</p>
-      <div class="chapter-link">Related research: <a href="/research/digital-assets-property-law">Digital Assets and Property Law</a> · <a href="/research/ucc-article-12">UCC Article 12 and Controllable Electronic Records</a> · <a href="/articles/commercial-law-intersections">Commercial Law Intersections</a> · <a href="/research/bankruptcy-crypto">Digital Assets, DAOs and Bankruptcy Law</a></div>
+      <p class="chapter-link">Related research: <a href="/research/digital-assets-property-law">Digital Assets and Property Law</a> &middot; <a href="/research/ucc-article-12">UCC Article 12 and Controllable Electronic Records</a> &middot; <a href="/articles/commercial-law-intersections">Commercial Law Intersections</a> &middot; <a href="/research/bankruptcy-crypto">Digital Assets, DAOs and Bankruptcy Law</a></p>
 
       <p><strong>Part II: NFTs and Debt Tokens</strong> turns to specific transactional contexts. Chapter 5 explores how non-fungible tokens have transformed the market for creative works and the private law questions that arise from their creation, sale, and licensing. Chapter 6 examines the use of digital assets in bankruptcy claims trading, an area where blockchain technology has the potential to bring transparency and efficiency to a traditionally opaque market.</p>
-      <div class="chapter-link">Related research: <a href="/essays/nfts-structured-finance">NFTs and Structured Finance</a> · <a href="/articles/debt-tokens">Debt Tokens</a></div>
+      <p class="chapter-link">Related research: <a href="/essays/nfts-structured-finance">NFTs and Structured Finance</a> &middot; <a href="/articles/debt-tokens">Debt Tokens</a></p>
 
-      <p><strong>Part III: Tokenization of Real Estate and Stablecoins</strong> addresses the intersection of digital assets and financial transactions. Chapter 7 analyzes the tokenization of real estate, tracing how fractional ownership interests in property are created, transferred, and financed through blockchain-based instruments. Chapter 8 examines stablecoins, exploring whether these instruments function as a new form of private money and how existing commercial law frameworks apply to their issuance and circulation.</p>
-      <div class="chapter-link">Related research: <a href="/articles/moneyness-of-stablecoins">The Moneyness of Stablecoins</a> · <a href="/articles/crypto-real-estate-finance">Crypto in Real Estate Finance</a> · <a href="/essays/tokenized-real-estate">Tokenized Real Estate</a> · <a href="/research/stablecoins-private-law">Stablecoins and Private Law</a> · <a href="/articles/private-law-stablecoins">The Private Law of Stablecoins</a></div>
+      <p><strong>Part III: Tokenization of Real Estate and Stablecoins</strong> addresses the intersection of digital assets and financial transactions. Chapter 7 analyses the tokenization of real estate, tracing how fractional ownership interests in property are created, transferred, and financed through blockchain-based instruments. Chapter 8 examines stablecoins, exploring whether these instruments function as a new form of private money and how existing commercial law frameworks apply to their issuance and circulation.</p>
+      <p class="chapter-link">Related research: <a href="/articles/moneyness-of-stablecoins">The Moneyness of Stablecoins</a> &middot; <a href="/articles/crypto-real-estate-finance">Crypto in Real Estate Finance</a> &middot; <a href="/essays/tokenized-real-estate">Tokenized Real Estate</a> &middot; <a href="/research/stablecoins-private-law">Stablecoins and Private Law</a> &middot; <a href="/articles/private-law-stablecoins">The Private Law of Stablecoins</a></p>
 
       <p>The <strong>Conclusion</strong> draws together the themes of the preceding chapters and argues that the development of a coherent digital commercial law is not merely a technical exercise but a precondition for the responsible integration of digital assets into the broader legal and economic order.</p>
-    </section>
+    </div>
+  </section>
 
-    <section class="book-section">
-      <h2>Foundational Scholarship</h2>
+  <section class="book-section">
+    <h2 class="subsection-label">Foundational scholarship</h2>
+    <div class="book-section-body">
       <p>The book develops themes explored in the following articles and essays:</p>
       <ul class="scholarship-list">
         <li>
-          <a href="/articles/moneyness-of-stablecoins">The Moneyness of Stablecoins</a>
-          <span class="scholarship-journal"> — Yale Law Journal (forthcoming 2026)</span>
+          <a href="/articles/moneyness-of-stablecoins"><em>The Moneyness of Stablecoins</em></a>,
+          <span class="venue">Yale Law Journal</span>
+          <span class="year">(forthcoming 2026)</span>
         </li>
         <li>
-          <a href="/articles/debt-tokens">Debt Tokens</a>
-          <span class="scholarship-journal"> — University of Pennsylvania Law Review, vol. 173 (2025)</span>
+          <a href="/articles/debt-tokens"><em>Debt Tokens</em></a>, 173
+          <span class="venue">University of Pennsylvania Law Review</span>
+          <span class="year">(2025)</span>
         </li>
         <li>
-          <a href="/articles/digital-assets-property-question">Digital Assets and the Property Question</a>
-          <span class="scholarship-journal"> — Florida Law Review, vol. 78 (forthcoming 2026)</span>
+          <a href="/articles/digital-assets-property-question"><em>Digital Assets and the Property Question</em></a>, 78
+          <span class="venue">Florida Law Review</span>
+          <span class="year">(forthcoming 2026)</span>
         </li>
         <li>
-          <a href="/articles/private-law-stablecoins">The Private Law of Stablecoins</a>
-          <span class="scholarship-journal"> — Arizona State Law Journal, vol. 54 (2022)</span>
+          <a href="/articles/private-law-stablecoins"><em>The Private Law of Stablecoins</em></a>, 54
+          <span class="venue">Arizona State Law Journal</span>
+          <span class="year">(2022)</span>
         </li>
         <li>
-          <a href="/articles/crypto-real-estate-finance">Crypto in Real Estate Finance</a>
-          <span class="scholarship-journal"> — Alabama Law Review, vol. 75 (2023)</span>
+          <a href="/articles/crypto-real-estate-finance"><em>Crypto in Real Estate Finance</em></a>, 75
+          <span class="venue">Alabama Law Review</span>
+          <span class="year">(2023)</span>
         </li>
         <li>
-          <a href="/articles/commercial-law-intersections">Commercial Law Intersections</a>
-          <span class="scholarship-journal"> — Hastings Law Journal, vol. 72 (2021)</span>
+          <a href="/articles/commercial-law-intersections"><em>Commercial Law Intersections</em></a>, 72
+          <span class="venue">Hastings Law Journal</span>
+          <span class="year">(2021)</span>
         </li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section class="book-section">
-      <h2>Publication Information</h2>
+  <section class="book-section">
+    <h2 class="subsection-label">Publication information</h2>
+    <div class="book-section-body">
       <p class="pub-detail">Publisher: Oxford University Press</p>
       <p class="pub-detail">Publication date: 16 June 2026</p>
       <p class="pub-detail">Format: Hardcover (also available as e-book)</p>
       <p class="pub-detail">Pages: 352</p>
       <p class="pub-detail">ISBN: 9780197758625</p>
       <p class="pub-detail">Price: $39.95 (hardcover)</p>
-    </section>
-  </div>
+    </div>
+  </section>
 </Layout>

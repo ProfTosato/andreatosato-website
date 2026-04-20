@@ -4,25 +4,26 @@ import Layout from '../layouts/Layout.astro';
 const recentArticles = [
   {
     title: "The Moneyness of Stablecoins",
+    authors: ["Andrea Tosato", "Christopher K. Odinet", "Yesha Yadav"],
     journal: "Yale Law Journal",
+    volume: "136",
     year: "forthcoming 2026",
-    coauthors: "with Christopher K. Odinet and Yesha Yadav",
     url: "/articles/moneyness-of-stablecoins"
   },
   {
     title: "Bankrupt Crypto Organizations",
+    authors: ["Kara Bruce", "Christopher Odinet", "Andrea Tosato"],
     journal: "North Carolina Law Review",
     volume: "104",
     year: "forthcoming 2026",
-    coauthors: "with Kara Bruce and Christopher Odinet",
     url: "/articles/bankrupt-crypto-organizations"
   },
   {
     title: "Digital Assets and the Property Question",
+    authors: ["Christopher Odinet", "Andrea Tosato"],
     journal: "Florida Law Review",
     volume: "78",
     year: "forthcoming 2026",
-    coauthors: "with Christopher Odinet",
     url: "/articles/digital-assets-property-question"
   }
 ];
@@ -30,675 +31,148 @@ const recentArticles = [
 const recentEssays = [
   {
     title: "Seeing the Intangible: Juliet Moringiello's Enduring Legacy in Property Law",
+    authors: ["Andrea Tosato", "Christopher K. Odinet"],
     publication: "American Bankruptcy Law Review",
     year: "forthcoming 2026",
-    coauthors: "with Christopher K. Odinet",
     url: "/essays/seeing-the-intangible"
   },
   {
     title: "Regulating Centralized Stablecoins: Comparing MiCAR and the GENIUS Act",
+    authors: ["Andrea Tosato", "Christopher Odinet"],
     publication: "Notre Dame Law Review Reflection",
     year: "forthcoming 2026",
-    coauthors: "with Christopher Odinet",
     url: "/essays/regulating-stablecoins"
   },
   {
     title: "Tokenized Real Estate: The Law and Tech of Digital Deeds",
+    authors: ["Andrea Tosato", "Christopher Odinet"],
     publication: "Ohio State Law Journal Online",
     year: "forthcoming 2026",
-    coauthors: "with Christopher Odinet",
     url: "/essays/tokenized-real-estate"
   }
 ];
 
-// All news items from news.astro, sorted by date (most recent first)
 const allNewsItems = [
   {
+    date: "2026-04-15",
+    iso: "2026-04-15",
+    human: "15 April 2026",
+    title: "Eighth Session of the UNIDROIT Working Group on Verified Carbon Credits",
+    description: "Participating in the Eighth Session of the Working Group on the Legal Nature of Verified Carbon Credits at UNIDROIT in Rome.",
+    url: "https://www.unidroit.org/work-in-progress/verified-carbon-credits/",
+    external: true
+  },
+  {
     date: "2026-03-18",
-    title: "The Moneyness of Stablecoins Forthcoming in the Yale Law Journal",
-    description: "Professor Tosato's new article with Christopher K. Odinet and Yesha Yadav, developing an original framework for stablecoin moneyness, has been accepted for publication in the Yale Law Journal.",
+    iso: "2026-03-18",
+    human: "18 March 2026",
+    title: "The Moneyness of Stablecoins forthcoming in the Yale Law Journal",
+    description: "New article with Christopher K. Odinet and Yesha Yadav, developing an original framework for stablecoin moneyness.",
     url: "/articles/moneyness-of-stablecoins",
     external: false
   },
   {
     date: "2026-02-05",
-    title: "Bankrupt Crypto Organizations Wins SEALS Submission of the Year Award",
-    description: "The co-authored article has been selected as the 2026 Submission of the Year by the Southeastern Association of Law Schools.",
+    iso: "2026-02-05",
+    human: "5 February 2026",
+    title: "Bankrupt Crypto Organizations wins SEALS Submission of the Year Award",
+    description: "The co-authored article, forthcoming in the North Carolina Law Review, has been selected as the 2026 Submission of the Year by the Southeastern Association of Law Schools.",
     url: "/articles/bankrupt-crypto-organizations",
     external: false
   },
   {
     date: "2025-10-01",
-    title: "Professor Andrea Tosato Elected to the ALI",
-    description: "Andrea Tosato has been elected to membership in the American Law Institute, one of the highest honors in the American legal profession.",
+    iso: "2025-10-01",
+    human: "1 October 2025",
+    title: "Elected to the American Law Institute",
+    description: "Elected to membership in the American Law Institute, one of the highest honours in the American legal profession.",
     url: "https://www.smu.edu/law/news-events/2025/professor-andrea-tosato-elected-to-ali-membership",
-    external: true
-  },
-  {
-    date: "2025-07-01",
-    title: "UCC Article 12 Enacted in 30+ States",
-    description: "The 2022 UCC amendments, including Article 12 on controllable electronic records, have now been enacted in over 30 states.",
-    url: "https://www.uniformlaws.org/committees/community-home?CommunityKey=1457c422-ddb7-40b0-8c76-39a1991651ac",
-    external: true
-  },
-  {
-    date: "2025-04-16",
-    title: "Speaking at American Bar Association Business Law Section Annual Meeting",
-    description: "Professor Tosato presented on the intersection of UCC Article 12 and bankruptcy law at the ABA Business Law Section Annual Meeting.",
-    url: "/articles/bankrupt-crypto-organizations",
-    external: false
-  },
-  {
-    date: "2024-11-20",
-    title: "Featured on Block & Order Podcast: Bankrupt Crypto Organizations",
-    description: "Discussion of Bankrupt Crypto Organizations, the forthcoming North Carolina Law Review article examining bankruptcy law's intersection with cryptocurrency and digital assets.",
-    url: "https://www.youtube.com/watch?v=4X904wo-56w&ab_channel=Block%26Order",
-    external: true
-  },
-  {
-    date: "2024-10-08",
-    title: "Featured in Barrons: Crypto's Future and Commercial Law",
-    description: "Analysis of how the UCC Article 12 amendments are shaping the legal framework for cryptocurrency transactions in the United States.",
-    url: "https://www.barrons.com/articles/crypto-commercial-laws-definition-of-money-5fbd8fe4",
     external: true
   }
 ];
-
-// Get the 5 most recent news items
-const featuredNews = allNewsItems.slice(0, 5);
 ---
 
 <Layout>
-  <style>
-    .hero {
-      padding: 3rem 0 2.5rem 0;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .hero-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .profile-image {
-      width: 180px;
-      height: auto;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .hero-content {
-      flex: 1;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 300;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      color: #000;
-    }
-
-    .subtitle {
-      font-size: 1.25rem;
-      color: #666;
-      font-weight: 300;
-      margin-bottom: 1rem;
-    }
-
-    .hero-links {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-      margin-top: 1.5rem;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: opacity 0.2s;
-    }
-
-    .social-icon:hover {
-      opacity: 0.7;
-    }
-
-    .cv-button {
-      display: inline-block;
-      padding: 0.6rem 1.5rem;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-      transition: opacity 0.2s;
-    }
-
-    .cv-button:hover {
-      opacity: 0.8;
-    }
-
-    /* News Section with Carousel */
-    .news-section {
-      background-color: #fafafa;
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
-      padding: 1.75rem 2rem;
-    }
-
-    .news-container {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .news-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .news-header h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin: 0;
-      color: #000;
-    }
-
-    .view-all-news {
-      font-size: 0.95rem;
-      color: #000;
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      border-bottom: 2px solid #000;
-      padding-bottom: 2px;
-      transition: opacity 0.2s;
-    }
-
-    .view-all-news:hover {
-      opacity: 0.5;
-    }
-
-    .news-carousel-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .news-grid {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      gap: 1.5rem;
-    }
-
-    .news-card {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      padding: 1.5rem;
-      text-decoration: none;
-      color: #000;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      display: block;
-      flex: 0 0 calc(33.333% - 1rem);
-      min-width: calc(33.333% - 1rem);
-    }
-
-    .news-card:hover {
-      border-color: #000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .news-date {
-      font-size: 0.85rem;
-      color: #999;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-    }
-
-    .news-title {
-      font-size: 1.15rem;
-      font-weight: 500;
-      line-height: 1.4;
-      margin-bottom: 0.75rem;
-      color: #000;
-    }
-
-    .news-description {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .news-external {
-      display: inline-block;
-      margin-top: 0.5rem;
-      font-size: 0.85rem;
-      color: #666;
-    }
-
-    .carousel-dots {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-
-    .carousel-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background-color: #ccc;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .carousel-dot.active {
-      background-color: #000;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2.1rem 2rem;
-    }
-
-    section h2 {
-      font-size: 1.9rem;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.01em;
-      color: #000;
-    }
-
-    section h2 a {
-      color: #000;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    section h2 a:hover {
-      opacity: 0.5;
-    }
-
-    .about-preview {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #444;
-    }
-
-    .about-preview p {
-      margin-bottom: 1.2rem;
-    }
-
-    .about-preview a {
-      color: #000;
-      text-decoration: underline;
-      transition: opacity 0.2s;
-    }
-
-    .about-preview a:hover {
-      opacity: 0.5;
-    }
-
-    .expertise-highlight {
-      background-color: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 4px;
-      margin-top: 1.5rem;
-    }
-
-    .expertise-highlight h3 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-bottom: 0.75rem;
-      color: #000;
-    }
-
-    .expertise-highlight ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 0.5rem;
-    }
-
-    .expertise-highlight li {
-      font-size: 1rem;
-      color: #444;
-      padding-left: 1.2rem;
-      position: relative;
-    }
-
-    .expertise-highlight li:before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #666;
-    }
-
-    .publication-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.3rem;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .publication-item:last-child {
-      border-bottom: none;
-    }
-
-    .publication-title {
-      font-size: 1.3rem;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-      color: #000;
-    }
-
-    .publication-title a {
-      color: #000;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .publication-title a:hover {
-      opacity: 0.5;
-    }
-
-    .publication-meta {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 0.3rem;
-    }
-
-    .publication-coauthors {
-      font-size: 0.95rem;
-      color: #999;
-    }
-
-    .view-all {
-      margin-top: 1.5rem;
-    }
-
-    .view-all a {
-      color: #000;
-      text-decoration: none;
-      font-size: 0.95rem;
-      letter-spacing: 0.05em;
-      border-bottom: 2px solid #000;
-      padding-bottom: 2px;
-      transition: opacity 0.2s;
-    }
-
-    .view-all a:hover {
-      opacity: 0.5;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero {
-        padding: 2.5rem 0 2rem 0;
-      }
-
-      .hero-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 1.5rem;
-      }
-
-      .profile-image {
-        width: 150px;
-        height: auto;
-      }
-
-      .hero-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      section {
-        padding: 1.7rem 1.5rem;
-      }
-
-      .news-section {
-        padding: 1.5rem 1.5rem;
-      }
-
-      .news-card {
-        flex: 0 0 100%;
-        min-width: 100%;
-      }
-
-      .news-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      .expertise-highlight ul {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const newsGrid = document.querySelector('.news-grid') as HTMLElement;
-      const dots = document.querySelectorAll('.carousel-dot');
-      const totalNews = parseInt(newsGrid.dataset.total || '5', 10);
-      let currentIndex = 0;
-      let autoplayInterval: number;
-
-      function getCardsPerView(): number {
-        return window.innerWidth <= 768 ? 1 : 3;
-      }
-
-      function updateCarousel() {
-        const cardsPerView = getCardsPerView();
-        const cardWidth = newsGrid.children[0]?.getBoundingClientRect().width || 0;
-        const gap = 24; // 1.5rem in pixels
-        const translateX = -(currentIndex * (cardWidth + gap));
-        newsGrid.style.transform = `translateX(${translateX}px)`;
-        
-        dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentIndex);
-        });
-      }
-
-      function nextSlide() {
-        const cardsPerView = getCardsPerView();
-        const maxIndex = totalNews - cardsPerView;
-        currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-        updateCarousel();
-      }
-
-      function goToSlide(index: number) {
-        const cardsPerView = getCardsPerView();
-        const maxIndex = totalNews - cardsPerView;
-        currentIndex = Math.min(index, maxIndex);
-        updateCarousel();
-      }
-
-      function startAutoplay() {
-        stopAutoplay();
-        autoplayInterval = window.setInterval(nextSlide, 5000);
-      }
-
-      function stopAutoplay() {
-        if (autoplayInterval) {
-          clearInterval(autoplayInterval);
-        }
-      }
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          goToSlide(index);
-          stopAutoplay();
-          startAutoplay();
-        });
-      });
-
-      window.addEventListener('resize', () => {
-        updateCarousel();
-      });
-
-      newsGrid.addEventListener('mouseenter', stopAutoplay);
-      newsGrid.addEventListener('mouseleave', startAutoplay);
-
-      updateCarousel();
-      startAutoplay();
-    });
-  </script>
-
-  <div class="hero">
-    <div class="hero-container">
-      <img src="/profile.jpg" alt="Andrea Tosato - Private Law and Commercial Law Scholar" class="profile-image" />
-      <div class="hero-content">
-        <h1>Andrea Tosato</h1>
-        <p class="subtitle">Professor of Law, SMU Dedman School of Law</p>
-        <div class="hero-links">
-          <div class="social-icons">
-            <a href="https://www.smu.edu/law/faculty/profiles/tosato-andrea" class="social-icon" target="_blank" rel="noopener" title="SMU Profile" aria-label="SMU Profile">🎓</a>
-            <a href="https://www.linkedin.com/in/andrea-tosato-5a862067/" class="social-icon" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">in</a>
-            <a href="https://x.com/Andrea_Tosato" class="social-icon" target="_blank" rel="noopener" title="X (Twitter)" aria-label="X">𝕏</a>
-            <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1851659" class="social-icon" target="_blank" rel="noopener" title="SSRN" aria-label="SSRN">📄</a>
-            <a href="https://orcid.org/0000-0002-2607-2702" class="social-icon" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID" style="font-size: 0.85rem; font-weight: 600;">iD</a>
-          </div>
-          <a href="/Andrea-Tosato-CV.pdf" class="cv-button" download>Download CV</a>
-        </div>
+  <section class="hero">
+    <img class="portrait" src="/profile.jpg" alt="Andrea Tosato, Professor of Law at SMU Dedman School of Law">
+    <div class="hero-text">
+      <h1>Andrea Tosato</h1>
+      <div class="title-line">Professor of Law &nbsp;&middot;&nbsp; SMU Dedman School of Law</div>
+      <p class="positioning">
+        Private law, commercial law, and the legal architecture of modern intangible assets.
+      </p>
+      <div class="elsewhere">
+        <span class="elsewhere-label">Elsewhere</span>
+        <a href="https://www.smu.edu/law/faculty/profiles/tosato-andrea" target="_blank" rel="noopener">SMU</a><span class="sep">&middot;</span>
+        <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1851659" target="_blank" rel="noopener">SSRN</a><span class="sep">&middot;</span>
+        <a href="https://scholar.google.com/citations?user=gvFpxc4AAAAJ" target="_blank" rel="noopener">Google Scholar</a><span class="sep">&middot;</span>
+        <a href="https://orcid.org/0000-0002-2607-2702" target="_blank" rel="noopener">ORCID</a><span class="sep">&middot;</span>
+        <a href="https://www.linkedin.com/in/andrea-tosato-5a862067/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">&middot;</span>
+        <a href="https://x.com/Andrea_Tosato" target="_blank" rel="noopener">X</a><span class="sep">&middot;</span>
+        <a href="/Andrea-Tosato-CV.pdf">Curriculum Vitae (PDF)</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="news-section">
-    <div class="news-container">
-      <div class="news-header">
-        <h2>News</h2>
-        <a href="/news" class="view-all-news">View all news →</a>
-      </div>
-      <div class="news-carousel-wrapper">
-        <div class="news-grid" data-total={featuredNews.length}>
-          {featuredNews.map(news => (
-            <a 
-              href={news.url || '/news'} 
-              class="news-card"
-              target={news.external ? "_blank" : undefined}
-              rel={news.external ? "noopener" : undefined}
-            >
-              <div class="news-date">
-                {new Date(news.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}
-              </div>
-              <div class="news-title">{news.title}</div>
-              <div class="news-description">{news.description}</div>
-              {news.external && <span class="news-external">↗ External link</span>}
-            </a>
-          ))}
-        </div>
-      </div>
-      <div class="carousel-dots">
-        {featuredNews.map((_, index) => (
-          <button class={`carousel-dot ${index === 0 ? 'active' : ''}`} aria-label={`Go to slide ${index + 1}`}></button>
+  <section class="section columned">
+    <div class="section-label">News</div>
+    <div class="section-body">
+      <div class="news-list">
+        {allNewsItems.map(item => (
+          <article class="news-item">
+            <time class="news-date tabular" datetime={item.iso}>{item.human}</time>
+            <div class="news-body">
+              <h3>
+                <a href={item.url} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener" : undefined}>{item.title}</a>
+              </h3>
+              <p>{item.description}</p>
+            </div>
+          </article>
         ))}
       </div>
-    </div>
-  </div>
-
-  <section>
-    <h2><a href="/about-me">About Andrea Tosato</a></h2>
-    <div class="about-preview">
-      <p>Professor Andrea Tosato is a private law and commercial law scholar whose research examines how the law governs the creation, transfer, collateralization, and insolvency treatment of modern intangible assets. His current work focuses on digital assets, stablecoins, verified carbon credits, and related questions in secured transactions and bankruptcy.</p>
-
-      <p>His law reform work includes contributions to the 2022 Amendments to the Uniform Commercial Code, service on the UNIDROIT drafting committees on digital assets and verified carbon credits, and his current role as Associate Research Director of the Permanent Editorial Board for the UCC. <a href="/about-me">Read more →</a></p>
-
-      <div class="expertise-highlight">
-        <h3>Research Expertise</h3>
-        <ul>
-          <li>Private Law, Commercial Law, and Bankruptcy</li>
-          <li>Secured Transactions and Intangible Assets</li>
-          <li>Digital Assets, Stablecoins, and Controllable Electronic Records</li>
-          <li>Verified Carbon Credits and Carbon Markets</li>
-        </ul>
-      </div>
+      <a class="view-all" href="/news">All news</a>
     </div>
   </section>
 
-  <section>
-    <h2>Research</h2>
-    <div class="about-preview">
-      <p>Professor Tosato's scholarship sits at the intersection of private law, commercial law, and bankruptcy law. His scholarship addresses a central question of contemporary private law: how legal frameworks developed for tangible and conventional forms of property adapt to assets that are intangible, programmable, distributed, and increasingly central to modern commerce. His current work examines digital assets, stablecoins, and verified carbon credits as instances of this broader challenge.</p>
-
-      <p>As a key contributor to the drafting of <strong>UCC Article 12</strong>, he helped articulate the legal framework which provides clear rules for transferring and securing interests in cryptocurrencies, NFTs, and other digital assets across the United States of America. Beyond his work on UCC Article 12, Professor Tosato has made significant contributions to international law reform. He was a member of the Drafting Committee for the <strong>UNIDROIT Principles on Digital Assets and Private Law</strong> in 2023. More recently, he was appointed as a member of the drafting committee for the <strong>UNIDROIT Working Group on the Legal Nature of Verified Carbon Credits</strong> and serves as co-reporter for the <strong>Uniform Law Commission Study Committee on Commercial Law Framework for Voluntary Carbon Credits</strong>.</p>
-
-      <p>Professor Tosato's scholarship has been published in leading law journals, including the <em>Yale Law Journal</em>, <em>University of Pennsylvania Law Review</em>, <em>North Carolina Law Review</em>, <em>Alabama Law Review</em>, <em>Arizona State Law Journal</em>, <em>Florida Law Review</em>, <em>Fordham Law Review</em>, <em>Hastings Law Journal</em>, <em>Oxford Journal of Legal Studies</em>, <em>European Law Journal</em>, <em>Lloyd's Maritime and Commercial Law Quarterly</em>, and <em>Law &amp; Contemporary Problems</em>. His work has been cited by international bodies including the World Bank and the Advocate General of the European Court of Justice, demonstrating the impact of his scholarship on legal systems worldwide.</p>
+  <section class="section columned">
+    <div class="section-label">About</div>
+    <div class="section-body">
+      <div class="about-text">
+        <p><span class="drop">A</span> private law and commercial law scholar, examining how legal frameworks developed for tangible property adapt to assets that are intangible, programmable, and distributed. Current work addresses digital assets, stablecoins, and verified carbon credits, at the intersection of secured transactions and bankruptcy.</p>
+        <p>Contributor to the 2022 Amendments to the Uniform Commercial Code, member of the UNIDROIT drafting committees on digital assets and verified carbon credits, co-reporter for the Uniform Law Commission Study Committee on a Commercial Law Framework for Voluntary Carbon Credits, and Associate Research Director of the Permanent Editorial Board for the UCC. Elected to the American Law Institute in 2025.</p>
+      </div>
+      <a class="view-all" href="/about-me">Read more</a>
     </div>
   </section>
 
-  <section>
-    <h2><a href="/articles">Recent Articles</a></h2>
-    {recentArticles.map(article => (
-      <div class="publication-item">
-        <div class="publication-title">
-          <a href={article.url}>{article.title}</a>
-        </div>
-        <div class="publication-meta">
-          {article.journal}{article.volume && `, ${article.volume}`} ({article.year})
-        </div>
-        {article.coauthors && (
-          <div class="publication-coauthors">{article.coauthors}</div>
-        )}
-      </div>
-    ))}
-    <div class="view-all">
-      <a href="/articles">View all articles →</a>
-    </div>
-  </section>
+  <section class="section columned">
+    <div class="section-label">Writing</div>
+    <div class="section-body">
+      <div class="subsection-label">Articles &nbsp;&middot;&nbsp; recent</div>
+      <ol class="bib">
+        {recentArticles.map(a => (
+          <li>
+            {a.authors.join(', ')},
+            <span class="title"><a href={a.url}><em>{a.title}</em></a></span>,
+            {a.volume && <> {a.volume}</>} <span class="venue">{a.journal}</span>
+            <span class="year">({a.year})</span>.
+          </li>
+        ))}
+      </ol>
 
-  <section>
-    <h2><a href="/essays">Recent Essays</a></h2>
-    {recentEssays.map(essay => (
-      <div class="publication-item">
-        <div class="publication-title">
-          <a href={essay.url}>{essay.title}</a>
-        </div>
-        <div class="publication-meta">
-          {essay.publication} ({essay.year})
-        </div>
-        {essay.coauthors && (
-          <div class="publication-coauthors">{essay.coauthors}</div>
-        )}
-      </div>
-    ))}
-    <div class="view-all">
-      <a href="/essays">View all essays →</a>
+      <div class="subsection-label">Shorter writings</div>
+      <ol class="bib">
+        {recentEssays.map(e => (
+          <li>
+            {e.authors.join(', ')},
+            <span class="title"><a href={e.url}><em>{e.title}</em></a></span>,
+            <span class="venue">{e.publication}</span>
+            <span class="year">({e.year})</span>.
+          </li>
+        ))}
+      </ol>
+
+      <a class="view-all" href="/articles">All writing</a>
     </div>
   </section>
 </Layout>

@@ -2,75 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Teaching" description="Andrea Tosato teaches Contracts, Secured Transactions, Bankruptcy, International Business Transactions, and Blockchain and the Law at SMU Dedman School of Law.">
-  <style>
-    .content {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
+<Layout title="Teaching" description="Andrea Tosato teaches Contracts, Torts, Secured Transactions, Bankruptcy Law, International Business Transactions, and Blockchain and the Law at SMU Dedman School of Law.">
+  <div class="page-header">
+    <div class="section-label">Teaching</div>
+    <h1 class="page-title">Teaching</h1>
+  </div>
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 3rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
+  <div class="courses">
+    <section class="course-group">
+      <h2 class="course-heading">Foundation courses</h2>
+      <ul class="course-list">
+        <li>Contract Law</li>
+        <li>Tort Law</li>
+      </ul>
+    </section>
 
-    h2 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin: 2.5rem 0 1rem 0;
-      color: #000;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    li {
-      margin-bottom: 0.75rem;
-      color: #000;
-      font-size: 1.05rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-
-    li::before {
-      content: "—";
-      position: absolute;
-      left: 0;
-      color: #000;
-    }
-
-    @media (max-width: 768px) {
-      .content {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
-
-  <div class="content">
-    <h1>Teaching</h1>
-    
-    <h2>Foundation Courses</h2>
-    <ul>
-      <li>Contract Law</li>
-      <li>Tort Law</li>
-    </ul>
-
-    <h2>Elective Courses</h2>
-    <ul>
-      <li>Secured Transactions</li>
-      <li>Bankruptcy Law</li>
-      <li>International Business Transactions</li>
-      <li>Blockchain and the Law</li>
-    </ul>
+    <section class="course-group">
+      <h2 class="course-heading">Elective courses</h2>
+      <ul class="course-list">
+        <li>Secured Transactions</li>
+        <li>Bankruptcy Law</li>
+        <li>International Business Transactions</li>
+        <li>Blockchain and the Law</li>
+      </ul>
+    </section>
   </div>
 </Layout>

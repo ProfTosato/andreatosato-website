@@ -1,4 +1,8 @@
 ---
+import '../styles/site.css';
+import Masthead from '../components/Masthead.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
 const {
   title,
   authors,
@@ -20,6 +24,8 @@ const {
 const fullAuthors = authors.join(', ');
 const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? 'https://andreatosato.com';
 const currentUrl = `${siteBase}${Astro.url.pathname}`;
+
+const eyebrow = backLink.url === '/essays' ? 'Essay' : 'Article';
 ---
 
 <!DOCTYPE html>
@@ -31,7 +37,7 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <meta name="description" content={abstract ? abstract.substring(0, 160) : ''}>
   <meta name="author" content={fullAuthors}>
   <meta name="keywords" content={keywords.join(', ')}>
-  
+
   <!-- Additional SEO Meta Tags -->
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -41,6 +47,9 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="canonical" href={currentUrl}>
+
+  <!-- Preload primary font weight to reduce FOUT -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/eb-garamond-400-normal-latin.woff2" crossorigin>
 
   <!-- Google Scholar Meta Tags (Highwire Press) -->
   <meta name="citation_title" content={title}>
@@ -57,7 +66,7 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <meta name="citation_language" content="en">
   {doi && <meta name="citation_doi" content={doi}>}
   {localPdfUrl && <link rel="alternate" type="application/pdf" href={`https://andreatosato.com${localPdfUrl}`}>}
-  
+
   <!-- Dublin Core Metadata for Better Indexing -->
   <meta name="DC.title" content={title}>
   <meta name="DC.creator" content={fullAuthors}>
@@ -68,7 +77,7 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <meta name="DC.type" content="Text">
   <meta name="DC.format" content="text/html">
   <meta name="DC.language" content="en">
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content={title}>
   <meta property="og:description" content={abstract.substring(0, 200)}>
@@ -78,12 +87,12 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
   <meta property="article:author" content={fullAuthors}>
   <meta property="article:published_time" content={publishDate}>
   <meta property="article:section" content="Legal Research">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={abstract.substring(0, 200)}>
-  
+
   <!-- Schema.org -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -101,309 +110,79 @@ const currentUrl = `${siteBase}${Astro.url.pathname}`;
     "url": currentUrl,
     ...(localPdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": `https://andreatosato.com${localPdfUrl}` } } : pdfUrl ? { "encoding": { "@type": "MediaObject", "contentUrl": pdfUrl } } : {})
   })} />
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      line-height: 1.8;
-      color: #000;
-      background: #fff;
-      font-size: 17px;
-    }
-
-    nav {
-      border-bottom: 1px solid #000;
-      padding: 1.5rem 0;
-      background: #fff;
-    }
-
-    .nav-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    nav a {
-      color: #000;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: opacity 0.2s;
-    }
-
-    nav a:hover {
-      opacity: 0.5;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem 3rem 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      line-height: 1.3;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-      color: #000;
-    }
-
-    .authors {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-      color: #000;
-    }
-
-    .publication-info {
-      font-size: 1rem;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    .awards-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .award-item {
-      font-size: 0.95rem;
-      color: #000;
-      background: #f9f7f2;
-      border: 1px solid #e8e2d6;
-      padding: 0.5rem 1rem;
-      display: inline-block;
-      letter-spacing: 0.02em;
-    }
-
-    .abstract-section {
-      margin: 2rem 0;
-    }
-
-    .abstract-section h2 {
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 1.2rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #000;
-    }
-
-    .abstract-text {
-      text-align: justify;
-      line-height: 1.9;
-      font-size: 1.05rem;
-      color: #000;
-    }
-
-    .keywords {
-      margin: 2rem 0;
-    }
-
-    .keywords h3 {
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #000;
-    }
-
-    .keyword-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .keyword {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    .keyword:not(:last-child)::after {
-      content: "•";
-      margin-left: 1rem;
-      color: #ccc;
-    }
-
-    .download-section {
-      margin: 2.5rem 0;
-      padding: 2rem 0;
-      border-top: 1px solid #e0e0e0;
-      border-bottom: 1px solid #e0e0e0;
-      text-align: center;
-    }
-
-    .download-button {
-      display: inline-block;
-      color: #000;
-      background: #fff;
-      padding: 1rem 2rem;
-      text-decoration: none;
-      border: 2px solid #000;
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      transition: all 0.2s ease;
-    }
-
-    .download-button:hover {
-      background: #000;
-      color: #fff;
-    }
-
-    .download-button.secondary {
-      background: #fff;
-      color: #666;
-      border-color: #ccc;
-      margin-left: 1rem;
-      font-size: 0.85rem;
-    }
-
-    .download-button.secondary:hover {
-      background: #666;
-      color: #fff;
-      border-color: #666;
-    }
-
-    .related-talks {
-      margin: 2rem 0;
-    }
-
-    .related-talks h3 {
-      font-size: 0.9rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #000;
-    }
-
-    .talks-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .talks-list li {
-      font-size: 0.95rem;
-      color: #444;
-      padding: 0.4rem 0;
-      border-bottom: 1px solid #f0f0f0;
-      line-height: 1.6;
-    }
-
-    .talks-list li:last-child {
-      border-bottom: none;
-    }
-
-    footer {
-      border-top: 1px solid #000;
-      padding: 1.5rem;
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .nav-container {
-        padding: 0 1.5rem;
-      }
-    }
-  </style>
 </head>
 <body>
-  <nav>
-    <div class="nav-container">
-      <a href={backLink.url}>← Back to {backLink.text}</a>
-    </div>
-  </nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="page">
+    <Masthead />
+    <main id="main">
+      <a class="back-link" href={backLink.url}>&larr; {backLink.text}</a>
 
-  <div class="container">
-    <article>
-      <h1>{title}</h1>
-      <div class="authors">{fullAuthors}</div>
-      <div class="publication-info">
-        {journal}{volume && `, ${volume}`} ({year})
-      </div>
+      <article class="paper">
+        <div class="section-label">{eyebrow}</div>
+        <h1 class="paper-title">{title}</h1>
+        <p class="authors">{fullAuthors}</p>
+        <p class="citation">
+          {volume && <span class="vol">{volume}&nbsp;</span>}<span class="venue">{journal}</span>&nbsp;<span class="year">({year})</span>
+        </p>
 
-      {awards.length > 0 && (
-        <div class="awards-section">
-          {awards.map(award => (
-            <div class="award-item">
-              {award}
+        {awards.length > 0 && awards.map(award => (
+          <p class="award-note">&mdash; {award}</p>
+        ))}
+
+        {abstract && (
+          <>
+            <h2 class="paper-section">Abstract</h2>
+            <div class="abstract">
+              <p>{abstract}</p>
             </div>
-          ))}
-        </div>
-      )}
+          </>
+        )}
 
-      {abstract && (
-        <div class="abstract-section">
-          <h2>Abstract</h2>
-          <div class="abstract-text">
-            {abstract}
+        {(localPdfUrl || pdfUrl || ssrnUrl) && (
+          <div class="paper-actions">
+            {localPdfUrl && (
+              <a href={localPdfUrl} target="_blank" rel="noopener">Download PDF</a>
+            )}
+            {pdfUrl && (
+              <>
+                {localPdfUrl && <span class="dot">&middot;</span>}
+                <a href={pdfUrl} target="_blank" rel="noopener">{localPdfUrl ? 'View Published Version' : 'Download PDF'}</a>
+              </>
+            )}
+            {ssrnUrl && (
+              <>
+                {(localPdfUrl || pdfUrl) && <span class="dot">&middot;</span>}
+                <a href={ssrnUrl} target="_blank" rel="noopener">View on SSRN</a>
+              </>
+            )}
           </div>
-        </div>
-      )}
+        )}
 
-      {keywords.length > 0 && (
-        <div class="keywords">
-          <h3>Keywords</h3>
-          <div class="keyword-list">
-            {keywords.map(keyword => (
-              <span class="keyword">{keyword}</span>
-            ))}
+        {keywords.length > 0 && (
+          <>
+            <h2 class="paper-section">Keywords</h2>
+            <ul class="keywords">
+              {keywords.map(keyword => (
+                <li>{keyword}</li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {relatedTalks.length > 0 && (
+          <div class="related-talks">
+            <h3>Selected Presentations</h3>
+            <ul>
+              {relatedTalks.map(talk => (
+                <li>{talk}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-      )}
-
-      {relatedTalks.length > 0 && (
-        <div class="related-talks">
-          <h3>Selected Presentations</h3>
-          <ul class="talks-list">
-            {relatedTalks.map(talk => (
-              <li>{talk}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      <div class="download-section">
-        {localPdfUrl && (
-          <a href={localPdfUrl} class="download-button" target="_blank" rel="noopener">
-            Download PDF
-          </a>
         )}
-        {pdfUrl && (
-          <a href={pdfUrl} class={localPdfUrl ? 'download-button secondary' : 'download-button'} target="_blank" rel="noopener">
-            {localPdfUrl ? 'View Published Version ↗' : 'Download PDF'}
-          </a>
-        )}
-        {ssrnUrl && (
-          <a href={ssrnUrl} class={(localPdfUrl || pdfUrl) ? 'download-button secondary' : 'download-button'} target="_blank" rel="noopener">
-            View on SSRN ↗
-          </a>
-        )}
-      </div>
-    </article>
+      </article>
+    </main>
+    <SiteFooter />
   </div>
-
-  <footer>
-    <p>© {new Date().getFullYear()} Andrea Tosato. All rights reserved.</p>
-  </footer>
 </body>
 </html>
