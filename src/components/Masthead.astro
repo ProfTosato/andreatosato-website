@@ -1,16 +1,16 @@
 ---
 const currentPath = Astro.url.pathname;
 
-const isResearch = currentPath === '/research' || currentPath.startsWith('/research/');
-const isArticles = currentPath === '/articles' || currentPath.startsWith('/articles/');
-const isEssays = currentPath === '/essays' || currentPath.startsWith('/essays/');
-const isBooks = currentPath === '/books';
-const isAbout = currentPath === '/about-me';
-const isLawReform = currentPath === '/law-reform';
-const isTeaching = currentPath === '/teaching';
-const isNews = currentPath === '/news';
-const isInvitedTalks = currentPath === '/invited-talks';
-const isMedia = currentPath === '/media';
+const isResearch = currentPath === '/research/' || currentPath.startsWith('/research/');
+const isArticles = currentPath === '/articles/' || currentPath.startsWith('/articles/');
+const isEssays = currentPath === '/essays/' || currentPath.startsWith('/essays/');
+const isBooks = currentPath === '/books/';
+const isAbout = currentPath === '/about-me/';
+const isLawReform = currentPath === '/law-reform/';
+const isTeaching = currentPath === '/teaching/';
+const isNews = currentPath === '/news/';
+const isInvitedTalks = currentPath === '/invited-talks/';
+const isMedia = currentPath === '/media/';
 ---
 <header class="masthead">
   <a class="wordmark" href="/">Andrea Tosato</a>
@@ -21,18 +21,18 @@ const isMedia = currentPath === '/media';
   </button>
   <div class="nav-stack" id="site-nav">
     <nav class="primary" aria-label="Scholarship">
-      <a href="/research" class={isResearch ? 'current' : ''}>Research</a>
-      <a href="/articles" class={isArticles ? 'current' : ''}>Articles</a>
-      <a href="/essays" class={isEssays ? 'current' : ''}>Essays</a>
-      <a href="/books" class={isBooks ? 'current' : ''}>Books</a>
+      <a href="/research/" class={isResearch ? 'current' : ''}>Research</a>
+      <a href="/articles/" class={isArticles ? 'current' : ''}>Articles</a>
+      <a href="/essays/" class={isEssays ? 'current' : ''}>Essays</a>
+      <a href="/books/" class={isBooks ? 'current' : ''}>Books</a>
     </nav>
     <nav class="secondary" aria-label="Professional">
-      <a href="/about-me" class={isAbout ? 'current' : ''}>About</a>
-      <a href="/law-reform" class={isLawReform ? 'current' : ''}>Law Reform</a>
-      <a href="/teaching" class={isTeaching ? 'current' : ''}>Teaching</a>
-      <a href="/news" class={isNews ? 'current' : ''}>News</a>
-      <a href="/invited-talks" class={isInvitedTalks ? 'current' : ''}>Invited Talks</a>
-      <a href="/media" class={isMedia ? 'current' : ''}>Media</a>
+      <a href="/about-me/" class={isAbout ? 'current' : ''}>About</a>
+      <a href="/law-reform/" class={isLawReform ? 'current' : ''}>Law Reform</a>
+      <a href="/teaching/" class={isTeaching ? 'current' : ''}>Teaching</a>
+      <a href="/news/" class={isNews ? 'current' : ''}>News</a>
+      <a href="/invited-talks/" class={isInvitedTalks ? 'current' : ''}>Invited Talks</a>
+      <a href="/media/" class={isMedia ? 'current' : ''}>Media</a>
     </nav>
   </div>
 </header>

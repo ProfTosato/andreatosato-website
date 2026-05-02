@@ -18,14 +18,14 @@ const {
   relatedTalks = [],
   publishDate,
   doi,
-  backLink = { url: '/articles', text: 'Articles' }
+  backLink = { url: '/articles/', text: 'Articles' }
 } = Astro.props;
 
 const fullAuthors = authors.join(', ');
 const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? 'https://andreatosato.com';
 const currentUrl = `${siteBase}${Astro.url.pathname}`;
 
-const eyebrow = backLink.url === '/essays' ? 'Essay' : 'Article';
+const eyebrow = backLink.url === '/essays/' ? 'Essay' : 'Article';
 ---
 
 <!DOCTYPE html>

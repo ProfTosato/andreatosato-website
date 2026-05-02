@@ -13,9 +13,9 @@ const currentPath = Astro.url.pathname;
 let pageDescription = description;
 if (currentPath === '/' && !description) {
   pageDescription = "Andrea Tosato is Professor of Law at SMU Dedman School of Law. His research examines how private law, commercial law, and bankruptcy law govern modern intangible assets, including digital assets, stablecoins, and verified carbon credits.";
-} else if (currentPath === '/about-me' && !description) {
+} else if (currentPath === '/about-me/' && !description) {
   pageDescription = "Andrea Tosato is Professor of Law at SMU Dedman School of Law. His research examines the private law, commercial law, and bankruptcy treatment of modern intangible assets, including digital assets, stablecoins, and verified carbon credits.";
-} else if (currentPath === '/articles' && !description) {
+} else if (currentPath === '/articles/' && !description) {
   pageDescription = "Law review articles by Andrea Tosato on private law, commercial law, bankruptcy, secured transactions, digital assets, stablecoins, and verified carbon credits.";
 }
 
