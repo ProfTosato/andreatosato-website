@@ -21,3 +21,6 @@ pnpm-debug.log*
 # IDE
 .vscode/
 .idea/
+
+# Generated output of scripts/wikidata-export.mjs (regenerate with `npm run wikidata`)
+wikidata-batch.txt

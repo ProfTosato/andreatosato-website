@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "cv": "set PATH=%LOCALAPPDATA%\\Pandoc;%LOCALAPPDATA%\\Programs\\MiKTeX\\miktex\\bin\\x64;%PATH% && cd cv && pandoc Andrea-Tosato-CV.md -o ../public/Andrea-Tosato-CV.pdf --pdf-engine=xelatex && cd ..",
     "indexnow": "node scripts/indexnow.mjs",
-    "indexnow:all": "node scripts/indexnow-from-sitemap.mjs"
+    "indexnow:all": "node scripts/indexnow-from-sitemap.mjs",
+    "wikidata": "node scripts/wikidata-export.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.2.1",

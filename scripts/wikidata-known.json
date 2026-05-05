@@ -1,0 +1,42 @@
+{
+  "_comment": "Lookup table for the wikidata-export.mjs script. Edit when new journals appear or new article items get created on Wikidata.",
+  "tosato_qnumber": "Q130368427",
+  "skip": {
+    "access-medicines-trips": "Q139622419",
+    "bankrupt-crypto-organizations": "Q139622420",
+    "commercial-agency-good-faith": "Q139622421",
+    "commercial-law-intersections": "Q139622422",
+    "crypto-real-estate-finance": "Q139622423",
+    "debt-tokens": "Q138766383",
+    "digital-assets-property-question": "Q139622424",
+    "european-dimension-commercial-agents": "Q139622425",
+    "ip-license-contracts": "Q139622426",
+    "moneyness-of-stablecoins": "Q139622427",
+    "private-law-stablecoins": "Q139622428",
+    "secured-transactions-ip-licenses": "Q139622429",
+    "security-interests-ip": "Q139622430",
+    "traditional-foods-eu": "Q139622431",
+    "uncitral-annex-ip": "Q139622432"
+  },
+  "journals": {
+    "Yale Law Journal": "Q3571386",
+    "North Carolina Law Review": "Q7054549",
+    "Florida Law Review": "Q5461497",
+    "University of Pennsylvania Law Review": "Q7896086",
+    "Arizona State Law Journal": "Q15749895",
+    "Alabama Law Review": "Q15762822",
+    "Hastings Law Journal": "Q15798916",
+    "Fordham Law Review": "Q5468067",
+    "Oxford Journal of Legal Studies": "Q7115388",
+    "European Law Journal": "Q15759262",
+    "Journal of Intellectual Property Law & Practice": "Q15734641",
+    "Law & Contemporary Problems": "Q6503131",
+    "University of Cincinnati Law Review": "Q15752012"
+  },
+  "_journals_missing": {
+    "Lloyd's Maritime and Commercial Law Quarterly": "no Wikidata item exists; the script will skip the published-in statement for european-dimension-commercial-agents"
+  },
+  "manual_dois": {
+    "_comment": "Use this to override or supply a DOI when ORCID/SSRN derivation is missing or wrong. Keys are article slugs."
+  }
+}
