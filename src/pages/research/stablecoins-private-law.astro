@@ -4,7 +4,7 @@ import HubLayout from '../../layouts/HubLayout.astro';
 
 <HubLayout
   title="Stablecoins and Private Law"
-  description="A research overview of the private law framework governing stablecoins — their legal nature, property rights, and insolvency treatment — by Professor Andrea Tosato."
+  description="A research overview of the private law architecture governing stablecoins: classification, property, redemption, transfer, insolvency treatment, and regulation under the GENIUS Act and MiCAR."
   relatedArticles={[
     { url: "/articles/moneyness-of-stablecoins/", title: "The Moneyness of Stablecoins" },
     { url: "/articles/private-law-stablecoins/", title: "The Private Law of Stablecoins" }
@@ -15,13 +15,462 @@ import HubLayout from '../../layouts/HubLayout.astro';
     { url: "/essays/stablecoins-in-bankruptcy/", title: "Stablecoins in Bankruptcy" }
   ]}
 >
-  <!-- PROFESSOR INPUT REQUIRED: 500–800 words of authoritative prose.
-       Suggested questions to address:
-       — What is a stablecoin and why does its legal classification matter?
-       — Do stablecoin holders have property rights in the backing assets?
-       — What happens to stablecoin holders when an issuer becomes insolvent?
-       — How do existing legal categories (money, securities, commodities, general
-           intangibles) apply or fail to apply?
-       — What does the GENIUS Act do, and how does it compare to the EU's MiCAR? -->
-  <p><em>Content forthcoming.</em></p>
+
+<h2 id="what-is-a-stablecoin">What Is a Stablecoin?</h2>
+
+<p>Stablecoins are digital assets issued on public blockchain networks that are designed to maintain a stable price relative to a reference asset, most commonly the United States dollar but also other fiat currencies (such as the euro) and, less commonly, precious metals such as gold.<sup><a id="fnref-1" href="#fn-1">1</a></sup> Unlike volatile cryptocurrencies such as Bitcoin and Ether, whose prices are driven primarily by supply and demand and market sentiment, stablecoins combine the technological advantages of distributed ledger technology, including disintermediation, cryptographic security, and programmability, with the price stability of traditional currencies.<sup><a id="fnref-2" href="#fn-2">2</a></sup> From approximately $1 billion in circulation in 2019, total stablecoin supply has grown rapidly and is projected to reach $4 trillion by 2030, with major payment providers including PayPal and Western Union actively incorporating stablecoins into their product portfolios and leading financial institutions such as Fidelity exploring stablecoin issuance.<sup><a id="fnref-3" href="#fn-3">3</a></sup></p>
+
+<p>Stablecoins serve multiple functions within the financial system. Their original and still predominant use is as a base currency for trading other digital assets. Over time, they have also become the preferred settlement medium in decentralized finance protocols, facilitate billions of dollars in cross-border payments annually, are used as an inflation hedge in economies with weaker domestic payment systems, and, on a small but growing scale, are accepted in retail transactions.<sup><a id="fnref-4" href="#fn-4">4</a></sup> This growing economic significance has prompted regulatory responses on both sides of the Atlantic, culminating in the European Union's Markets in Crypto-Assets Regulation (MiCAR) and the United States' GENIUS Act, enacted in July 2025.<sup><a id="fnref-5" href="#fn-5">5</a></sup></p>
+
+<p>Understanding the legal architecture of stablecoins is essential for practitioners, lawmakers, researchers, and students navigating this rapidly evolving landscape. The analysis that follows addresses the questions most frequently asked about these instruments. Throughout, the reader should bear in mind a distinction that runs through every question: the analysis often diverges significantly depending on whether one is considering a centralized stablecoin, issued by an identifiable company such as Tether, Circle, or PayPal, or a decentralized stablecoin, controlled by an autonomous software protocol such as MakerDAO. Most readers will be primarily interested in centralized stablecoins, which dominate the market, but the decentralized variants raise distinct legal challenges that are noted where relevant.</p>
+
+
+<h2 id="types">What Are the Different Types of Stablecoins?</h2>
+
+<p>There is no universally agreed upon definition of a stablecoin. However, from a legal perspective, stablecoins can be decomposed into three constitutive elements, each with distinct private law implications: the issuer, the peg, and the stabilization mechanism.<sup><a id="fnref-6" href="#fn-6">6</a></sup> Other taxonomies exist from computer science and economics perspectives, but this legal taxonomy is the one that governs the analysis of the rights, obligations, and risks of stablecoin holders.</p>
+
+<p><strong>The issuer.</strong> The majority of stablecoins are centralized: they are controlled by a single, identifiable entity.<sup><a id="fnref-7" href="#fn-7">7</a></sup> Tether's USDT is issued by Tether International, S.A. de C.V., a company that migrated from the British Virgin Islands to El Salvador. Circle's USDC is issued by Circle Internet Financial, LLC, a Delaware limited liability company that completed its initial public offering in June 2025.<sup><a id="fnref-8" href="#fn-8">8</a></sup> Centralized issuers have complete control over the design, creation (minting), destruction (burning), and operation of their stablecoins, and they constitute identifiable counterparties with which coinholders can enter into a contractual relationship.<sup><a id="fnref-9" href="#fn-9">9</a></sup></p>
+
+<p>Not all stablecoins, however, have an identifiable issuer. Decentralized stablecoins are controlled by software protocols (bundles of interconnected smart contracts deployed on distributed ledger networks such as Ethereum) that create stablecoins and manage every aspect of their operation automatically, pursuant to their code.<sup><a id="fnref-10" href="#fn-10">10</a></sup> The largest decentralized stablecoin, DAI, is controlled by the MakerDAO protocol, which has no legal personhood. Users interact exclusively with code rather than corporate counterparties. Updates and modifications to the protocol are effectuated through voting by holders of a separate governance token (MKR).<sup><a id="fnref-11" href="#fn-11">11</a></sup></p>
+
+<p>If a decentralized stablecoin collapses, coinholders confront a comprehensive legal vacuum. Contract claims are foreclosed because no contractual relationship exists between any of the participants in the ecosystem.<sup><a id="fnref-134" href="#fn-134">134</a></sup> Tort remedies face severe doctrinal barriers, since negligence claims encounter duty-of-care problems given the open-source and permissionless architecture, and conversion claims lack the requisite volitional act when value is destroyed by autonomous code execution.<sup><a id="fnref-136" href="#fn-136">136</a></sup> Criminal prosecution of governance-token holders or protocol maintainers runs into mens rea obstacles, since the conduct that causes harm is typically the operation of code rather than any specific human decision.<sup><a id="fnref-136b" href="#fn-136">136</a></sup> Fiduciary principles cannot coherently apply either: the diffuse, pseudonymous, and often conflicting relationships among DAO participants do not fit established fiduciary categories, which presuppose identifiable principals owed identifiable duties. Even if such duties could be conjured, the absence of any locus of authority means no party would be in a position to discharge them.<sup><a id="fnref-137" href="#fn-137">137</a></sup></p>
+
+<p><strong>The peg.</strong> Almost all stablecoins are pegged to either a currency or a precious metal. The United States dollar is overwhelmingly the most common choice, constituting 99% of the market capitalization of fiat-pegged stablecoins.<sup><a id="fnref-13" href="#fn-13">13</a></sup> Gold-pegged stablecoins such as PAXG and XAUT also exist, though their market capitalization is significantly smaller.<sup><a id="fnref-14" href="#fn-14">14</a></sup></p>
+
+<p><strong>The stabilization mechanism.</strong> Three mechanisms are prevalent. First, reserve-backed models in which issuers hold pools of valuable assets and commit to mint and redeem stablecoins at a predetermined rate (typically one token for one dollar), relying on economic arbitrage to suppress price fluctuations.<sup><a id="fnref-15" href="#fn-15">15</a></sup> This is the model used by Tether, Circle, and other leading centralized issuers. Second, dual-coin structures in which a primary stablecoin is linked to a secondary coin designed to absorb volatility; the viability of this mechanism is contingent on the secondary coin retaining value, and multiple projects built on this model, including TerraUSD/Luna, have collapsed catastrophically.<sup><a id="fnref-16" href="#fn-16">16</a></sup> Third, algorithmic mechanisms that adjust the supply of stablecoins in circulation to counteract price swings, operating as a quasi-central bank; the challenge is that the only value buttressing these stablecoins is their scarcity and the algorithm itself, and if market participants lose confidence, collapse is inevitable.<sup><a id="fnref-17" href="#fn-17">17</a></sup></p>
+
+
+<h2 id="how-peg">How Do Stablecoins Maintain Their Peg?</h2>
+
+<p>For centralized, reserve-backed stablecoins, which represent the dominant model, the stabilization mechanism operates through economic arbitrage.<sup><a id="fnref-18" href="#fn-18">18</a></sup> Issuers hold large asset pools and undertake to supply one stablecoin to anyone who tenders one dollar and, conversely, to redeem each stablecoin for one dollar. When the market price of a stablecoin dips below one dollar, arbitrageurs purchase tokens in the open market and redeem them with the issuer for one dollar, netting a profit and contracting supply until the price recovers. When the market price rises above one dollar, arbitrageurs mint new tokens from the issuer and sell them at a profit, expanding supply and lowering the price.<sup><a id="fnref-19" href="#fn-19">19</a></sup></p>
+
+<p>This mechanism is not novel: it can be traced to seventeenth-century European banks that issued deposits backed by precious metal coins, and it underpinned the Bretton Woods accord.<sup><a id="fnref-20" href="#fn-20">20</a></sup> Its viability depends entirely on market confidence that the issuer maintains sufficient reserves and will honor redemption requests. It follows that the contractual terms pursuant to which issuers promise to perform these operations and manage their reserves are critical.<sup><a id="fnref-21" href="#fn-21">21</a></sup></p>
+
+<p>An important practical consideration is that transaction fees can undermine the stabilization mechanism. Tether, for example, charges a 0.1% fee for minting and the greater of $1,000 or 0.1% for redemption, with $100,000 minimum thresholds.<sup><a id="fnref-24" href="#fn-24">24</a></sup> Arbitrageurs will only act to correct price deviations to the extent the spread exceeds total fees, meaning that a 0.2% total fee creates a floor below which the arbitrage mechanism does not operate.<sup><a id="fnref-25" href="#fn-25">25</a></sup></p>
+
+<p>For dual-coin stablecoins, the stabilization mechanism is fundamentally different. Rather than backing the primary coin with reserves, the design pairs it with a secondary coin engineered to absorb price volatility. Holders can exchange one primary token for a fixed dollar value of the secondary token, so that arbitrage operates not against an asset reserve but against the floating market value of the volatility coin. The viability of this mechanism is wholly dependent on the secondary coin retaining value, and history offers little reassurance: the TerraUSD/Luna collapse of May 2022 destroyed more than $60 billion of market capitalization within days, and similar designs (including Iron/Titan and USDX/Lighthouse) have suffered analogous failures.<sup><a id="fnref-16b" href="#fn-16">16</a></sup></p>
+
+<p>Purely algorithmic stablecoins (such as Ampleforth) take yet another approach, adjusting the total supply of tokens in circulation to counteract price deviations rather than relying on backing assets or a secondary coin. The protocol expands the supply when prices rise above the peg and contracts it when prices fall, on the model of a quasi-central bank. The structural difficulty is that nothing apart from scarcity and the algorithm itself stands behind the value of these instruments: once market participants lose confidence in the design, no asset is available to halt the descent.<sup><a id="fnref-17b" href="#fn-17">17</a></sup></p>
+
+<p>For decentralized stablecoins such as DAI, the stabilization mechanism is different again. Users deposit volatile digital assets (such as Ether) into non-custodial vaults controlled by the protocol's smart contracts and can generate DAI up to a predetermined percentage of the value of those locked assets.<sup><a id="fnref-22" href="#fn-22">22</a></sup> The specific ratios vary by asset type and are established through governance; for example, a user depositing $1,000 worth of Ether might be able to generate up to $750 worth of DAI. Because the value of the locked assets always exceeds the value of DAI generated, the system maintains a surplus that serves as a buffer against price volatility. If the market value of deposited assets declines below a safety threshold, the protocol automatically seizes and auctions them, with the proceeds burned to reduce the DAI supply and maintain the peg.<sup><a id="fnref-23" href="#fn-23">23</a></sup> No issuer stands behind this process; it is purely algorithmic.</p>
+
+<p>It bears emphasis that, despite the prevalent use of words such as "collateral", "collateralized debt position", and "foreclosure" to describe this mechanism, no secured transaction in the legal sense is created. There is no lender, no borrower, no security interest, no perfection, and no foreclosure proceeding. The imprecise terminology is regrettable and a source of considerable confusion in both the academic literature and policy debates.<sup><a id="fnref-22b" href="#fn-22">22</a></sup></p>
+
+
+<h2 id="are-stablecoins-money">Are Stablecoins Money?</h2>
+
+<p>The simplest answer is no: stablecoins are not money in the strict sense of legal tender. No statute compels their acceptance, no central bank stands behind them, and no court has held that an obligation can be discharged in stablecoins absent the agreement of the parties.</p>
+
+<p>"Money", however, is a much broader concept than legal tender. Modern economies rely on a heterogeneous set of instruments that perform monetary functions (medium of exchange, store of value, and unit of account) without being legal tender. Bank deposits, electronic-money balances held with providers such as PayPal or Cash App, and money-market-fund shares all circulate as money in everyday commerce, yet none of them carries legal-tender status. The interesting question, therefore, is not whether stablecoins are legal tender (they are not) but where they sit on the spectrum of instruments that can perform monetary functions.</p>
+
+<p>This is the central question addressed in a forthcoming article in the <em>Yale Law Journal</em>, co-authored with Christopher K. Odinet and Yesha Yadav.<sup><a id="fnref-26" href="#fn-26">26</a></sup> The article develops an original framework for "moneyness", a concept that captures the degree to which an instrument's legal and institutional architecture enables it to perform monetary functions.</p>
+
+<p>The conventional definition of money looks to three characteristic features: a unit of account, a store of value, and a medium of exchange.<sup><a id="fnref-27" href="#fn-27">27</a></sup> But these functional definitions tell us what money does, not what money is, and they do not explain how something becomes money. The <em>Moneyness</em> article identifies a critical yet undertheorized dimension: an instrument's capacity to operate effectively within the domain of private law.<sup><a id="fnref-28" href="#fn-28">28</a></sup></p>
+
+<p>The framework identifies four constitutive elements of moneyness. The first is foundational: the <strong>nature and substance of the claim</strong>, that is, what legal right does the holder possess? Public money (Federal Reserve notes, central bank reserves) is sui generis: the instrument constitutes money rather than evidencing a right to receive it.<sup><a id="fnref-29" href="#fn-29">29</a></sup> Private money (bank deposits, stablecoin claims) consists of contractual obligations requiring privity and exposing holders to counterparty risk.<sup><a id="fnref-30" href="#fn-30">30</a></sup> The second element is <strong>safety</strong>, that is, whether the issuer is likely to honor its undertakings and what recovery holders can expect if it fails.<sup><a id="fnref-31" href="#fn-31">31</a></sup> The third is <strong>discharge capacity</strong>, that is, whether creditors will accept the instrument in satisfaction of obligations and whether transfers achieve legal finality.<sup><a id="fnref-32" href="#fn-32">32</a></sup> The fourth is <strong>negotiability</strong>, that is, whether recipients can take the instrument free of competing claims and defenses, permitting circulation without inquiry into provenance.<sup><a id="fnref-33" href="#fn-33">33</a></sup></p>
+
+<p>The relationship among these elements is conjunctive, not additive: an instrument that fails to achieve adequacy in any single element cannot function reliably as money, regardless of how well it performs on the others.<sup><a id="fnref-34" href="#fn-34">34</a></sup></p>
+
+<p>Stablecoins occupy an unambiguous position in the monetary hierarchy: they are private money. The GENIUS Act makes this classification explicit, providing that it is unlawful to represent that payment stablecoins are backed by the full faith and credit of the United States or subject to federal deposit insurance.<sup><a id="fnref-35" href="#fn-35">35</a></sup> Applying its framework, the <em>Moneyness</em> article concludes that stablecoins, in their current legal and institutional configuration, exhibit a relatively low degree of moneyness. The GENIUS Act brings genuine improvements yet fails to resolve critical deficiencies across safety, discharge capacity, and the legal nature of the redemption claim.<sup><a id="fnref-36" href="#fn-36">36</a></sup></p>
+
+<p>For decentralized stablecoins, the moneyness analysis is even more stark. These instruments lack an identifiable issuer, have no contractual redemption right, provide no claim against any entity's reserves, and operate in a comprehensive legal vacuum.<sup><a id="fnref-37" href="#fn-37">37</a></sup></p>
+
+
+<h2 id="bank-deposits">What Is the Difference Between a Stablecoin and a Bank Deposit?</h2>
+
+<p>A bank deposit is a contractual debt claim representing an unsecured personal right to receive a determinate monetary sum from the depositing bank.<sup><a id="fnref-38" href="#fn-38">38</a></sup> Though formally an unsecured claim, bank deposits are transformed into near-equivalents of public money by four interlocking layers of legal protection: federal deposit insurance guaranteeing accounts up to $250,000; access to Federal Reserve liquidity facilities during stress; comprehensive prudential supervision, including capital and liquidity requirements; and a tailored FDIC resolution regime outside ordinary bankruptcy that prioritizes rapid depositor recovery.<sup><a id="fnref-39" href="#fn-39">39</a></sup> These protections render bank deposits informationally insensitive: holders can accept them at par without investigating the issuing bank's financial condition.<sup><a id="fnref-40" href="#fn-40">40</a></sup></p>
+
+<p>A centralized stablecoin, by contrast, benefits from none of these layers. The GENIUS Act explicitly denies federal deposit insurance to stablecoin holders.<sup><a id="fnref-41" href="#fn-41">41</a></sup> Stablecoin issuers have no access to Federal Reserve liquidity facilities, leaving them vulnerable to the mismatch between crypto's 24/7 settlement cycle and traditional banking hours, a vulnerability starkly illustrated when Silicon Valley Bank's weekend failure in March 2023 drove USDC to trade at $0.88 as Circle could not access its $3.3 billion in reserves held at the failed bank.<sup><a id="fnref-42" href="#fn-42">42</a></sup> While the GENIUS Act introduces reserve requirements and custody rules, it does not replicate the comprehensive prudential supervision that governs bank operations. And the Act's bankruptcy provisions, while unprecedented in their ambition, are internally contradictory and operationally incoherent in ways that may paradoxically harm the holders they seek to protect.<sup><a id="fnref-43" href="#fn-43">43</a></sup></p>
+
+<p>The result is that prudent holders of stablecoins must assess the soundness of both the issuer and its reserve custodians before accepting payment, a burden incompatible with money's basic function as an instrument accepted at face value without investigation.<sup><a id="fnref-44" href="#fn-44">44</a></sup></p>
+
+<p>For decentralized stablecoins, the comparison is more extreme still: there is no issuer to assess, no reserves held in custody, no deposit insurance, and no legal recourse of any kind in the event of failure.<sup><a id="fnref-45" href="#fn-45">45</a></sup></p>
+
+
+<h2 id="emoney">What Is the Difference Between a Stablecoin and Electronic Money?</h2>
+
+<p>Electronic money (e-money), the balance held in a digital wallet with a provider such as PayPal or Cash App, shares important characteristics with stablecoins. Both are non-bank payment claims: contractual obligations of non-state, private institutions evidencing a right to receive value.<sup><a id="fnref-46" href="#fn-46">46</a></sup> Both lack the comprehensive safety architecture that transforms bank deposits into near-equivalents of public money. And both present heterogeneous legal frameworks that vary by provider and jurisdiction.<sup><a id="fnref-47" href="#fn-47">47</a></sup></p>
+
+<p>However, stablecoins differ from traditional e-money in several material respects. First, e-money balances are confined to the provider's closed-loop network and cannot be transferred peer-to-peer without intermediation, whereas stablecoins transfer on public blockchain networks without requiring the provider's involvement.<sup><a id="fnref-48" href="#fn-48">48</a></sup> Second, e-money providers in the European Union are subject to the Electronic Money Directive, which imposes specific safeguarding requirements and grants holders a statutory right of redemption at par value at any time, protections that the EU has extended to stablecoins through MiCAR's e-money token (EMT) category.<sup><a id="fnref-49" href="#fn-49">49</a></sup> Third, the legal relationship between an e-money holder and the provider, while governed by heterogeneous provider-specific terms, is always contractual: privity exists. For stablecoins, the vast majority of holders (those who acquire tokens on secondary markets rather than directly from the issuer) have no contractual relationship with the issuer whatsoever.<sup><a id="fnref-50" href="#fn-50">50</a></sup></p>
+
+<p>Under MiCAR, stablecoins pegged to a single fiat currency are classified as EMTs and subjected to the electronic money regulatory framework, including unconditional redemption rights, a prohibition on redemption fees, and strict liability for misleading disclosures.<sup><a id="fnref-51" href="#fn-51">51</a></sup> The GENIUS Act takes a different approach, creating a unified "payment stablecoin" category defined by functional redeemability rather than by analogy to e-money.<sup><a id="fnref-52" href="#fn-52">52</a></sup></p>
+
+
+<h2 id="property-rights-issuer">What Kind of Property Is a Stablecoin Under Private Law, and What Legal Rights Does a Stablecoin Holder Have Against the Issuer?</h2>
+
+<p>Two distinct things must be kept apart: the stablecoin token itself, and any rights that may be linked to it. The GENIUS Act leaves the relationship between them unresolved.</p>
+
+<p><strong>The token as property.</strong> Under UCC Article 12, a stablecoin token qualifies as a controllable electronic record (CER), a novel category of personal property introduced by the 2022 amendments to the Uniform Commercial Code.<sup><a id="fnref-53" href="#fn-53">53</a></sup> Both verified account holders and secondary market participants own their stablecoin tokens as personal property under this framework. The qualifying purchaser rule under Section 12-104(e) provides that a person who obtains control of a CER for value, in good faith, and without notice of conflicting claims acquires the CER free from any adverse property claim.<sup><a id="fnref-54" href="#fn-54">54</a></sup> This provides genuine negotiability for the token itself.</p>
+
+<p><strong>The redemption right as a separate asset.</strong> The critical difficulty is that the redemption right, that is, the claim to receive one dollar from the issuer, is an entirely separate and distinct asset, subject to a different private law regime.<sup><a id="fnref-55" href="#fn-55">55</a></sup> Under existing issuer terms of service (before the GENIUS Act), the redemption right is a contractual claim governed by ordinary rules for the assignment of contract rights. Assignees take subject to all defenses, claims, and setoffs that the issuer could assert against the assignor.<sup><a id="fnref-56" href="#fn-56">56</a></sup> A transferee might therefore obtain clean title to the stablecoin token under Article 12 while simultaneously acquiring a redemption right subject to issuer defenses arising from the conduct of prior holders.<sup><a id="fnref-57" href="#fn-57">57</a></sup></p>
+
+<p><strong>Pre-GENIUS Act: the two-tiered system.</strong> Before the GENIUS Act, the private law framework was even more restrictive. Tether limited direct contractual relationships to only 882 verified customer accounts worldwide; Circle to 1,834 Circle Mint accounts.<sup><a id="fnref-62" href="#fn-62">62</a></sup> Secondary market holders, the vast majority, existed in a legal vacuum vis-à-vis the issuer, possessing stablecoin tokens as personal property under Article 12 but maintaining no contractual privity and consequently no direct redemption claim.<sup><a id="fnref-63" href="#fn-63">63</a></sup></p>
+
+<p><strong>Two constructions under the GENIUS Act.</strong> The GENIUS Act defines a payment stablecoin as a digital asset whose issuer "is obligated to convert, redeem, or repurchase for a fixed amount of monetary value", but does not resolve whether this obligation is embedded in the token or remains separate.<sup><a id="fnref-58" href="#fn-58">58</a></sup> Two possible constructions exist.</p>
+
+<p>Under the first construction, the GENIUS Act tokenizes the redemption right, meaning it is embedded in and inseparable from the digital asset itself. The redemption right runs to whomever controls the stablecoin, following the model of negotiable instruments where the holder possesses enforcement rights.<sup><a id="fnref-59" href="#fn-59">59</a></sup> This construction would facilitate the use of stablecoins as negotiable instruments, with Article 12's qualifying purchaser protections shielding both the token and the redemption right.</p>
+
+<p>Under the second construction, the token and the redemption right remain two distinct things governed by different legal regimes. If the redemption right is contractual, the current status quo would persist: the right would run only to the issuer's contractual counterparty. If statutory, the right would run to whomever the statute is deemed to benefit, but whether that is the owner or the controller of the stablecoin remains unspecified.<sup><a id="fnref-60" href="#fn-60">60</a></sup></p>
+
+<p>The stakes of this interpretive choice are considerable. The first construction enables true negotiability and allows the token to function as a complete monetary instrument carrying its value-realization mechanism within itself. The second introduces complexity and uncertainty into every stablecoin transaction.<sup><a id="fnref-61" href="#fn-61">61</a></sup> The first construction is, on policy grounds, preferable: it preserves the unitary character of the stablecoin and enables its circulation as a coherent monetary instrument. Whether courts will adopt this construction, however, remains an open question.</p>
+
+<p><strong>For decentralized stablecoins</strong>, the analysis collapses entirely. There is no issuer, no contractual relationship, no redemption right, and no entity against which any claim could be asserted. Users interact exclusively with autonomous code, and what may resemble redemption is not a legal right at all: it is a technical feature of the protocol that holders may invoke if the code permits.<sup><a id="fnref-64" href="#fn-64">64</a></sup></p>
+
+
+<h2 id="property-rights-reserves">Does a Stablecoin Holder Have a Property Right in the Issuer's Reserves?</h2>
+
+<p>This is among the most consequential questions for stablecoin holders, and the answer has shifted significantly with the enactment of the GENIUS Act.</p>
+
+<p><strong>Before the GENIUS Act</strong>, stablecoin issuers' representations of their reserve holdings fell on a spectrum ranging from custodial arrangements that might shield reserves from creditor claims to clear indications that reserves were issuer property.<sup><a id="fnref-65" href="#fn-65">65</a></sup> At one end, issuers such as Gemini and Paxos (both organized as New York limited trust companies) made the strongest assertions that reserves might be excluded from their bankruptcy estates. At the other end, Tether's terms of service made clear that reserves were within its "sole control and at the sole and absolute discretion of Tether" and that the redemption right was "a contractual right personal to [the client]", language indicating no proprietary interest in reserves.<sup><a id="fnref-66" href="#fn-66">66</a></sup> Circle, after initially providing ambiguous signals, amended its user agreement in June 2022 to broadly disclaim any trust, fiduciary, or qualified custodian status.<sup><a id="fnref-67" href="#fn-67">67</a></sup></p>
+
+<p><strong>The GENIUS Act transforms this framework</strong> through amendments to the Bankruptcy Code. The Act excludes required reserves from the debtor's estate entirely, creating complete bankruptcy remoteness.<sup><a id="fnref-68" href="#fn-68">68</a></sup> It ensures that all stablecoin holders, including secondary market holders without contractual privity, have standing in bankruptcy proceedings.<sup><a id="fnref-69" href="#fn-69">69</a></sup> And it grants holders priority over all other creditors with respect to reserves, as well as a super-priority for any reserve shortfall over the issuer's entire estate, including administrative expenses.<sup><a id="fnref-70" href="#fn-70">70</a></sup></p>
+
+<p>However, the Act does not grant holders direct proprietary rights in reserves. The reserves remain issuer assets, albeit segregated.<sup><a id="fnref-71" href="#fn-71">71</a></sup> This preserves the fundamental debtor-creditor relationship. Moreover, the Act's bankruptcy provisions are internally contradictory: they exclude reserves from the estate yet extend the automatic stay to those reserves and direct courts to administer their distribution, provisions that presuppose reserves are property of the estate.<sup><a id="fnref-72" href="#fn-72">72</a></sup> The super-priority provision risks creating administratively insolvent estates where no trustee, attorney, or debtor-in-possession lender would agree to service a reorganization when their fees are subordinate to the potentially massive liability of the stablecoin float.<sup><a id="fnref-73" href="#fn-73">73</a></sup></p>
+
+<p>The preferable approach would be to grant stablecoin holders a perfected security interest in reserve assets under UCC Article 9, integrating stablecoins into established commercial law and bankruptcy infrastructure rather than retrofitting special protections through ad hoc amendments.<sup><a id="fnref-74" href="#fn-74">74</a></sup></p>
+
+<p><strong>For decentralized stablecoins</strong>, the question of property rights in reserves takes a different form. There are no reserves in the traditional sense. Assets are locked in non-custodial smart contract vaults by the users themselves, and no entity holds or controls them on behalf of anyone. The protocol's automated seizure and auction mechanisms operate without consent or legal authorization in the traditional property-law sense, creating profound uncertainties regarding the validity of transfers.<sup><a id="fnref-75" href="#fn-75">75</a></sup></p>
+
+
+<h2 id="transfers">How Are Stablecoins Transferred Under Private Law?</h2>
+
+<p>Stablecoins can transfer either peer-to-peer on public blockchain networks or through centralized platforms such as Coinbase, Gemini, and Kraken. This duality means that a complete analysis of stablecoin transfers must address both scenarios, and for neither has law supplied the finality rules that govern other payment forms.<sup><a id="fnref-76" href="#fn-76">76</a></sup></p>
+
+<p><strong>Acceptance.</strong> Unlike physical currency, which a creditor must generally accept under legal tender statutes, stablecoins require the express agreement of the counterparty.<sup><a id="fnref-77" href="#fn-77">77</a></sup> This shifts the question from public mandate to transaction-by-transaction negotiation. The reliance on private ordering for acceptance is further complicated by the fragmentation of the underlying blockchain infrastructure: stablecoins issued on Ethereum cannot simply be transferred to a creditor with a Solana wallet without bridging mechanisms that introduce additional costs and security risks.<sup><a id="fnref-78" href="#fn-78">78</a></sup></p>
+
+<p><strong>Finality.</strong> No statute or judicial precedent establishes when a stablecoin payment achieves finality, that is, the point at which the payor's obligation to the payee is extinguished and the transaction is closed to subsequent challenge.<sup><a id="fnref-79" href="#fn-79">79</a></sup> For peer-to-peer transfers, the <em>Moneyness</em> article proposes that transfer of control, as defined by UCC Article 12, should effect discharge of the payor's obligation, extending the logic that control of a controllable electronic record is the functional equivalent of possession of a tangible asset.<sup><a id="fnref-80" href="#fn-80">80</a></sup> For intermediated transfers, no equivalent to UCC Article 4A exists for stablecoin intermediaries, which vary dramatically from regulated domestic exchanges to offshore platforms to decentralized finance protocols controlled by DAOs.<sup><a id="fnref-81" href="#fn-81">81</a></sup></p>
+
+<p>The GENIUS Act entirely disregards these issues. Neither acceptance mandates nor finality rules appear in the statute.<sup><a id="fnref-82" href="#fn-82">82</a></sup></p>
+
+
+<h2 id="ucc-article-12">How Does UCC Article 12 Apply to Stablecoins?</h2>
+
+<p>Stablecoins qualify as controllable electronic records (CERs) under UCC Article 12, the first comprehensive American legal framework for commercial transactions involving digital assets, adopted in 2022 and now enacted in thirty-three jurisdictions.<sup><a id="fnref-83" href="#fn-83">83</a></sup> Article 12 governs the token itself, the electronic record stored on the blockchain. However, any rights purportedly linked to that electronic record (such as the redemption right) are governed by other law as applicable.<sup><a id="fnref-84" href="#fn-84">84</a></sup></p>
+
+<p>This distinction is critical. Article 12's qualifying purchaser rule provides robust protection for transferees of the token: a person who obtains control for value, in good faith, and without notice of conflicting claims takes the CER free from any adverse property claim.<sup><a id="fnref-85" href="#fn-85">85</a></sup> But the redemption right, as a separate asset under a different legal regime, may not benefit from the same protections. A transferee could acquire clean title to the stablecoin token while simultaneously acquiring a redemption right subject to issuer defenses arising from prior holders' conduct.<sup><a id="fnref-86" href="#fn-86">86</a></sup></p>
+
+<p>The <em>Moneyness</em> article argues that Congress should resolve this asymmetry by explicitly providing that the redemption right is embedded in the token such that control of the stablecoin under Article 12 carries with it the entitlement to demand redemption, following the model of negotiable instruments where the holder possesses enforcement rights.<sup><a id="fnref-87" href="#fn-87">87</a></sup></p>
+
+<p>For a comprehensive analysis of UCC Article 12 and controllable electronic records, see the companion research page on <a href="/research/ucc-article-12/">UCC Article 12 and Controllable Electronic Records</a>.</p>
+
+
+<h2 id="collateral">Can Stablecoins Be Used as Collateral in Secured Transactions?</h2>
+
+<p>Under the 2022 UCC amendments, stablecoins as controllable electronic records can be used as collateral under Article 9's secured transactions framework. Two pathways exist for perfection: filing a financing statement in the relevant public registry, or taking control of the CER.<sup><a id="fnref-88" href="#fn-88">88</a></sup> Control-based perfection eliminates the jurisdictional complexities associated with determining the correct filing location, a particularly thorny issue for digital assets, and provides priority over competing security interests held by secured parties who do not have control.<sup><a id="fnref-89" href="#fn-89">89</a></sup></p>
+
+<p>The <em>Private Law of Stablecoins</em> article additionally proposes that stablecoins backed by commodities such as gold could be structured as electronic negotiable documents of title under UCC Article 7, deployed as tokens on distributed ledger networks.<sup><a id="fnref-90" href="#fn-90">90</a></sup> Under this structure, the combined Article 7 and Article 9 regime would provide simple avenues to acquire title and take security that would support the rapid circulation of these stablecoins and their use as collateral, a regime very similar to that which the UCC reserves for "money".<sup><a id="fnref-91" href="#fn-91">91</a></sup></p>
+
+
+<h2 id="intermediaries">What Happens When Stablecoins Are Held Through an Intermediary?</h2>
+
+<p>When a user holds stablecoins through a centralized platform such as Coinbase or Gemini, the transaction may occur entirely on the platform's internal ledger rather than on the public blockchain, or it may involve multiple steps across different systems. In either case, intermediaries stand between the holder and the issuer, creating additional layers of credit risk.<sup><a id="fnref-92" href="#fn-92">92</a></sup></p>
+
+<p>No comprehensive legal framework governs these intermediated stablecoin holdings. UCC Article 4A, which provides the statutory framework for bank-mediated wire transfers, cannot be applied analogically because stablecoin intermediaries share none of the characteristics that make Article 4A effective: they vary dramatically in form, operate under inconsistent regulatory regimes, and bear no uniform obligations to customers.<sup><a id="fnref-93" href="#fn-93">93</a></sup></p>
+
+<p>UCC Article 8 offers a potential pathway. If reserves were treated as "financial assets" held in "securities accounts", holders would receive more robust protection through Article 8's security entitlement regime, which insulates customer assets from the intermediary's creditors.<sup><a id="fnref-94" href="#fn-94">94</a></sup> However, neither existing market practice nor the GENIUS Act requires this treatment.</p>
+
+<p>For the millions of stablecoin holders who acquired tokens through secondary markets and hold them on exchange platforms, the insolvency risk is acute. These holders have no direct relationship with the stablecoin issuer and therefore, absent the GENIUS Act's standing provisions, would likely have no standing to file claims in the issuer's bankruptcy proceedings. They would be entirely dependent on whatever recovery their intermediary platform might achieve as an unsecured creditor, creating multiple layers of credit risk.<sup><a id="fnref-95" href="#fn-95">95</a></sup></p>
+
+
+<h2 id="insolvency">What Happens to Stablecoin Holders When an Issuer Becomes Insolvent?</h2>
+
+<p>The treatment of stablecoin holders in issuer insolvency has been fundamentally reshaped by the GENIUS Act, but significant uncertainties remain.</p>
+
+<p><strong>Before the GENIUS Act</strong>, stablecoin holders faced a grim prospect. For the two largest issuers (Tether and Circle), reserves were likely property of the issuer's bankruptcy estate, and holders would be classified as general unsecured creditors, potentially receiving pennies on the dollar or nothing at all.<sup><a id="fnref-96" href="#fn-96">96</a></sup> Even for issuers like Gemini and Paxos that made custodial representations, establishing that reserves were excluded from the estate would require protracted and expensive litigation.<sup><a id="fnref-97" href="#fn-97">97</a></sup> Secondary market holders, the vast majority, arguably had no standing to file claims at all.<sup><a id="fnref-98" href="#fn-98">98</a></sup></p>
+
+<p><strong>The GENIUS Act</strong> introduces unprecedented bankruptcy protections. Reserves are excluded from the estate entirely.<sup><a id="fnref-99" href="#fn-99">99</a></sup> All stablecoin holders, regardless of contractual privity, are deemed to hold claims.<sup><a id="fnref-100" href="#fn-100">100</a></sup> Holders receive priority over all other creditors with respect to reserves, and a super-priority for any reserve shortfall.<sup><a id="fnref-101" href="#fn-101">101</a></sup></p>
+
+<p>However, the Act's bankruptcy provisions suffer from multiple internal contradictions that may undermine their effectiveness.<sup><a id="fnref-102" href="#fn-102">102</a></sup> The automatic stay is extended to reserves that are simultaneously excluded from the estate, a conceptual incoherence, since the stay exists to protect estate property.<sup><a id="fnref-103" href="#fn-103">103</a></sup> The bankruptcy court is directed to begin distributions to holders within fourteen days, presupposing judicial administration of assets supposedly outside the estate.<sup><a id="fnref-104" href="#fn-104">104</a></sup> The super-priority provision subordinates administrative expenses to holder claims, creating the risk that no trustee, attorney, or DIP lender would agree to service a reorganization, paradoxically harming the very holders the Act seeks to protect.<sup><a id="fnref-105" href="#fn-105">105</a></sup></p>
+
+<p>The core problem is methodological: Congress attempted to retrofit special protections onto a claim whose fundamental legal nature was not fully understood, rather than first determining what stablecoin claimants actually own and allowing bankruptcy treatment to flow as a logical consequence.<sup><a id="fnref-106" href="#fn-106">106</a></sup> The preferable approach would be to grant holders a perfected security interest in reserve assets under UCC Article 9, integrating their claims into the existing commercial law and bankruptcy infrastructure.<sup><a id="fnref-107" href="#fn-107">107</a></sup></p>
+
+<p><strong>For decentralized stablecoins</strong>, there is no issuer to become insolvent and no estate to administer. The protocol's Emergency Shutdown mechanism provides a limited substitute: upon activation, vault creation ceases, pending auctions complete, and DAI holders claim proportional shares of the remaining asset portfolio. If aggregate asset value falls below total DAI supply, holders receive less than one dollar per token.<sup><a id="fnref-108" href="#fn-108">108</a></sup></p>
+
+
+<h2 id="reserves">What Reserve Requirements Apply to Stablecoin Issuers Under the GENIUS Act?</h2>
+
+<p>The GENIUS Act mandates one-to-one reserve backing, requiring issuers to maintain reserves equal to all outstanding stablecoins.<sup><a id="fnref-109" href="#fn-109">109</a></sup> These reserves must consist exclusively of low-risk assets: United States currency, Treasury securities, central bank reserves, and repurchase agreements collateralized by Treasuries.<sup><a id="fnref-110" href="#fn-110">110</a></sup> This eliminates the discretion issuers previously exercised over reserve composition. Tether, for example, historically held commercial paper, secured loans, precious metals, and crypto-assets in its reserves.<sup><a id="fnref-111" href="#fn-111">111</a></sup></p>
+
+<p>The Act imposes strict custody requirements: reserves must be held with qualified custodians (insured depository institutions, trust companies, or authorized Federal Reserve Banks), segregated from custodian assets, and identified as customer assets.<sup><a id="fnref-112" href="#fn-112">112</a></sup> Rehypothecation is categorically prohibited except for limited liquidity management.<sup><a id="fnref-113" href="#fn-113">113</a></sup></p>
+
+<p>The Act's regulatory architecture rests on a "narrow bank" model in which safety derives from what the issuer holds rather than who stands behind it.<sup><a id="fnref-114" href="#fn-114">114</a></sup> Issuers are restricted from engaging in traditional onward lending: they cannot perform fractional reserve banking.<sup><a id="fnref-115" href="#fn-115">115</a></sup> However, a critical gap remains: non-bank issuers must entrust reserves to third-party custodians such as commercial banks, which themselves may use the funds for ordinary lending activities. The Act's prohibition on fractional reserve banking operates directly on issuers but cannot prevent the practices of their custodians.<sup><a id="fnref-116" href="#fn-116">116</a></sup></p>
+
+
+<h2 id="redemption-rights">What Redemption Rights Do Stablecoin Holders Have?</h2>
+
+<p>The GENIUS Act fundamentally restructures redemption rights by transforming them from revocable contractual privileges into statutory obligations.<sup><a id="fnref-117" href="#fn-117">117</a></sup> The Act defines a payment stablecoin as a digital asset whose issuer "is obligated to convert, redeem, or repurchase for a fixed amount of monetary value".<sup><a id="fnref-118" href="#fn-118">118</a></sup> It strips issuers of unilateral power to suspend redemption, providing that discretionary limitations can only be imposed by designated public regulators.<sup><a id="fnref-119" href="#fn-119">119</a></sup></p>
+
+<p>However, the Act leaves critical ambiguities unresolved. It does not explicitly address whether the redemption obligation extends to all token holders or only those with direct issuer relationships.<sup><a id="fnref-120" href="#fn-120">120</a></sup> It remains silent on minimum transaction thresholds, processing timeframes, and verification requirements. Issuers retain discretion to set fee levels, minimum redemption amounts, and eligibility criteria. Nothing prevents them from maintaining current gatekeeping that limits direct redemption to institutional clients.<sup><a id="fnref-121" href="#fn-121">121</a></sup></p>
+
+<p>It bears emphasis that redemption rights exist primarily for centralized stablecoins regulated under the GENIUS Act. For decentralized stablecoins such as DAI, there is no redemption right in any conventional sense. Vault Owners can reclaim their deposited assets by repaying the generated DAI plus accrued fees, but this is a mechanical interaction with autonomous code, not an enforceable claim against an entity.<sup><a id="fnref-122" href="#fn-122">122</a></sup> DAI Holders who acquired tokens on secondary markets cannot even use DAI to directly obtain assets from a Maker Vault: they hold tokens that represent no claim against any issuer.<sup><a id="fnref-123" href="#fn-123">123</a></sup></p>
+
+<p>Under MiCAR, redemption protections are more robust. Holders of e-money tokens have a right of redemption at any moment and at par value, redemption fees are explicitly prohibited, and temporary suspensions require regulatory approval.<sup><a id="fnref-124" href="#fn-124">124</a></sup></p>
+
+
+<h2 id="genius-act">How Are Stablecoins Regulated Under the GENIUS Act?</h2>
+
+<p>The GENIUS Act, enacted on July 18, 2025, is the first comprehensive federal legislation addressing stablecoins in the United States.<sup><a id="fnref-125" href="#fn-125">125</a></sup> The Act establishes a unified category of "payment stablecoins", that is, digital assets designed to maintain stable value relative to a reference asset and readily redeemable for fiat currency, and creates a permission structure for their issuance and growth.<sup><a id="fnref-126" href="#fn-126">126</a></sup></p>
+
+<p>Key provisions include: mandatory one-to-one reserve backing with high-quality assets; prohibition on fractional reserve banking and rehypothecation; segregated custody with qualified custodians; statutory redemption obligations; disclosure requirements for redemption procedures and fees; and unprecedented bankruptcy protections including reserve exclusion from the estate, universal holder standing, and super-priority for reserve shortfalls.<sup><a id="fnref-127" href="#fn-127">127</a></sup></p>
+
+<p>The Act creates parallel regulatory tracks: state-licensed issuers operate under state supervision, while federally licensed issuers may obtain charters from the Office of the Comptroller of the Currency.<sup><a id="fnref-128" href="#fn-128">128</a></sup> Both bank and non-bank entities may issue payment stablecoins, provided they satisfy applicable requirements.</p>
+
+<p>The GENIUS Act definition effectively excludes algorithmic stablecoins that lack reserve backing, as well as decentralized protocols that lack identifiable issuers.<sup><a id="fnref-129" href="#fn-129">129</a></sup> For algorithmic and decentralized stablecoins, the Act mandates future Treasury Department studies rather than imposing substantive regulation.<sup><a id="fnref-130" href="#fn-130">130</a></sup></p>
+
+
+<h2 id="decentralized-issuer">Who Is the "Issuer" of a Decentralized Stablecoin, and Can Decentralized Stablecoins Be Regulated?</h2>
+
+<p>This question is addressed comprehensively in a forthcoming essay in the <em>Iowa Law Review Online</em>, co-authored with Christopher K. Odinet.<sup><a id="fnref-131" href="#fn-131">131</a></sup> The essay provides the first comprehensive legal analysis of decentralized stablecoins and reveals a private law vacuum that distinguishes these tokens from every traditional financial instrument.</p>
+
+<p>Decentralized stablecoins have no issuer in any legally meaningful sense. The MakerDAO protocol, which controls DAI, comprises multiple smart contracts on the Ethereum network that execute predetermined operations automatically.<sup><a id="fnref-132" href="#fn-132">132</a></sup> No natural or legal person owns or controls it. The protocol's "white paper" is a technical description, not a contract, and "no terms of service specifically govern the issuance, holding, or use of DAI itself".<sup><a id="fnref-133" href="#fn-133">133</a></sup></p>
+
+<p>This architecture creates four private law deficiencies. First, a complete contractual void: no bilateral or multilateral agreements exist between any participants, foreclosing breach of contract claims and eliminating baseline commercial protections.<sup><a id="fnref-134b" href="#fn-134">134</a></sup> Second, instability regarding property rights: while vault owners retain property rights in deposited assets and DAI follows UCC Article 12 for transfers, the protocol's automated seizure and auction mechanisms operate on uncertain legal foundations.<sup><a id="fnref-135" href="#fn-135">135</a></sup> Third, inadequate tort and criminal law remedies: negligence claims face duty-of-care barriers, conversion claims lack the requisite volitional act, and criminal prosecution of Governors or Maintainers encounters profound mens rea barriers.<sup><a id="fnref-136c" href="#fn-136">136</a></sup> Fourth, fiduciary principles cannot coherently apply to the diffuse, pseudonymous, and conflicting relationships that characterize the ecosystem.<sup><a id="fnref-137b" href="#fn-137">137</a></sup></p>
+
+<p><strong>Can they be regulated?</strong> Both MiCAR and the GENIUS Act explicitly defer substantive regulation of decentralized stablecoins to future study.<sup><a id="fnref-138" href="#fn-138">138</a></sup> In the interim, they employ divergent strategies.</p>
+
+<p>MiCAR adopts functional definitions that technically encompass decentralized stablecoins (DAI functionally qualifies as an e-money token) but imposes structural compliance requirements that these protocols cannot satisfy (authorization, management, segregated reserves). The regulation effectively excludes decentralized stablecoins by transferring liability to crypto-asset service providers who list them, making these intermediaries quasi-issuers for assets they cannot control.<sup><a id="fnref-139" href="#fn-139">139</a></sup></p>
+
+<p>The GENIUS Act adopts structural prerequisites that categorically exclude protocols lacking identifiable issuers from the "payment stablecoin" definition, leaving them in regulatory limbo. The Act explicitly carves out "distributed ledger protocols", "self-custodial software interfaces", and "liquidity pools" from the definition of "digital asset service provider".<sup><a id="fnref-140" href="#fn-140">140</a></sup></p>
+
+<p>Neither framework successfully resolves the fundamental challenge: replicating financial functions without financial institutions.<sup><a id="fnref-141" href="#fn-141">141</a></sup></p>
+
+
+<h2 id="algorithmic">What Risks Do Algorithmic Stablecoins Present, and Should They Be Banned?</h2>
+
+<p>Algorithmic stablecoins and dual-coin stablecoins present acute risks because they are not backed by reserve assets. Their viability depends entirely on market confidence in the stabilization mechanism itself.<sup><a id="fnref-142" href="#fn-142">142</a></sup></p>
+
+<p>The collapse of TerraUSD/Luna in May 2022 remains the most devastating illustration. TerraUSD was a dollar-pegged stablecoin whose stabilization mechanism relied on a secondary coin, Luna. When TerraUSD's price fell unexpectedly, a negative feedback loop, a "death spiral", ensued: declines in one coin fueled declines in the other, and the system collapsed entirely when Luna's price fell below one dollar, breaking the stabilization mechanism. The system's market capitalization, which had exceeded $60 billion, was destroyed almost entirely within days.<sup><a id="fnref-143" href="#fn-143">143</a></sup></p>
+
+<p>Multiple other dual-coin and algorithmic stablecoin projects (including Iron/Titan and USDX/Lighthouse) have failed catastrophically through similar dynamics.<sup><a id="fnref-144" href="#fn-144">144</a></sup> For holders of these stablecoins, the legal analysis returns a clear and somber outcome: they have neither remedies nor recourse in the event of a collapse.<sup><a id="fnref-145" href="#fn-145">145</a></sup></p>
+
+<p>The GENIUS Act does not explicitly ban algorithmic stablecoins, but its definition of "payment stablecoin", which requires an issuer "obligated to convert, redeem, or repurchase for a fixed amount of monetary value" and mandates reserve-backed stabilization, effectively excludes them from the regulated stablecoin market.<sup><a id="fnref-146" href="#fn-146">146</a></sup> The Act mandates a Treasury Department study on "endogenously collateralized payment stablecoins" to inform future policy.<sup><a id="fnref-147" href="#fn-147">147</a></sup></p>
+
+
+<h2 id="micar">How Does the European Union Regulate Stablecoins Under MiCA?</h2>
+
+<p>The EU's Markets in Crypto-Assets Regulation (MiCAR), in force since December 30, 2024, creates two categories of stablecoins: asset-referenced tokens (ARTs), which reference assets other than a single official currency, and e-money tokens (EMTs), which reference only a single fiat currency.<sup><a id="fnref-148" href="#fn-148">148</a></sup> This dual classification contrasts with the GENIUS Act's unified "payment stablecoin" category.</p>
+
+<p>MiCAR employs a markedly different regulatory philosophy from the GENIUS Act. Where the American legislation focuses on operational requirements and bankruptcy protections, MiCAR emphasizes comprehensive conduct obligations and strict liability.<sup><a id="fnref-149" href="#fn-149">149</a></sup></p>
+
+<p>On contractual protections, MiCAR imposes duties to act honestly, fairly, and professionally, and establishes strict liability for any misleading information in white papers. Any contractual provision attempting to exclude or limit this liability is "deprived of legal effect".<sup><a id="fnref-150" href="#fn-150">150</a></sup> The GENIUS Act does not impose comparable affirmative duties.</p>
+
+<p>On redemption, MiCAR provides an unconditional statutory right: ART holders have a "right of redemption at all times against the issuers"; EMTs must be redeemable "at any moment and at par value". Both provisions explicitly prohibit redemption fees.<sup><a id="fnref-151" href="#fn-151">151</a></sup> The GENIUS Act creates a statutory redemption obligation but permits issuers to charge disclosed fees and set eligibility criteria.</p>
+
+<p>On reserves, MiCAR requires segregation, authorized custody, and limitation to high-quality assets, but stops short of granting holders direct proprietary rights, creating quasi-proprietary protection through operational segregation.<sup><a id="fnref-152" href="#fn-152">152</a></sup> The GENIUS Act goes further by amending the Bankruptcy Code to exclude reserves from the estate entirely, but the resulting framework is internally contradictory.<sup><a id="fnref-153" href="#fn-153">153</a></sup></p>
+
+<p>For decentralized stablecoins, MiCAR's functional definitions technically encompass protocols like DAI but impose impossible compliance requirements, effectively excluding them through liability transfer to crypto-asset service providers.<sup><a id="fnref-154" href="#fn-154">154</a></sup></p>
+
+
+<h2 id="systemic-risks">What Systemic Risks Do Stablecoins Pose to Financial Stability?</h2>
+
+<p>The systemic risks of stablecoins derive primarily from their dependence on the traditional banking system for reserve custody and their vulnerability to confidence crises amplified by the always-on nature of blockchain networks.</p>
+
+<p>Non-bank stablecoin issuers must entrust their reserves to third-party custodians such as commercial banks. This exposes both issuers and holders to the credit and operational risk of custodian failure, a vulnerability that neither can fully monitor or control.<sup><a id="fnref-155" href="#fn-155">155</a></sup> The Silicon Valley Bank episode of March 2023 demonstrated this danger concretely: Circle's $3.3 billion in uninsured cash reserves at the failed bank triggered panic selling that drove USDC to $0.88 over a weekend when traditional payment rails were closed.<sup><a id="fnref-156" href="#fn-156">156</a></sup></p>
+
+<p>This episode reveals a troubling asymmetry at the heart of the stablecoin model. Stablecoin issuers promise 24/7 availability on always-on blockchain networks, yet they must re-enter the traditional banking system to honor redemption requests, a system that operates on business days and working hours.<sup><a id="fnref-157" href="#fn-157">157</a></sup> Unlike bank runs, which can be halted by closing doors or pausing over weekends, stablecoin issuers remain vulnerable at all times while lacking access to the braking mechanisms (Federal Reserve liquidity facilities, FDIC resolution authority) that protect banks.<sup><a id="fnref-158" href="#fn-158">158</a></sup></p>
+
+<p>The GENIUS Act does not include protections that would enhance the information insensitivity of stablecoin claims by reducing dependence on third-party custodians. It does not require issuers to hold reserves in Federal Reserve accounts. It explicitly denies federal insurance. And while stablecoin issuers, as customers of banks, may themselves enjoy deposit insurance, that protection belongs to the issuer, not to stablecoin holders.<sup><a id="fnref-159" href="#fn-159">159</a></sup></p>
+
+
+<h2 id="why-it-matters">Why Do Stablecoins Matter for the Future of Payments, Commercial Law, and Financial Regulation?</h2>
+
+<p>Stablecoins matter because they represent the first serious attempt in generations to create new private money at scale. If current projections hold, stablecoins will fundamentally reshape the architecture of the payment system and alter the landscape of private money in ways not seen since the rise of bank deposits as the dominant medium of exchange.<sup><a id="fnref-160" href="#fn-160">160</a></sup></p>
+
+<p>The policy stakes extend well beyond the stablecoin market itself. A recurring theme of the scholarship cited throughout this page is the importance of integrating public law with private law analysis. Financial regulation too often proceeds without adequate attention to the private law foundations upon which regulated financial instruments rest, that is, the contractual relationships, property rights, and transfer mechanisms that define the money claim.<sup><a id="fnref-161" href="#fn-161">161</a></sup> The GENIUS Act's bankruptcy provisions fail precisely because Congress attempted to retrofit special protections onto a claim whose fundamental legal nature was not fully considered. A more coherent approach would first determine how stablecoins function, what novel capabilities they possess, and what rights holders actually have, and then allow regulatory treatment to flow as a logical consequence.<sup><a id="fnref-162" href="#fn-162">162</a></sup></p>
+
+<p>The lessons generalize: as financial markets continue to evolve, the instruments they produce will demand regulatory responses that integrate public oversight with the private law architecture governing the claims those instruments represent.<sup><a id="fnref-163" href="#fn-163">163</a></sup></p>
+
+
+<h2 id="open-questions">What Are the Key Unresolved Legal and Regulatory Questions About Stablecoins?</h2>
+
+<p>Despite the significant advances represented by the GENIUS Act and MiCAR, several fundamental questions remain unresolved.</p>
+
+<p><strong>Is the redemption right embedded in the token?</strong> The GENIUS Act does not specify whether the issuer's obligation to redeem runs to the owner of the stablecoin, to the person in control of it, or whether the right is tokenized such that it travels with the digital asset itself. This ambiguity undermines negotiability and creates uncertainty in every stablecoin transaction.<sup><a id="fnref-164" href="#fn-164">164</a></sup></p>
+
+<p><strong>When does a stablecoin transfer achieve finality?</strong> Neither the GENIUS Act nor any other source of law establishes when a peer-to-peer stablecoin transfer extinguishes the payor's debt, or what rules govern intermediated transfers. This gap is incompatible with money's basic function.<sup><a id="fnref-165" href="#fn-165">165</a></sup></p>
+
+<p><strong>How should issuer insolvency be handled?</strong> The GENIUS Act's bankruptcy provisions are internally contradictory and operationally incoherent. The authors propose replacing them with a perfected security interest in reserve assets under UCC Article 9, or alternatively, providing qualifying issuers with Federal Reserve master account access to eliminate custodian dependency entirely.<sup><a id="fnref-166" href="#fn-166">166</a></sup></p>
+
+<p><strong>Should stablecoin holders have insurance?</strong> Neither the GENIUS Act nor MiCAR provides insurance for stablecoin holders. The <em>Moneyness</em> article proposes an industry-funded insurance mechanism modeled on the Securities Investor Protection Corporation (SIPC), which would mutualize failure risk and enhance the information insensitivity of stablecoin claims.<sup><a id="fnref-167" href="#fn-167">167</a></sup></p>
+
+<p><strong>How should decentralized stablecoins be regulated?</strong> Both MiCAR and the GENIUS Act defer this question to future study. The longer studies extend, the more entrenched decentralized stablecoins become, potentially constraining future regulatory options through path dependence.<sup><a id="fnref-168" href="#fn-168">168</a></sup></p>
+
+<p><strong>Should functional equivalence drive regulatory parity?</strong> Decentralized stablecoins perform identical economic functions to their centralized counterparts (maintaining dollar pegs, facilitating payments, serving as trading collateral) yet receive fundamentally different legal treatment. Whether the law should address what stablecoins functionally do or how they are structurally organized remains an open question.<sup><a id="fnref-169" href="#fn-169">169</a></sup></p>
+
+
+<div class="endnotes">
+<h2 id="notes">Notes</h2>
+<ol>
+<li id="fn-1">Bruce, Odinet &amp; Tosato, <em>The Private Law of Stablecoins</em>, 54 Ariz. St. L.J. 1073, 1078 (2022). <a href="#fnref-1" aria-label="Back to text">↩</a></li>
+<li id="fn-2"><em>Id.</em> at 1089-90. <a href="#fnref-2">↩</a></li>
+<li id="fn-3">Odinet, Tosato &amp; Yadav, <em>The Moneyness of Stablecoins</em>, Yale L.J. (forthcoming), manuscript at 4; Stablecoins 2030: Web3 to Wall Street, Citigroup (Sept. 25, 2025). <a href="#fnref-3">↩</a></li>
+<li id="fn-4">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1105-07. <a href="#fnref-4">↩</a></li>
+<li id="fn-5">MiCAR, Regulation (EU) 2023/1114 (in force Dec. 30, 2024); GENIUS Act, 12 U.S.C. §§ 5901-5916 (enacted July 18, 2025). <a href="#fnref-5">↩</a></li>
+<li id="fn-6">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1090-91 (adopting the classification suggested by Moin, Sirer &amp; Sekniqi). <a href="#fnref-6">↩</a></li>
+<li id="fn-7"><em>Id.</em> at 1091. <a href="#fnref-7">↩</a></li>
+<li id="fn-8">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 30-31. <a href="#fnref-8">↩</a></li>
+<li id="fn-9">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1092. <a href="#fnref-9">↩</a></li>
+<li id="fn-10"><em>Id.</em> at 1092. <a href="#fnref-10">↩</a></li>
+<li id="fn-11"><em>Id.</em> at 1092; Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins: Comparing MiCAR and the GENIUS Act</em>, Iowa L. Rev. Online (forthcoming 2026), manuscript at 7-10. <a href="#fnref-11">↩</a></li>
+<li id="fn-12">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1093.</li>
+<li id="fn-13"><em>Id.</em> at 1093-94. <a href="#fnref-13">↩</a></li>
+<li id="fn-14"><em>Id.</em> at 1094. <a href="#fnref-14">↩</a></li>
+<li id="fn-15"><em>Id.</em> at 1094-95. <a href="#fnref-15">↩</a></li>
+<li id="fn-16"><em>Id.</em> at 1096-97; <em>id.</em> at 1118-19 (TerraUSD/Luna collapse). <a href="#fnref-16">↩</a></li>
+<li id="fn-17"><em>Id.</em> at 1098. <a href="#fnref-17">↩</a></li>
+<li id="fn-18"><em>Id.</em> at 1094-95. <a href="#fnref-18">↩</a></li>
+<li id="fn-19"><em>Id.</em> <a href="#fnref-19">↩</a></li>
+<li id="fn-20"><em>Id.</em> at 1095. <a href="#fnref-20">↩</a></li>
+<li id="fn-21"><em>Id.</em> <a href="#fnref-21">↩</a></li>
+<li id="fn-22">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 8-9. <a href="#fnref-22">↩</a></li>
+<li id="fn-23"><em>Id.</em> at 9. <a href="#fnref-23">↩</a></li>
+<li id="fn-24">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 34. <a href="#fnref-24">↩</a></li>
+<li id="fn-25">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1099. <a href="#fnref-25">↩</a></li>
+<li id="fn-26">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3. <a href="#fnref-26">↩</a></li>
+<li id="fn-27"><em>Id.</em> at 9. <a href="#fnref-27">↩</a></li>
+<li id="fn-28"><em>Id.</em> at 5. <a href="#fnref-28">↩</a></li>
+<li id="fn-29"><em>Id.</em> at 10. <a href="#fnref-29">↩</a></li>
+<li id="fn-30"><em>Id.</em> at 10-11. <a href="#fnref-30">↩</a></li>
+<li id="fn-31"><em>Id.</em> at 12-19. <a href="#fnref-31">↩</a></li>
+<li id="fn-32"><em>Id.</em> at 19-22. <a href="#fnref-32">↩</a></li>
+<li id="fn-33"><em>Id.</em> at 22-23. <a href="#fnref-33">↩</a></li>
+<li id="fn-34"><em>Id.</em> at 26. <a href="#fnref-34">↩</a></li>
+<li id="fn-35">GENIUS Act § 4(e)(2)(A); Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 49. <a href="#fnref-35">↩</a></li>
+<li id="fn-36">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 65. <a href="#fnref-36">↩</a></li>
+<li id="fn-37">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 11-23. <a href="#fnref-37">↩</a></li>
+<li id="fn-38">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 11. <a href="#fnref-38">↩</a></li>
+<li id="fn-39"><em>Id.</em> at 14-16. <a href="#fnref-39">↩</a></li>
+<li id="fn-40"><em>Id.</em> at 16. <a href="#fnref-40">↩</a></li>
+<li id="fn-41">GENIUS Act § 4(e)(2)(A). <a href="#fnref-41">↩</a></li>
+<li id="fn-42">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 54. <a href="#fnref-42">↩</a></li>
+<li id="fn-43"><em>Id.</em> at 56-59. <a href="#fnref-43">↩</a></li>
+<li id="fn-44"><em>Id.</em> at 55. <a href="#fnref-44">↩</a></li>
+<li id="fn-45">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 11-13. <a href="#fnref-45">↩</a></li>
+<li id="fn-46">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 10-11. <a href="#fnref-46">↩</a></li>
+<li id="fn-47"><em>Id.</em> at 11. <a href="#fnref-47">↩</a></li>
+<li id="fn-48"><em>Id.</em> at 21. <a href="#fnref-48">↩</a></li>
+<li id="fn-49">MiCAR arts. 49(4), 49(6); Odinet &amp; Tosato, <em>Regulating Centralized Stablecoins: Comparing MiCAR and the GENIUS Act</em>, Notre Dame L. Rev. Reflection (forthcoming 2026), manuscript at 16. <a href="#fnref-49">↩</a></li>
+<li id="fn-50">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 36, 49. <a href="#fnref-50">↩</a></li>
+<li id="fn-51">Odinet &amp; Tosato, <em>Regulating Centralized Stablecoins</em>, <em>supra</em> note 49, at 14-16. <a href="#fnref-51">↩</a></li>
+<li id="fn-52">GENIUS Act § 2(22)(A). <a href="#fnref-52">↩</a></li>
+<li id="fn-53">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, Fla. L. Rev. (forthcoming 2026); U.C.C. § 12-102(a)(1). <a href="#fnref-53">↩</a></li>
+<li id="fn-54">U.C.C. § 12-102(a)(2), § 12-104(e). <a href="#fnref-54">↩</a></li>
+<li id="fn-55">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 64. <a href="#fnref-55">↩</a></li>
+<li id="fn-56"><em>Id.</em> <a href="#fnref-56">↩</a></li>
+<li id="fn-57"><em>Id.</em> <a href="#fnref-57">↩</a></li>
+<li id="fn-58">GENIUS Act § 2(22)(A)(ii)(I). <a href="#fnref-58">↩</a></li>
+<li id="fn-59">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 50-51. <a href="#fnref-59">↩</a></li>
+<li id="fn-60"><em>Id.</em> at 51-52. <a href="#fnref-60">↩</a></li>
+<li id="fn-61"><em>Id.</em> at 52, 71. <a href="#fnref-61">↩</a></li>
+<li id="fn-62"><em>Id.</em> at 35-36. <a href="#fnref-62">↩</a></li>
+<li id="fn-63"><em>Id.</em> at 36. <a href="#fnref-63">↩</a></li>
+<li id="fn-64">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 11-13. <a href="#fnref-64">↩</a></li>
+<li id="fn-65">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1125 (Figure 3: Reserve Asset Holding Spectrum). <a href="#fnref-65">↩</a></li>
+<li id="fn-66"><em>Id.</em> at 1132. <a href="#fnref-66">↩</a></li>
+<li id="fn-67"><em>Id.</em> at 1133-35. <a href="#fnref-67">↩</a></li>
+<li id="fn-68">GENIUS Act § 11(e)(3). <a href="#fnref-68">↩</a></li>
+<li id="fn-69">GENIUS Act § 11(a)(2). <a href="#fnref-69">↩</a></li>
+<li id="fn-70">GENIUS Act §§ 11(a)(1), 11(d). <a href="#fnref-70">↩</a></li>
+<li id="fn-71">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 44. <a href="#fnref-71">↩</a></li>
+<li id="fn-72"><em>Id.</em> at 57. <a href="#fnref-72">↩</a></li>
+<li id="fn-73"><em>Id.</em> at 58. <a href="#fnref-73">↩</a></li>
+<li id="fn-74"><em>Id.</em> at 69-70. <a href="#fnref-74">↩</a></li>
+<li id="fn-75">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 13-16. <a href="#fnref-75">↩</a></li>
+<li id="fn-76">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 60-61. <a href="#fnref-76">↩</a></li>
+<li id="fn-77"><em>Id.</em> at 60. <a href="#fnref-77">↩</a></li>
+<li id="fn-78"><em>Id.</em> at 60-61. <a href="#fnref-78">↩</a></li>
+<li id="fn-79"><em>Id.</em> at 62. <a href="#fnref-79">↩</a></li>
+<li id="fn-80"><em>Id.</em> at 70. <a href="#fnref-80">↩</a></li>
+<li id="fn-81"><em>Id.</em> at 62-63. <a href="#fnref-81">↩</a></li>
+<li id="fn-82"><em>Id.</em> at 60. <a href="#fnref-82">↩</a></li>
+<li id="fn-83">Tosato, Dick &amp; Odinet, <em>Debt Tokens</em>, 173 U. Pa. L. Rev. 1103, 1152 (2025). <a href="#fnref-83">↩</a></li>
+<li id="fn-84">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 64; U.C.C. § 12-104(f). <a href="#fnref-84">↩</a></li>
+<li id="fn-85">U.C.C. § 12-104(e). <a href="#fnref-85">↩</a></li>
+<li id="fn-86">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 64. <a href="#fnref-86">↩</a></li>
+<li id="fn-87"><em>Id.</em> at 71. <a href="#fnref-87">↩</a></li>
+<li id="fn-88">Tosato &amp; Odinet, <em>Digital Assets and the Property Question</em>, <em>supra</em> note 53, at 48-50. <a href="#fnref-88">↩</a></li>
+<li id="fn-89"><em>Id.</em> at 50. <a href="#fnref-89">↩</a></li>
+<li id="fn-90">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1151-55. <a href="#fnref-90">↩</a></li>
+<li id="fn-91"><em>Id.</em> at 1154. <a href="#fnref-91">↩</a></li>
+<li id="fn-92">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 61-62. <a href="#fnref-92">↩</a></li>
+<li id="fn-93"><em>Id.</em> at 62. <a href="#fnref-93">↩</a></li>
+<li id="fn-94"><em>Id.</em> at 44; U.C.C. §§ 8-501 to 8-511. <a href="#fnref-94">↩</a></li>
+<li id="fn-95">Odinet &amp; Tosato, <em>Regulating Centralized Stablecoins</em>, <em>supra</em> note 49, at 11. <a href="#fnref-95">↩</a></li>
+<li id="fn-96">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1136-37. <a href="#fnref-96">↩</a></li>
+<li id="fn-97"><em>Id.</em> at 1126-32. <a href="#fnref-97">↩</a></li>
+<li id="fn-98"><em>Id.</em> at 1137. <a href="#fnref-98">↩</a></li>
+<li id="fn-99">GENIUS Act § 11(e)(3). <a href="#fnref-99">↩</a></li>
+<li id="fn-100">GENIUS Act § 11(a)(2). <a href="#fnref-100">↩</a></li>
+<li id="fn-101">GENIUS Act §§ 11(a)(1), 11(d). <a href="#fnref-101">↩</a></li>
+<li id="fn-102">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 56-59. <a href="#fnref-102">↩</a></li>
+<li id="fn-103"><em>Id.</em> at 57. <a href="#fnref-103">↩</a></li>
+<li id="fn-104"><em>Id.</em> <a href="#fnref-104">↩</a></li>
+<li id="fn-105"><em>Id.</em> at 58. <a href="#fnref-105">↩</a></li>
+<li id="fn-106"><em>Id.</em> at 59. <a href="#fnref-106">↩</a></li>
+<li id="fn-107"><em>Id.</em> at 69-70. <a href="#fnref-107">↩</a></li>
+<li id="fn-108">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 10. <a href="#fnref-108">↩</a></li>
+<li id="fn-109">GENIUS Act § 4(a)(1)(A). <a href="#fnref-109">↩</a></li>
+<li id="fn-110"><em>Id.</em> <a href="#fnref-110">↩</a></li>
+<li id="fn-111">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 32. <a href="#fnref-111">↩</a></li>
+<li id="fn-112">GENIUS Act § 10(c). <a href="#fnref-112">↩</a></li>
+<li id="fn-113">GENIUS Act § 4(a)(2). <a href="#fnref-113">↩</a></li>
+<li id="fn-114">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 53. <a href="#fnref-114">↩</a></li>
+<li id="fn-115"><em>Id.</em> <a href="#fnref-115">↩</a></li>
+<li id="fn-116"><em>Id.</em> at 66. <a href="#fnref-116">↩</a></li>
+<li id="fn-117"><em>Id.</em> at 42. <a href="#fnref-117">↩</a></li>
+<li id="fn-118">GENIUS Act § 2(22)(A)(ii)(I). <a href="#fnref-118">↩</a></li>
+<li id="fn-119">GENIUS Act § 4(a)(1)(B)(i). <a href="#fnref-119">↩</a></li>
+<li id="fn-120">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 43. <a href="#fnref-120">↩</a></li>
+<li id="fn-121"><em>Id.</em> <a href="#fnref-121">↩</a></li>
+<li id="fn-122">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 9. <a href="#fnref-122">↩</a></li>
+<li id="fn-123"><em>Id.</em> at 12. <a href="#fnref-123">↩</a></li>
+<li id="fn-124">MiCAR arts. 39(1), 49(4), 39(3), 49(6); Odinet &amp; Tosato, <em>Regulating Centralized Stablecoins</em>, <em>supra</em> note 49, at 16. <a href="#fnref-124">↩</a></li>
+<li id="fn-125">GENIUS Act, 12 U.S.C. §§ 5901-5916. <a href="#fnref-125">↩</a></li>
+<li id="fn-126">GENIUS Act § 2(22)(A). <a href="#fnref-126">↩</a></li>
+<li id="fn-127">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 42-46; Odinet &amp; Tosato, <em>Regulating Centralized Stablecoins</em>, <em>supra</em> note 49, at 14-19. <a href="#fnref-127">↩</a></li>
+<li id="fn-128">GENIUS Act §§ 3, 5-6. <a href="#fnref-128">↩</a></li>
+<li id="fn-129">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 47. <a href="#fnref-129">↩</a></li>
+<li id="fn-130">GENIUS Act §§ 9(e)(1)(E), 14. <a href="#fnref-130">↩</a></li>
+<li id="fn-131">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11. <a href="#fnref-131">↩</a></li>
+<li id="fn-132"><em>Id.</em> at 8. <a href="#fnref-132">↩</a></li>
+<li id="fn-133"><em>Id.</em> at 11. <a href="#fnref-133">↩</a></li>
+<li id="fn-134"><em>Id.</em> at 11-13. <a href="#fnref-134">↩</a></li>
+<li id="fn-135"><em>Id.</em> at 13-16. <a href="#fnref-135">↩</a></li>
+<li id="fn-136"><em>Id.</em> at 16-19. <a href="#fnref-136">↩</a></li>
+<li id="fn-137"><em>Id.</em> at 19-23. <a href="#fnref-137">↩</a></li>
+<li id="fn-138"><em>Id.</em> at 34-35. <a href="#fnref-138">↩</a></li>
+<li id="fn-139"><em>Id.</em> at 31-32. <a href="#fnref-139">↩</a></li>
+<li id="fn-140">GENIUS Act § 2(7)(B); Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 32. <a href="#fnref-140">↩</a></li>
+<li id="fn-141">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 34. <a href="#fnref-141">↩</a></li>
+<li id="fn-142">Bruce, Odinet &amp; Tosato, <em>Private Law of Stablecoins</em>, <em>supra</em> note 1, at 1097-98. <a href="#fnref-142">↩</a></li>
+<li id="fn-143"><em>Id.</em> at 1118-19. <a href="#fnref-143">↩</a></li>
+<li id="fn-144"><em>Id.</em> at 1118. <a href="#fnref-144">↩</a></li>
+<li id="fn-145"><em>Id.</em> at 1119. <a href="#fnref-145">↩</a></li>
+<li id="fn-146">GENIUS Act § 2(22)(A); Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 47. <a href="#fnref-146">↩</a></li>
+<li id="fn-147">GENIUS Act § 14. <a href="#fnref-147">↩</a></li>
+<li id="fn-148">MiCAR arts. 3(1)(6), 3(1)(7). <a href="#fnref-148">↩</a></li>
+<li id="fn-149">Odinet &amp; Tosato, <em>Regulating Centralized Stablecoins</em>, <em>supra</em> note 49, at 14-15. <a href="#fnref-149">↩</a></li>
+<li id="fn-150">MiCAR arts. 26(1)-(2), 27(1), 52(1)-(2), 53(1). <a href="#fnref-150">↩</a></li>
+<li id="fn-151">MiCAR arts. 39(1), 39(3), 49(4), 49(6). <a href="#fnref-151">↩</a></li>
+<li id="fn-152">MiCAR arts. 36(2)-(3), 37(3), 38(1). <a href="#fnref-152">↩</a></li>
+<li id="fn-153">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 56-59. <a href="#fnref-153">↩</a></li>
+<li id="fn-154">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 31-32. <a href="#fnref-154">↩</a></li>
+<li id="fn-155">Odinet, Tosato &amp; Yadav, <em>Moneyness</em>, <em>supra</em> note 3, at 53. <a href="#fnref-155">↩</a></li>
+<li id="fn-156"><em>Id.</em> at 54. <a href="#fnref-156">↩</a></li>
+<li id="fn-157"><em>Id.</em> at 53-54. <a href="#fnref-157">↩</a></li>
+<li id="fn-158"><em>Id.</em> at 54-55. <a href="#fnref-158">↩</a></li>
+<li id="fn-159"><em>Id.</em> at 55-56. <a href="#fnref-159">↩</a></li>
+<li id="fn-160"><em>Id.</em> at 4. <a href="#fnref-160">↩</a></li>
+<li id="fn-161"><em>Id.</em> at 72. <a href="#fnref-161">↩</a></li>
+<li id="fn-162"><em>Id.</em> at 59. <a href="#fnref-162">↩</a></li>
+<li id="fn-163"><em>Id.</em> at 72. <a href="#fnref-163">↩</a></li>
+<li id="fn-164"><em>Id.</em> at 50-52, 71. <a href="#fnref-164">↩</a></li>
+<li id="fn-165"><em>Id.</em> at 60-63, 70. <a href="#fnref-165">↩</a></li>
+<li id="fn-166"><em>Id.</em> at 65-70. <a href="#fnref-166">↩</a></li>
+<li id="fn-167"><em>Id.</em> at 68-69. <a href="#fnref-167">↩</a></li>
+<li id="fn-168">Odinet &amp; Tosato, <em>Regulating Decentralized Stablecoins</em>, <em>supra</em> note 11, at 35. <a href="#fnref-168">↩</a></li>
+<li id="fn-169"><em>Id.</em> at 33-34. <a href="#fnref-169">↩</a></li>
+</ol>
+</div>
+
 </HubLayout>
