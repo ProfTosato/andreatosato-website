@@ -80,85 +80,85 @@ Courses Taught: Contracts, Secured Transactions Law, Bankruptcy Law, Company Law
 
 \cvsection{PUBLICATIONS -- Articles in Law Reviews and Peer-Reviewed Journals}
 
-\noindent\href{https://www.andreatosato.com/articles/moneyness-of-stablecoins}{\textit{The Moneyness of Stablecoins}}, 136 \jnl{Y\s{ale} L.J.} (forthcoming 2026) (with Christopher K. Odinet and Yesha Yadav)
+\noindent\href{https://www.andreatosato.com/articles/moneyness-of-stablecoins/}{\textit{The Moneyness of Stablecoins}}, 136 \jnl{Y\s{ale} L.J.} (forthcoming 2026) (with Christopher K. Odinet and Yesha Yadav)
 
-\cvpub\href{https://www.andreatosato.com/articles/bankrupt-crypto-organizations}{\textit{Bankrupt Crypto Organizations}}, 104 \jnl{N.C. L. R\s{ev}.} (forthcoming 2026) (with Kara Bruce and Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/articles/bankrupt-crypto-organizations/}{\textit{Bankrupt Crypto Organizations}}, 104 \jnl{N.C. L. R\s{ev}.} (forthcoming 2026) (with Kara Bruce and Christopher K. Odinet)
 
 \begin{itemize}
 \item Awarded the 2026 Submission of the Year Award by the Southeastern Association of Law Schools
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/digital-assets-property-question}{\textit{Digital Assets and the Property Question}}, 78 \jnl{F\s{la}. L. R\s{ev}.} (forthcoming 2026) (with Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/articles/digital-assets-property-question/}{\textit{Digital Assets and the Property Question}}, 78 \jnl{F\s{la}. L. R\s{ev}.} (forthcoming 2026) (with Christopher K. Odinet)
 
 \begin{itemize}
 \item Featured in the Oxford Business Law Blog, 18 March 2025
 \item Featured in The ALI Adviser, 3 April 2025
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/debt-tokens}{\textit{Debt Tokens}}, 173 \jnl{U. P\s{a}. L. R\s{ev}.} (2025) (with Diane Lourdes Dick and Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/articles/debt-tokens/}{\textit{Debt Tokens}}, 173 \jnl{U. P\s{a}. L. R\s{ev}.} (2025) (with Diane Lourdes Dick and Christopher K. Odinet)
 
 \begin{itemize}
 \item Featured in The ALI Adviser, 16 May 2024
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/crypto-real-estate-finance}{\textit{Crypto in Real Estate Finance}}, 75 \jnl{A\s{la}. L. R\s{ev}.} (2023) (with R. Wilson Freyermuth and Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/articles/crypto-real-estate-finance/}{\textit{Crypto in Real Estate Finance}}, 75 \jnl{A\s{la}. L. R\s{ev}.} (2023) (with R. Wilson Freyermuth and Christopher K. Odinet)
 
 \begin{itemize}
 \item Awarded the Shook Hardy Bacon Research Award
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/access-medicines-trips}{\textit{Access To Medicines and Pharmaceutical Patents: Fulfilling The Promise Of TRIPS Article 31bis}}, 91 \jnl{F\s{ordham} L. R\s{ev}.} (2023) (with Ezinne Igboqwe)
+\cvpub\href{https://www.andreatosato.com/articles/access-medicines-trips/}{\textit{Access To Medicines and Pharmaceutical Patents: Fulfilling The Promise Of TRIPS Article 31bis}}, 91 \jnl{F\s{ordham} L. R\s{ev}.} (2023) (with Ezinne Igboqwe)
 
-\cvpub\href{https://www.andreatosato.com/articles/private-law-stablecoins}{\textit{The Private Law of Stablecoins}}, 54 \jnl{A\s{riz}. S\s{t}. L.J.} (2022) (with Kara Bruce and Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/articles/private-law-stablecoins/}{\textit{The Private Law of Stablecoins}}, 54 \jnl{A\s{riz}. S\s{t}. L.J.} (2022) (with Kara Bruce and Christopher K. Odinet)
 
 \begin{itemize}
 \item Awarded the Grant Gilmore Award of the American College of Commercial Finance Lawyers in recognition of ``superior writing in the field of commercial finance law''
 \item Cited by the Bank for International Settlements, \textit{Cryptocurrencies and decentralised finance: functions and financial stability implications} (2025)
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/commercial-law-intersections}{\textit{Commercial Law Intersections}}, 72 \jnl{H\s{astings} L.J.} 999 (2021) (peer-reviewed) (with Giuliano G. Castellano)
+\cvpub\href{https://www.andreatosato.com/articles/commercial-law-intersections/}{\textit{Commercial Law Intersections}}, 72 \jnl{H\s{astings} L.J.} 999 (2021) (peer-reviewed) (with Giuliano G. Castellano)
 
 \begin{itemize}
 \item Cited by the World Bank: \textit{Distributed Ledger Technology and Secured Transactions Frameworks: A Primer} (2020); \textit{Coordinating Prudential Regulation and Secured Transactions Frameworks: A Primer} (2020)
 \item Featured in the Duke University School of Law FinReg Blog, 30 June 2020
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/secured-transactions-ip-licenses}{\textit{Secured Transactions and IP Licenses: Comparative Observations and Reform Suggestions}}, 81 \jnl{L\s{aw} \& C\s{ontemp}. P\s{robs}.} 155 (2018)
+\cvpub\href{https://www.andreatosato.com/articles/secured-transactions-ip-licenses/}{\textit{Secured Transactions and IP Licenses: Comparative Observations and Reform Suggestions}}, 81 \jnl{L\s{aw} \& C\s{ontemp}. P\s{robs}.} 155 (2018)
 
 \begin{itemize}
 \item Cited by the World Bank, \textit{Collateral Registry, Secured Transactions Law and Practice} (2020)
 \item Featured in the Oxford Business Law Blog, 13 June 2018
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/ip-license-contracts}{\textit{Intellectual Property License Contracts: Reflections on a Prospective UNCITRAL Project}}, 86 \jnl{U. C\s{in}. L. R\s{ev}.} 1251 (2018)
+\cvpub\href{https://www.andreatosato.com/articles/ip-license-contracts/}{\textit{Intellectual Property License Contracts: Reflections on a Prospective UNCITRAL Project}}, 86 \jnl{U. C\s{in}. L. R\s{ev}.} 1251 (2018)
 
-\cvpub\href{https://www.andreatosato.com/articles/commercial-agency-good-faith}{\textit{Commercial Agency and the Duty to Act in Good Faith}}, 36 \jnl{O\s{xford} J\s{ournal of} L\s{egal} S\s{tudies}} 661 (2016) (peer-reviewed)
+\cvpub\href{https://www.andreatosato.com/articles/commercial-agency-good-faith/}{\textit{Commercial Agency and the Duty to Act in Good Faith}}, 36 \jnl{O\s{xford} J\s{ournal of} L\s{egal} S\s{tudies}} 661 (2016) (peer-reviewed)
 
-\cvpub\href{https://www.andreatosato.com/articles/european-dimension-commercial-agents}{\textit{An Exploration of the European Dimension of the Commercial Agents Regulations}}, 39 \jnl{L\s{loyd's} M\s{aritime and} C\s{ommercial} L\s{aw} Q\s{uarterly}} 544 (2013) (peer-reviewed)
+\cvpub\href{https://www.andreatosato.com/articles/european-dimension-commercial-agents/}{\textit{An Exploration of the European Dimension of the Commercial Agents Regulations}}, 39 \jnl{L\s{loyd's} M\s{aritime and} C\s{ommercial} L\s{aw} Q\s{uarterly}} 544 (2013) (peer-reviewed)
 
 \begin{itemize}
 \item Cited by the Advocate General of the European Court of Justice, \textit{The Software Incubator} (Self-employed commercial agents -- Concepts of `sale' and `goods' -- Supply of computer software) Opinion of Advocate General Tanchev, {[}2020{]} EUECJ C-410/19\_O (17 December 2020)
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/articles/traditional-foods-eu}{\textit{The Protection of Traditional Foods in the EU: Traditional Specialities Guaranteed}}, 19 \jnl{E\s{uropean} L\s{aw} J\s{ournal}} 545 (2013) (peer-reviewed)
+\cvpub\href{https://www.andreatosato.com/articles/traditional-foods-eu/}{\textit{The Protection of Traditional Foods in the EU: Traditional Specialities Guaranteed}}, 19 \jnl{E\s{uropean} L\s{aw} J\s{ournal}} 545 (2013) (peer-reviewed)
 
-\cvpub\href{https://www.andreatosato.com/articles/security-interests-ip}{\textit{Security Interests over Intellectual Property}}, 6 \jnl{J\s{ournal of} I\s{ntellectual} P\s{roperty} L\s{aw} \& P\s{ractice}} 93 (2011) (peer-reviewed)
+\cvpub\href{https://www.andreatosato.com/articles/security-interests-ip/}{\textit{Security Interests over Intellectual Property}}, 6 \jnl{J\s{ournal of} I\s{ntellectual} P\s{roperty} L\s{aw} \& P\s{ractice}} 93 (2011) (peer-reviewed)
 
-\cvpub\href{https://www.andreatosato.com/articles/uncitral-annex-ip}{\textit{The UNCITRAL Annex on Security Rights in IP: A Work in Progress}}, 4 \jnl{J\s{ournal of} I\s{ntellectual} P\s{roperty} L\s{aw} \& P\s{ractice}} 743 (2009) (peer-reviewed)
+\cvpub\href{https://www.andreatosato.com/articles/uncitral-annex-ip/}{\textit{The UNCITRAL Annex on Security Rights in IP: A Work in Progress}}, 4 \jnl{J\s{ournal of} I\s{ntellectual} P\s{roperty} L\s{aw} \& P\s{ractice}} 743 (2009) (peer-reviewed)
 
 \cvsection{PUBLICATIONS -- Essays, Book Chapters and Book Reviews}
 
-\noindent\href{https://www.andreatosato.com/essays/seeing-the-intangible}{\textit{Seeing the Intangible: Juliet Moringiello's Enduring Legacy in Property Law}}, \jnl{A\s{m}. B\s{ankr}. L. R\s{ev}.} (forthcoming 2026) (with Christopher K. Odinet)
+\noindent\href{https://www.andreatosato.com/essays/seeing-the-intangible/}{\textit{Seeing the Intangible: Juliet Moringiello's Enduring Legacy in Property Law}}, \jnl{A\s{m}. B\s{ankr}. L. R\s{ev}.} (forthcoming 2026) (with Christopher K. Odinet)
 
-\cvpub\href{https://www.andreatosato.com/essays/regulating-decentralized-stablecoins}{\textit{Regulating Decentralized Stablecoins: Comparing MiCAR and the GENIUS Act}}, \jnl{I\s{owa} L. R\s{ev}. O\s{nline}} (2026) (with Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/essays/regulating-decentralized-stablecoins/}{\textit{Regulating Decentralized Stablecoins: Comparing MiCAR and the GENIUS Act}}, \jnl{I\s{owa} L. R\s{ev}. O\s{nline}} (2026) (with Christopher K. Odinet)
 
-\cvpub\href{https://www.andreatosato.com/essays/regulating-stablecoins}{\textit{Regulating Centralized Stablecoins: Comparing MiCAR and the GENIUS Act}}, \jnl{N\s{otre} D\s{ame} L. R\s{ev}. R\s{eflection}} (2026) (with Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/essays/regulating-stablecoins/}{\textit{Regulating Centralized Stablecoins: Comparing MiCAR and the GENIUS Act}}, \jnl{N\s{otre} D\s{ame} L. R\s{ev}. R\s{eflection}} (2026) (with Christopher K. Odinet)
 
 \begin{itemize}
 \item Cited by the Bank of Italy, \textit{Stablecoins in the Payments Ecosystem: Reflections on Responsible Innovation}
 \end{itemize}
 
-\cvpub\href{https://www.andreatosato.com/essays/tokenized-real-estate}{\textit{Tokenized Real Estate: The Law and Tech of Digital Deeds}}, \jnl{O\s{hio} S\s{t}. L.J. O\s{nline}} (2026) (with Christopher K. Odinet) (forthcoming)
+\cvpub\href{https://www.andreatosato.com/essays/tokenized-real-estate/}{\textit{Tokenized Real Estate: The Law and Tech of Digital Deeds}}, \jnl{O\s{hio} S\s{t}. L.J. O\s{nline}} (2026) (with Christopher K. Odinet) (forthcoming)
 
 \begin{itemize}
 \item Featured in the Oxford Business Law Blog, 20 October 2025
@@ -168,9 +168,9 @@ Courses Taught: Contracts, Secured Transactions Law, Bankruptcy Law, Company Law
 
 \cvpub\textit{Decentralizing Bankruptcy Law}, 44 \jnl{T\s{he} B\s{ankruptcy} L\s{aw} L\s{etter}} 1 (2024) (with Kara Bruce and Christopher K. Odinet)
 
-\cvpub\href{https://www.andreatosato.com/essays/nfts-structured-finance}{\textit{The Intersection of NFTs and Structured Finance}}, 103 \jnl{B.U. L. R\s{ev}.} (2023) (with Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/essays/nfts-structured-finance/}{\textit{The Intersection of NFTs and Structured Finance}}, 103 \jnl{B.U. L. R\s{ev}.} (2023) (with Christopher K. Odinet)
 
-\cvpub\href{https://www.andreatosato.com/essays/floating-liens-crypto}{\textit{Floating Liens Over Crypto-in-Commerce}}, 99 \jnl{I\s{nd}. L.J.} (2023) (with Christopher K. Odinet)
+\cvpub\href{https://www.andreatosato.com/essays/floating-liens-crypto/}{\textit{Floating Liens Over Crypto-in-Commerce}}, 99 \jnl{I\s{nd}. L.J.} (2023) (with Christopher K. Odinet)
 
 \begin{itemize}
 \item Featured in The ALI Adviser, 3 July 2023

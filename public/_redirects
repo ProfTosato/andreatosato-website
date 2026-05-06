@@ -1,0 +1,7 @@
+# Netlify _redirects — fall-through canonical fixes
+
+# Some external sources link to a combined "invited-talks-and-media" slug
+# that does not exist on this site. Send those visitors to the larger of
+# the two pages (Invited Talks); a sister redirect could point at /media/
+# if that ever becomes the more useful destination.
+/invited-talks-and-media   /invited-talks/   301
